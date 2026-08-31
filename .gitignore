@@ -1,0 +1,24 @@
+# Python virtual environment
+.venv/
+
+# Python cache/bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Tooling/cache
+.pytest_cache/
+.mypy_cache/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Generated pipeline artifacts
+output/
+
+# Local logs/tmp
+*.log
+*.tmp

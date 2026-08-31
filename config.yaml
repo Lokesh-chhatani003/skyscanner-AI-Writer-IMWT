@@ -1,0 +1,82 @@
+# -----------------------------------------------------------------------------
+# CONFIGURATION FOR THE SKYSCANNER AI-LQA PIPELINE (CSV / DOCX)
+# Languages: BR, DE, ES, FR, IT, NL, US, PT
+# -----------------------------------------------------------------------------
+
+# --- API and Model Settings ---
+# Note: For production, it's highly recommended to load the API key from
+# an environment variable instead of storing it in this file.
+api_key: "__SET_ME__"
+
+llm_settings:
+  model: "gemini-2.5-pro"
+  temperature: 1
+
+# --- File Paths ---
+paths:
+  input: "input"
+  prompts: "prompts"
+  reference: "reference"
+  output: "output"
+
+# --- File Names ---
+file_names:
+  # Agent 1
+  system_prompt: "system.txt"
+  user_prompt: "user.txt"
+
+  # Agent 2 (validator / final pass)
+  system_prompt_2: "system_2.txt"
+  user_prompt_2: "user_2.txt"
+
+  # Agent 3 (Summary)
+  system_prompt_3: "system_3.txt"
+  user_prompt_3: "user_3.txt"
+
+  glossary: "Skyscanner_Glossary_v2.xlsx"
+  output_report_prefix: "LQA_Report"
+  edited_output_prefix: "Edited"
+
+# --- Language Mapping ---
+lang_map:
+  DE: "de-DE"
+  ES: "es-ES"
+  FR: "fr-FR"
+  IT: "it-IT"
+  NL: "nl-NL"
+  BR: "pt-BR"
+  PT: "pt-PT"
+  US: "en-US"
+
+# --- Pipeline / Batching Controls ---
+pipeline: &pipeline_defaults
+  max_batches_per_window: 30
+  window_pause_seconds: 10
+  combine_reports_per_language: true
+  drop_empty_sections: true
+
+# Back-compat with current script (it reads `batching`)
+batching:
+  <<: *pipeline_defaults
+
+# --- Selection / Limits (independent of batching windows) ---
+limits:
+  # Cap sections/batches per language (useful for CSV smoke tests; null = no cap).
+  max_hr_sections_per_language: null
+  max_final_batches_per_language: null
+  max_words_per_language: null
+
+# Optional scoring config used by the report writer
+scoring:
+  pass_threshold: 90
+
+# --- Parsing / Batching Mode ---
+parsing:
+  input_format: "csv"                # "csv" | "docx" | "html" | "auto"
+  csv_heading_tag: "h3"              # Split CSV content_html on this tag
+  split_mode: "heading"              # DOCX/HTML heading mode
+  heading_level_preference: 2        # DOCX H2 batches under H1 URL
+  include_parent_h1: "prefix_all"    # HTML-only
+  create_intro_batch_if_long: true   # HTML-only
+  min_intro_chars: 200               # HTML-only
+  allow_fallback_to_h1: false        # HTML-only

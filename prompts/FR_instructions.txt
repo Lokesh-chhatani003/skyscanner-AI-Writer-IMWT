@@ -1,0 +1,111 @@
+# FR Style Guide for Skyscanner
+
+## Critical Requirements
+- **Tone Hierarchy**: **Helpful** > **Geeky** > **Playful**. If conflicted, prioritize helpfulness and clarity.
+- **Formality**: Use the **formal "vous"** consistently across all UI, marketing, emails, and help content.
+- **Brand Name**: "Skyscanner" must remain unchanged. Do not add articles.
+- **Active Voice**: Mandatory for headlines, CTAs, and user-facing instructions. Avoid passive structures.
+- **Placeholder/Variable Safety**: **Never translate or alter variables/tags** (e.g., `@@city@@`). Maintain exact syntax. Adapt sentence structure (reordering/periphrasis) to ensure grammatical correctness (e.g., contractions, articles).
+- **No Sustainability Greenwashing**: Never use absolute claims like "green", "eco", "clean", or "sustainable". Use comparatives ("X is more sustainable than Y").
+
+## Tone of Voice
+- **Goal**: Sound like a savvy, friendly, geeky travel pal.
+- **Playful**: Conversational, light energy. Use rhymes/alliteration/metaphors only if natural. Avoid corporate jargon, stiff phrasing, or "LOL-funny" attempts.
+- **Geeky**: Enthusiastic about data/patterns. Explain complex info simply.
+- **Helpful**: Put travellers first. Start with the benefit/instruction.
+- **Apologies**: Drop playfulness. Be direct, sincere, and use 1st person plural ("nous"). Avoid "We apologize for the inconvenience." Focus on solutions.
+
+## Formatting and Punctuation
+- **Apostrophes**: Use straight apostrophes (`'`).
+- **Ellipsis**: Use three dots (`...`) instead of the typographic symbol.
+- **Guillemets**: Use French guillemets (`« »`) with non-breaking spaces.
+- **Hyphens**: Use a non-breaking space before a hyphen for date ranges/itineraries.
+- **Dashes**: Avoid en-dashes/em-dashes. Start a new sentence instead.
+- **Exclamation Marks**: Use sparingly. Avoid multiple marks in one block.
+- **Full Stops**: 
+    - No full stops in CTAs or titles. 
+    - Include full stops in subheaders and body copy.
+    - Lists: Full stops if phrases; none if single words/concepts.
+- **Ampersand**: Do not use `&` in normal copy. Use only in brand names.
+- **Spaces**: Use non-breaking spaces for units, names, dates, before currency, and before double punctuation (`: ; ! ? %`).
+- **Superscripts**: Prohibited.
+- **Numbers/Time**: 
+    - Decimal: Use comma (e.g., 10,50).
+    - Thousands: Use space (e.g., 1 000).
+    - Time: 24h system.
+    - Dates: `DD month YYYY` (lowercase month/day).
+
+## Inclusive Language
+- Avoid stereotypes, gendered labels, ageism, or assumptions about ability/background.
+- Prefer neutral, precise terms.
+- **Gendered forms**: If unavoidable, use bracketed forms (e.g., `Satisfait(e)`).
+
+## Capitalization
+- **Accents**: Use accented characters on capital letters.
+- **Titles/CTAs**: Capitalize first word and proper nouns only; keep rest lowercase.
+- **Post-colon**: Use lowercase letter after a colon.
+- **Months/Days**: Lowercase unless in isolation.
+- **Geo-nicknames**: Capitalize every word in descriptive periphrasis.
+- **Product/Feature Names**: Follow source capitalization consistency.
+
+## Linguistic Guidelines
+- **Anglicisms**: Avoid unless widely used/expected (e.g., "check-in"). Do not mix English/French in phrases.
+- **Abbreviations/Acronyms**: Use only if widely understood. Write full term + (abbrev) on first mention. Avoid creating new ones.
+- **Transliteration/Geo-terms**: Use official/widely used local names. Keep airport names as official. Do not add "airport" (it is often provided by the placeholder). Keep "international" at the end.
+- **Plurals**: Avoid `(s)` if possible; rephrase for neutrality.
+- **Best/Superlatives**: Avoid "best" or "cheapest ever" unless there is a disclaimer explaining measurement. Use "prix avantageux" or "super offres".
+- **Discounts**: Skyscanner never offers discounts. Use "You are offered a discount" (neutral) if needed. Never refer to price fluctuations as "discounts".
+
+## Content Type Guidelines
+- **UI**: Short, action-focused. One idea per string. Consistent terminology.
+- **Marketing**: Natural, fluid, inspirational. Focus on benefits (time, money, discovery).
+- **SEO**: Natural language, no keyword stuffing. Clear headings.
+- **Google Ads/App Store**: Concise. Direct CTAs. No clickbait/unprovable claims.
+- **Editorial/Blog**: Warmer, descriptive, factual.
+- **Legal/Policies**: Precise, neutral, no emotion/idioms. Accuracy over tone.
+- **Surveys**: Non-biased phrasing.
+
+## Technical Rules
+- **URL Requirements**:
+    - No spaces (use hyphens `-`).
+    - All lowercase.
+    - No extended/special characters (replace with basic Latin).
+- **Emojis/Symbols**: Use sparingly. Only if they support clarity. Avoid in legal/serious/policy content. Replace if culturally inappropriate.
+- **Accessibility**: Refer to specific Accessibility guidelines for localized needs.
+
+## Glossary & Terminology (General)
+- **Sustainability**:
+    - **Avoid**: "Green", "eco", "clean", "planet-friendly", "guilt-free", "non-toxic", "natural", "sustainable".
+    - **Use**: Comparatives ("X is more sustainable than Y").
+- **Brand Voice Examples**:
+    - *Don't*: "We have the low-down on baggage... so you can avoid stress." (Too corporate/stiff).
+    - *Do*: "Need to know the cheapest day to fly? We got you." (Helpful/Geeky/Conversational).
+- **CTA Style**:
+    - *Do*: "Réservez maintenant." (Infinitive/Active).
+    - *Don't*: "Réservez Maintenant" (Incorrect capitalization) or "Démarrer la réservation ?" (Passive/Unclear).
+
+## Validation Checklist for LQA
+- [ ] Is the tone "Geeky Travel Pal"?
+- [ ] Is "Vous" used?
+- [ ] Are placeholders intact?
+- [ ] Are URLs lowercase with hyphens?
+- [ ] Are guillemets used correctly?
+- [ ] Is the 24h clock used?
+- [ ] Are sustainability claims comparative, not absolute?
+- [ ] Are CTAs active voice?
+- [ ] Are decimals formatted with commas?
+
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (French). Additive.
+
+### Register (mandatory)
+- Formal **vous** (not *tu*) for standard product/SEO content. Flag *tu* as **Compliance** outside documented exceptions.
+- Respect French typography (NBSP before `: ; ? !`, guillemets) as **Punctuation**.
+
+### Geo naming
+- Use official French toponyms / government recommendations; consistent forms.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

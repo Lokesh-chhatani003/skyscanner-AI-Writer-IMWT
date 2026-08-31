@@ -1,0 +1,104 @@
+# European Portuguese (pt-PT) Style Guide for Skyscanner
+
+## Critical Requirements
+**Tone of Voice**: Be a **Geeky Travel Pal**. Tone must be **playful, geeky, and helpful**.
+- **Hierarchy**: **Helpful > Geeky > Playful**. If forced to choose, be helpful first.
+- **Playful**: Conversational and lively. Clarity always beats wordplay.
+- **Geeky**: Enthusiastic about data and patterns, explained like a knowledgeable friend.
+- **Helpful**: Make complex travel info simple; put travelers first.
+- **Avoid**: Corporate jargon, stiff phrasing, forced jokes, excessive exclamation marks.
+
+## Formality (mandatory — pt-PT)
+- Use the **formal 3rd-person** register for all communications.
+- **Do not use "você"** and **do not use informal "tu"** (nor *tua/teu/tuas/teus*, nor 2nd-person verb forms like *encontras*, *reservares*, *alugares*).
+- Prefer impersonal / 3rd-person constructions (e.g. *é necessário*, *recomendamos*, *o utilizador*, *pode*).
+- Flag any *tu* / *você* register leakage as **Compliance** (Major unless a single isolated slip).
+
+## Linguistic Guidelines
+
+### Spelling & Orthography
+- Follow **European Portuguese** spelling (Acordo Ortográfico as used in Portugal).
+- Prefer European lexicon over Brazilian variants when both appear (e.g. *autocarro* not *ônibus*, *pequeno-almoço* not *café da manhã*, *telemóvel* not *celular*, *ecrã* not *tela*, where context is Portugal).
+- Flag clear BR-only forms in pt-PT market content as **Compliance** / **Accuracy** when they are objectively wrong for Portugal.
+
+### Punctuation & Spacing
+- Use European Portuguese punctuation conventions.
+- Currency: non-breaking space between value and symbol where the locale requires it (e.g. `52 €`).
+- Prefer clarity: commas where needed to separate clauses.
+
+### Capitalization & Dates
+- **Sentence case** for titles and CTAs.
+- Dates in Portuguese long form when written out (`11 de janeiro de 2026`).
+
+### Addressing Users & CTAs
+- **Active voice** for headlines and CTAs.
+- CTAs in the **imperative** (short, direct), consistent with formal register (not *tu* imperatives).
+
+### Units
+- Metric-first market. Missing mandated metric presentation when only imperial is shown → **Compliance**.
+
+## Technical Requirements
+
+### URLs
+- All lowercase, hyphens for word separation, basic Latin characters only.
+
+### Placeholders
+- Never translate, delete, or alter placeholders. Keep spacing around tags.
+
+### Airport Names
+- Never add "aeroporto" if it is not in the source name (avoid duplication).
+
+### Geo-terms
+- Use official / most widely used Portuguese names. EU style-guide country list is a valid reference.
+
+## Content Type Guidelines
+
+### SEO / Editorial
+- Natural language, no keyword stuffing. Clear descriptive headings.
+- If one SEO body paragraph packs multiple distinct ideas and is objectively hard to scan, flag **Style** and split into shorter paragraphs in `updated_sentence` / `corrected_content`.
+
+### Marketing
+- Natural, fluid, inspirational; keep promises realistic and compliant.
+
+### Legal / Policies
+- Precise, neutral, unemotional. No jokes or idioms.
+
+### Sustainability
+- No greenwashing. Prefer comparatives over absolutes. Never claim a flight is "sustentável/verde/eco/limpo".
+
+## Brand & Legal Constraints
+
+### Skyscanner
+- Never translate or alter the brand name "Skyscanner".
+
+### "Best" & Superlatives
+- Do not claim "melhores preços" / "melhores ofertas" as an unsubstantiated competitive claim.
+- "Best" allowed only with a clear measurement disclaimer.
+
+### "Discount" & "Deals"
+- Skyscanner never offers discounts. Never "A Skyscanner ofereceerece um desconto".
+- Prefer neutral phrasing (*ofertas*, *redução de preço*, *é-lhe oferecido um desconto*).
+
+## Quick Reference: Dos and Don'ts
+
+| Category | Do | Don't |
+| :--- | :--- | :--- |
+| **Register** | Formal 3rd person / impersonal | *tu*, *você*, *encontras*, *reservares* |
+| **Lexicon (PT)** | *autocarro*, *telemóvel* | BR-only *ônibus*, *celular* (in PT-PT market) |
+| **Currency** | `52 €` | `€52` / glued forms that break locale rules |
+| **Airport** | Keep source airport name | Duplicate "Aeroporto Aeroporto …" |
+| **Discounts** | *ofertas*, *redução de preço* | "A Skyscanner ofereceerece desconto" |
+| **Sustainability** | "emite 20% menos carbono" | "voo sustentável/verde" |
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Portuguese / Portugal). Additive.
+
+### Register
+- Formal 3rd person; ban *tu* and *você*. Flag register leaks as **Compliance**.
+
+### Geo naming
+- Official/common Portuguese forms; consistent across the page.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

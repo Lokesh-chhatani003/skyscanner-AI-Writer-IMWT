@@ -1,0 +1,89 @@
+# NL Style Guide for Skyscanner
+
+## Critical Requirements
+- **Tone Hierarchy**: **Helpful > Geeky > Playful**. If a rule conflicts, be helpful first.
+- **Formality**: Use informal **'je/jij'** consistently across all content.
+- **Brand Name**: **Never translate 'Skyscanner'**. Do not add articles.
+- **'Discount' Forbidden**: **Never** refer to 'discount' (korting). Only partners offer discounts. Use 'deals' or 'price drops'.
+- **'Best' Claims**: Only use 'best' if accompanied by a disclaimer explaining the measurement.
+- **Sustainability**: Avoid greenwashing. Use comparatives only (e.g., 'more sustainable'), never absolutes (e.g., 'green', 'eco').
+- **No Em-dashes**: Never use em-dashes (—). Use en-dashes (–) for side notes or commas/brackets.
+
+## Tone of Voice: The Geeky Travel Pal
+Our tone is **playful, geeky, and helpful**.
+- **Playful**: Light, natural energy. Use rhyme/alliteration/metaphors sparingly if natural. Avoid stiff corporate speak or over-the-top humor.
+- **Geeky**: Enthusiastic about data/patterns. Explain complex info simply.
+- **Helpful**: Foundation of our brand. Clear, honest, empathetic.
+- **Apologies**: If our fault, apologize sincerely once. Focus on solutions. Do not use cold phrases like "Onze excuses voor het ongemak."
+
+## Writing & Technical Guidelines
+- **Active Voice**: Use everywhere, especially in CTAs and headlines.
+- **Conciseness**: Short sentences. Remove unnecessary words/repetition.
+- **Placeholders/Tags**: **Do not translate, delete, or change** tags (e.g., `@@city@@`). Keep exact order, spacing, and grammar.
+- **URLs**:
+    - Format: Lowercase, hyphenated (no spaces).
+    - Encoding: **Latin characters only**. No special characters (e.g., replace 'ë' with 'e').
+- **Inclusive Language**: Avoid stereotypes (gender, age, ability, background). Use neutral, precise terms.
+- **Geographic Terms**: Use official/widely used local names. **Never add 'luchthaven' to airport names** (avoid duplication).
+- **Anglicisms**: Avoid unless widely expected (e.g., brand names).
+
+## Dutch Punctuation & Formatting
+- **Commas**: Pause-based. Do not use Oxford commas.
+- **Ellipsis**: Space before and after, unless breaking a word. No full stop after ellipsis at sentence end.
+- **Exclamation Marks**: **Use sparingly**. Avoid 'shouty' tone.
+- **Quotation Marks**: Double straight for quotes. Single straight for UI elements/thoughts.
+- **Full Stops**: Standard rules apply. **Do not use in titles, headers, or buttons**.
+- **Emphasis**: Use **accent aigu** only. Avoid ALL CAPS and excessive bolding.
+- **Capitalization**:
+    - **Sentence case preferred** for UI/Marketing.
+    - Months/days: Lowercase in running text (only cap if first word/standalone).
+    - Colon: First letter after colon is lowercase unless it's a name, full sentence, or quote.
+- **Abbreviations**: Only if widely understood (e.g., airport codes). Define first, then abbreviate.
+
+## Content-Specific Rules
+- **UI**: Short, clear, action-focused. One idea per string. Consistent terminology.
+- **Marketing**: Natural, fluid, inspirational, compliant. Focus on benefits.
+- **SEO**: Natural language, descriptive headers. Avoid keyword stuffing.
+- **Google Ads**: Concise, clear benefits, direct CTA. Avoid unprovable superlatives (e.g., 'nummer 1').
+- **Editorial**: Warm, descriptive, factual.
+- **Legal/Policies**: Precise, neutral. No jokes/emotions. No added interpretations.
+- **Emojis**: Use sparingly. Avoid suggestive/culturally inappropriate ones. No emojis in legal/policy/incident content.
+
+## Sustainability Content
+- **Comparatives Only**: Use 'X is more sustainable than Y'.
+- **No Absolutes**: Avoid 'ecological', 'green', 'clean', 'planet-friendly', 'guilt-free'.
+- **Evidence-Based**: Only reference environmental performance if data is available.
+
+## Glossary & Terminology Management
+- **Feature Names**: Prioritize user clarity over literal translation. Must be consistent with local travel provider norms.
+- **UI Elements**: Use single, straight quotes for UI elements (e.g., 'Terug naar resultaten').
+- **Dates/Days**:
+    - Months: jan, feb, mrt, apr, mei, jun, jul, aug, sep, okt, nov, dec
+    - Days: ma, di, wo, do, vr, za, zo
+
+## Do & Don't Summary
+- **Do**: "Eindelijk een manier om vluchten te vergelijken..."
+- **Don't**: Use "TOT. OP. DE. GRAM." or multiple exclamation marks.
+- **Do**: "Vergelijk vluchten naar Tokio en bespaar tijd."
+- **Don't**: Make unsubstantiated claims like "Gegarandeerd de goedkoopste".
+- **Do**: Use "Belasting toegevoegde waarde (btw)" on first mention, then "btw".
+- **Don't**: Use internal acronyms without explanation (e.g., "PNR").
+- **Do**: Use active, concise CTAs (e.g., "Nu boeken").
+- **Don't**: Use passive/vague phrases (e.g., "Klaar om te boeken?").
+- **Do**: Use the correct equivalent for "deal".
+- **Don't**: Mix English/local words to sound "trendy".
+
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Dutch). Additive.
+
+### Register (mandatory)
+- Informal **je / jij** (not *u*) for standard product/SEO. Flag *u* as **Compliance** outside legal exceptions.
+- CTAs in infinitive where applicable.
+
+### Geo naming
+- Always use correct Dutch geographical equivalents; never duplicate “luchthaven/airport” in placeholders.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

@@ -1,0 +1,15 @@
+Topic Name: $topic_name
+
+Here is the content to review:
+
+$content
+
+Available key terms:
+
+$terms
+
+Draft LQA report to validate and finalize (JSON):
+
+$draft_report
+
+Return only the final JSON object (must include `corrected_content` for the full section body).

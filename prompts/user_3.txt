@@ -1,0 +1,9 @@
+Language: $lang
+
+Roll‑up (JSON):
+$rollup
+
+Final issues (JSON array):
+$final_issues
+
+Return ONLY the JSON object for overall_feedback as specified in the system prompt.

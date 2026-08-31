@@ -1,0 +1,63 @@
+# Korean Style Guide for Skyscanner
+
+## Tone of Voice: "Geeky Travel Pal"
+
+**Core Principles**: Playful, Geeky, Helpful. **If in doubt, always prioritize Helpful.**
+- **Tone**: Friendly, human, conversational. Avoid "fake-smart" corporate speak or overly formal, stiff language.
+- **Adaptation**: Prioritize meaning over literal translation. If source wordplay (rhymes, puns, alliteration) does not translate naturally, use an alternative device or omit it.
+- **Geeky**: Be enthusiastic about data/patterns but keep it controlled (act as a knowledgeable friend, not a lecturer).
+- **Helpful**: Simplify complex travel info. Focus on the traveler's benefit. Start with the instruction/benefit, then explain.
+- **Apologies**: Drop playfulness when apologizing. Be honest, clear, and focused on solutions. Apologize once sincerely.
+
+## Technical Requirements
+
+- **URLs**: Must be lowercase, Latin characters only. No spaces; use hyphens (`-`). No special characters.
+- **Placeholders/Variables**: **Never translate, delete, or change** placeholders/tags. Maintain original order.
+    - **Grammar Workaround**: If a Korean postposition depends on a placeholder value, add an extra word (e.g., a noun) to ensure correct grammar without compromising meaning.
+- **Inclusive Language**: Use neutral, precise terms. Avoid assumptions about gender, family, age, ability, or background. Avoid stereotypical idioms.
+
+## Korean Formatting & Punctuation
+
+- **Parentheses**: **No spacing** inside parentheses (e.g., `(서울)`, not `( 서울 )`).
+- **Commas**: Use standard Korean rules; do not overuse.
+- **Ellipses (`…`)**: Use sparingly for pauses/omissions. Do not use for emotional emphasis.
+- **Exclamation Marks (`!`)**: Use sparingly. **Avoid `!!` or `!!!`** and `! ` in formal notices, error messages, or customer support.
+- **Quotation Marks**: Use single quotes (`‘ ’`) for emphasis or speech. **No space** between quotes and enclosed text.
+- **Hyphens/Dashes**: Use hyphens (`-`) only for established conventions. Replace range-indicating hyphens with tildes (`~`). **Do not use dashes**; restructure sentences to remove them.
+- **Full Stops (`.`)**: Omit in titles and headlines, even if they are full sentences.
+- **Emphasis**: Use **bold** or single quotes. Do not use ALL CAPS or excessive exclamation marks.
+
+## Linguistic Guidelines
+
+- **Active Voice**: Mandatory for CTAs and headlines. Avoid passive constructions.
+- **Formality**: Use a friendly, respectful tone. **Omit the subject ("you")** where it is implicit in Korean honorifics.
+- **Transliteration**: Use established local/official usage. Refer to *Hangulize* or official standards. Do not invent spellings.
+- **Airport Names**: Do not add "Airport" to the name unless officially part of the name.
+- **Feature Names**: Focus on clarity/meaning. Avoid literal translations if awkward. Check local competitor usage.
+- **Abbreviations**: Use only if widely known (e.g., airport codes). Write full term + (abbr) on first mention.
+
+## Legal, Brand & Specific Constraints
+
+- **Skyscanner Brand**: Never translate the brand name.
+- **"Best"**: Only use when substantiated or with a clear disclaimer explaining the measurement. Otherwise, use subjective terms like "epic prices."
+- **"Discounts"**: Skyscanner **never** offers discounts. Use neutral phrasing (e.g., "You are offered a discount") to attribute to partners. Never imply Skyscanner offers them.
+- **Sustainability (Greenwashing)**:
+    - Avoid: "green", "eco", "natural", "guilt-free", "clean".
+    - Use: Comparatives ("X is more sustainable than Y").
+    - Base all claims on measurable data. Do not use absolute "sustainable" claims.
+
+## Content Type Specifics
+
+- **UI**: Short, clear, action-focused. Consistent terminology.
+- **Marketing**: Natural, fluid, inspirational.
+- **SEO**: Natural language, no keyword stuffing.
+- **Google Ads**: Concise, clear benefits, no clickbait, no superlatives.
+- **App Store**: Benefits-focused, simple, no guarantees.
+- **Editorial**: Warm, descriptive, factual.
+- **Emails**: Short subject lines, actionable body.
+- **Legal**: Precise, neutral, literal. No jokes/emotions.
+
+## Resources
+- *Standard Dictionary of Korean Language (표준국어대사전)*
+- *Korean Standard Spelling Conventions (한글맞춤법)*
+- *Hangulize* (for transliteration)

@@ -1,0 +1,125 @@
+# Japanese Style Guide for Skyscanner
+
+## Critical Requirements
+
+- **Tone Hierarchy**: Prioritize **Helpful** > **Geeky** > **Playful**. Always be helpful first.
+- **Placeholders**: Never translate, delete, or change placeholders/tags (e.g., `@@city@@`). **Do not add spaces before or after tags in Japanese.**
+- **Commas/Ellipses**: Do not use ellipses. Only use commas for numbers > 1000.
+- **Sustainability**: Never use terms like "sustainable," "eco," "green," "clean," "planet-friendly," or "guilt-free." Use factual, measurable data regarding emissions.
+- **Superlatives/Discounts**: Never claim "best prices" or "best deals" without a clear, specific disclaimer. Never refer to price fluctuations or "deals" as "discounts" (Skyscanner does not offer discounts).
+- **URL/Technical**: Keep URLs in English (Latin characters only, lowercase, no spaces, use hyphens).
+
+---
+
+## Tone of Voice: "The Geeky Travel Pal"
+
+- **Playful**: Write with a light, natural energy. Use a conversational tone, like a friend. Avoid corporate/stiff language and "fake-smart" jargon. If wordplay (puns/rhymes) sounds unnatural in Japanese, skip it. Clarity > Wordplay.
+- **Geeky**: Show expertise, data-driven curiosity, and enthusiasm. Simplify complex info into human-readable steps. Tone should be enthusiastic but controlled—not a lecture.
+- **Helpful**: Foundation of all communication. Focus on user needs. Start with benefits/instructions, then explain context. Use short sentences; divide long source sentences into 2+ shorter ones if necessary.
+
+**Handling Apologies/Bad News**:
+- Drop playfulness. 
+- Apologize sincerely if the fault is Skyscanner’s. Show empathy if not.
+- State clearly: what happened, next steps, and solution.
+- Avoid cold phrases like "We apologize for the inconvenience."
+
+---
+
+## Japanese-Specific Formatting & Conventions
+
+- **Punctuation**:
+    - **Commas**: Only for numbers > 1000.
+    - **Ellipses**: Do not use.
+    - **Exclamation marks**: Rare. Use only if appropriate for content; use half-width `!` if necessary.
+    - **Quotation marks**: Use half-width square brackets `[ ]` for UIs.
+- **Typography**:
+    - **Italics**: Do not use.
+    - **Bold**: Use sparingly for key information.
+    - **Capitalization**: N/A for Japanese. Use sentence case for descriptive text. Keep branded names in original Latin script (e.g., "Drops").
+- **Katakana**: Avoid overuse. Prioritize Hiragana or Kanji where natural. Research appropriate terms rather than direct Katakana transliteration.
+- **Numbers/Units**:
+    - **Rounding**: Round down decimals < 0.5; round up decimals ≥ 0.5.
+    - **Measurements**: Convert imperial to metric. Do not convert airline miles.
+    - **Time**: Prefer 24-hour clock.
+- **Airport Names**: Keep as official source. Do not add "Airport" if it creates duplication (e.g., "Fly from [Name] Airport").
+
+---
+
+## Content-Type Guidelines
+
+### User Interface (UI)
+- Be short, clear, action-focused.
+- One idea per string.
+- Maintain consistent terminology (e.g., always "Price Alerts," never "Price Watch").
+
+### Marketing
+- Creative, fluid, inspirational.
+- Ensure the translation feels native, not like a translation.
+- Focus on user benefits (time, money, discovery).
+
+### SEO
+- Prioritize natural language over keyword stuffing.
+- Use clear, descriptive headings.
+- Keep meta titles/descriptions concise.
+
+### Google Ads
+- Strict character limits.
+- Clear benefits + direct Call to Action (CTA).
+- Avoid unprovable claims (e.g., "best," "cheapest ever").
+- Use common search language.
+
+### Legal/Policies
+- Accuracy and clarity > Tone.
+- Neutral, precise. No idioms, humor, or emotional language.
+- Do not interpret or add promises not in source text.
+
+### Sustainability
+- **Prefer Comparatives**: Use "X is more sustainable/lower-emission than Y," not absolutes.
+- **No Superlatives**: Avoid "the greenest," "most ecological."
+- **Fact-Based**: Reference emissions data, not vague marketing terms.
+
+---
+
+## Technical & Operational Rules
+
+- **Placeholders**: Keep tags exactly as is. If the tool displays tags as text, do not translate.
+- **Abbreviations**: Use only if widely understood in Japan (e.g., airport codes). If obscure, write full term first, then (Abbr.). Do not invent new abbreviations.
+- **Active Voice**: Use active voice for CTAs and headlines (e.g., "Search flights," not "Flights are searched").
+- **Brand Names**: Never translate "Skyscanner." Do not add articles.
+- **"Best" Claims**:
+    - Only use "best" if there is a clear, visible disclaimer explaining the measurement criteria.
+    - Otherwise, use subjective terms like "epic prices" or "amazing deals."
+
+---
+
+## Cultural Sensitivity
+
+- **Emojis/Symbols**: Use sparingly. Ensure they are universally understood and appropriate. Never replace key words with emojis. Never use in legal/serious content. If suspicious, flag to Lead Linguist.
+- **Imagery/References**: Avoid stereotypes (nationality, gender, age, family roles). If imagery/references seem inappropriate, flag to Lead Linguist.
+
+---
+
+## Do's and Don'ts Reference
+
+| Context | Do | Don't |
+| :--- | :--- | :--- |
+| **Playful** | Conversational; travel hacks. | "Fake-smart" jargon; "LOL-funny" attempts. |
+| **Helpful** | Pose question, offer solution. | Overly formal, stiff, robotic. |
+| **Sustainability** | Factual data (e.g., "emits 20% less carbon"). | "Green," "eco," "sustainable," "guilt-free." |
+| **UI CTA** | Clear verbs; active voice. | Long, vague phrases. |
+| **Placeholders** | Keep order; check flow. | Add spaces before/after tags in Japanese. |
+| **Numbers** | Round 0.5+ up, <0.5 down. | Mix conventions. |
+| **Discounts** | Refer to price drops/deals. | Call it a "discount" (unless specific partner offer). |
+| **Headlines** | No punctuation if unnatural. | Follow source punctuation blindly. |
+| **Formatting** | Use [ ] for UI. | Use italics. |
+
+---
+
+## Validation Checklist
+
+Before finalizing content:
+1. **Meaning**: Does it sound like a smart, friendly travel pal?
+2. **Clarity**: Is it actionable and simple?
+3. **Accuracy**: Are tags preserved without surrounding spaces?
+4. **Policy**: Are sustainability/discount/superlative rules strictly followed?
+5. **Consistency**: Are terms used identically across the product?

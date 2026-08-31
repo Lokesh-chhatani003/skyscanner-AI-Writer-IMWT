@@ -1,0 +1,137 @@
+# es-ES Style Guide for Skyscanner
+
+## Critical Requirements
+**Tone**: Always maintain the "Geeky Travel Pal" persona. Prioritize **Helpful** > **Geeky** > **Playful**.
+**Formality**: Use informal **"tú"** for all UI, marketing, and help content. Use **"usted"** only in legal/policy texts.
+**Accuracy**: Never claim Skyscanner offers a "discount." Discounts come from partners; use "You are offered a discount" or neutral phrasing.
+**Placeholders**: **Never translate, delete, or change** placeholders (`%{variable}`, `@@tag@@`). Keep exact syntax; ensure grammatical agreement (use workarounds if necessary).
+**Sustainability**: **Avoid greenwashing**. Use comparatives (e.g., "emits less") rather than absolute superlatives (e.g., "eco-friendly," "green").
+
+---
+
+## Tone of Voice: "Geeky Travel Pal"
+Our voice must be playful, geeky (data-driven but human), and helpful.
+
+*   **Conversational**: Write like a friend. Avoid stiff/corporate language.
+*   **Empathetic**: When delivering bad news, drop playfulness. Apologize sincerely if our fault; show empathy if not. Avoid "Sentimos las molestias."
+*   **Simple**: Use short sentences. Focus on traveler benefits (save time/money/effort).
+*   **Playful Tools**: Use rhymes, metaphors, or alliteration only when natural. **Never** force it; clarity > wordplay.
+*   **Avoid**: "Fake-smart" corporate speak, "LOL-funny" attempts, and over-excitement (prudent use of exclamation marks).
+
+---
+
+## Localization & Translation Strategy
+*   **Naturalness**: Adapt expressions to Spanish culture; do not translate word-for-word.
+*   **Human Touch**: If an English idiom doesn't work, discard it. Maintain the "smart, friendly travel pal" persona in every sentence.
+*   **Inclusive Language**: Avoid stereotypes (gender, age, ability, family). Use neutral terms.
+*   **Anglicisms**: Avoid unless widely accepted (e.g., brand names). Prefer local equivalents.
+*   **Active Voice**: Mandatory for headlines and CTAs.
+
+---
+
+## Technical Specifications & URL Rules
+
+### URL Requirements
+*   **Format**: Lowercase only.
+*   **Separators**: Use standard hyphens (`-`) to separate words. No spaces.
+*   **Characters**: Latin characters only.
+*   **Restrictions**: No special/extended characters.
+
+### Numbers & Formatting
+*   **Format**: Use **DD/MM/YYYY**.
+*   **Time**: 24-hour format (e.g., `14:00`). Use colon as separator. Do not use "h" unless necessary; if used, insert non-breaking space (e.g., `14:00 h`).
+*   **Separators**:
+    *   Thousands: Non-breaking space (e.g., `10 000`).
+    *   Decimals: Comma (e.g., `10,50`).
+    *   Four-figure numbers: No separator (e.g., `1200`).
+*   **Non-breaking spaces**: Mandatory between number and symbol/unit (e.g., `20 €`).
+
+### Punctuation
+*   **Quotes**: Use `«angular quotation marks»` instead of English “ ”.
+*   **Sentence Case**: Use for titles and CTAs. Only capitalize first word and proper nouns.
+*   **Exclamation Marks**: Use sparingly.
+*   **Full Stops**: Do not use in buttons, menus, headers, or titles.
+*   **Colons**: No capital letter after colon, except for greetings, "Nota:", "Aviso:", or quotes.
+
+---
+
+## Content Type Guidelines
+
+### UI
+*   **Goal**: Short, clear, action-oriented.
+*   **Consistency**: Use standard terms across the product (e.g., always "Alertas de precios").
+*   **CTAs**: Use active voice. Infinitive form for user-led actions (e.g., "Reservar"); Imperative when Skyscanner encourages action.
+
+### Marketing
+*   **Tone**: Inspirational, natural, fluid.
+*   **Focus**: Benefits (saving, discovery).
+*   **Avoid**: Unprovable claims ("#1", "cheapest ever").
+
+### SEO
+*   **Constraint**: No keyword stuffing. Write for humans.
+*   **Formatting**: Clear, descriptive headings. Concise meta titles.
+
+### Legal & Policies
+*   **Tone**: Precise, neutral, formal ("usted").
+*   **Rule**: No jokes, idioms, or emotional language.
+
+---
+
+## Terminology & Product Constraints
+
+### Skyscanner Brand
+*   **Usage**: Never translate the name "Skyscanner".
+*   **Articles**: Do not add articles unless linguistically mandatory.
+
+### Feature Naming
+*   **Focus**: User clarity.
+*   **Verification**: Check against local competitors. Avoid literal translation if misleading (e.g., "Packages" → use local equivalent like "vacaciones" if referring to flight+hotel).
+
+### "Best" & Superlatives
+*   **Rule**: Do not use "best" / "best deals" as an objective claim.
+*   **Exception**: Only use if supported by a clear, visible disclaimer explaining the methodology. If English says "best" but no disclaimer exists, use subjective alternatives ("precios increíbles," "ofertas fantásticas").
+
+### Sustainability Content
+*   **Principles**:
+    *   Use comparatives (e.g., "X is more sustainable than Y").
+    *   **Prohibited**: Absolute terms like "green," "eco," "clean," "planet-friendly," "guilt-free."
+    *   **Data**: Base claims on measurable, standardized criteria.
+
+---
+
+## Summary of Correct vs. Incorrect
+
+| Item | Correct | Incorrect |
+| :--- | :--- | :--- |
+| **Dates** | 18 de marzo de 2021 | 18 de Marzo de 2021 |
+| **Time** | 14:00 | 2.00 PM / 14:00h |
+| **Decimals** | 10,50 € | 10.50 € |
+| **Thousands**| 10 000 | 10.000 |
+| **Tone** | "Busca vuelos" | "Es menester buscar vuelos" |
+| **Discounts** | "Te ofrecen un descuento" | "Skyscanner te ofrece un descuento" |
+| **Quotes** | «Oferta» | "Oferta" |
+| **Sustainability**| "Emite un 20% menos" | "Vuelo ecológico" |
+| **Titles** | Primeras palabras en mayúscula | Todas Las Palabras En Mayúscula |
+
+---
+
+## Useful Resources
+*   **RAE**: [http://www.rae.es/](http://www.rae.es/)
+*   **Diccionario Panhispánico de Dudas**: [http://www.rae.es/recursos/diccionarios/dpd](http://www.rae.es/recursos/diccionarios/dpd)
+*   **Fundéu**: [http://www.fundeu.es/](http://www.fundeu.es/)
+*   **DiCE**: [http://www.dicesp.com/paginas](http://www.dicesp.com/paginas)
+
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Spanish ES). Additive.
+
+### Register (mandatory)
+- Informal **tú** for UI/marketing/SEO/help. Use **usted** only in legal/policy. Flag wrong register as **Compliance**.
+- Refer to Skyscanner as **nosotros / nos / nuestro**.
+
+### Geo naming
+- Official/common local names; consistent spelling; no over-translation of expected originals (landmarks/airports).
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

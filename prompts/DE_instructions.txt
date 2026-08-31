@@ -1,0 +1,93 @@
+# DE Style Guide for Skyscanner
+
+## Critical Requirements: Tone of Voice
+**Hierarchy**: **Helpful > Geeky > Playful**.
+- **Helpful**: Foundation. Simplify complex info, be honest, prioritize user needs, take responsibility for errors.
+- **Geeky**: Data-driven, enthusiastic, human explanation. Avoid lecture-style tone.
+- **Playful**: Conversational, lively rhythm. **Clarity over wordplay**. Do not use if it harms understanding.
+- **Avoid**: "Fake-smart" corporate speak, stiff phrases, "LOL-funny" attempts, passive voice, noun-heavy sentences (*Nominalstil*).
+
+## Technical & URL Guidelines
+- **URLs**: No spaces (use hyphens), all lowercase, no special characters (Latin only).
+- **Placeholders/Variables (e.g., @@city@@)**: **NEVER translate, delete, or change**. Keep exact syntax/order. Add spaces around tags to ensure readability when populated.
+- **Accessibility**: Use emojis sparingly. Never replace keywords with emojis. No emojis in legal/policy/incident content.
+
+## Language & Grammar Rules
+- **General**: Follow **Duden** (current edition). Use "Von Duden empfohlene Schreibung" for spelling variants.
+- **Addressing Users**: Use informal singular "**du**" (lowercase: *du, dir, deine*).
+- **Inclusive Language**: Prefer neutral, precise terms (e.g., "Alle Reisenden", "2 Gäste"). Use generic masculine only if neutral terms/space are unavailable.
+- **Capitalization**: Standard German rules (nouns capitalized). Sentence case for UI. Capitalize months/days.
+- **Punctuation**:
+  - **Commas**: Standard German (no Oxford comma).
+  - **Ellipsis**: Exactly three dots (…) + **non-breaking space** before.
+  - **Quotes**: **99-66 rule** („xyz“). Use 9-6 for nested quotes.
+  - **Hyphens**: Use for combined nouns/numbers (e.g., *80-prozentig*). Do not use if the combination is an established noun (e.g., *Feedback*).
+  - **Dashes**: Use for connections/timespans (no spaces).
+  - **Ampersands**: Use only for brands or UI constraints with a non-breaking space before.
+  - **Apostrophes**: Always looks like a '9'. Do not use for imperatives.
+  - **Percentage/Units**: Mandatory **non-breaking space** between number and symbol/unit (e.g., *50 %*, *1.500 km*). 
+- **Numbers/Dates/Time**:
+  - Write out 1–12; use digits for 13+.
+  - Use decimal commas; use dots for thousands.
+  - Follow **DIN 5008** for dates/time.
+
+## Content-Specific Guidelines
+
+### Marketing, SEO & Ads
+- **Marketing**: Be natural, fluid, inspirational.
+- **SEO**: Focus on natural language; **no keyword stuffing**.
+- **Google Ads**: Very concise, benefit-driven. **No clickbait or unprovable superlatives** (e.g., "best", "cheapest").
+- **App Store**: Focus on features/benefits.
+
+### Legal, Policy & Sustainability
+- **Sustainability (Greenwashing Prevention)**:
+  - **Never** use: "green," "eco," "sustainable," "planet-friendly," "guilt-free" as absolutes.
+  - **Use**: Comparatives (e.g., "X has 20% lower emissions than Y").
+  - **Basis**: Only use verifiable data.
+- **Discounts**: **Skyscanner never offers discounts**. Discounts come from partners. Never imply "Skyscanner offers a discount." Use neutral phrasing (e.g., "You are offered a discount").
+- **Best/Superlatives**: Avoid "best" or "cheapest" unless using a clear, objective disclaimer on how "best" is measured. Use subjective alternatives like "epic prices" or "amazing deals."
+
+### Terminology & Localization
+- **Brand Name**: "Skyscanner". Never translate (no "Sky" or "Scanner").
+- **Feature Names**: Focus on user clarity, not literal translation. Ensure names match local market expectations.
+- **Airport Names**: Use official/widely used names. Do not add "Airport" if redundant.
+- **Anglicisms**: Use only if widely accepted/expected (e.g., digital terms).
+
+## Do vs. Don't Summary
+
+| Category | Do | Don't |
+| :--- | :--- | :--- |
+| **Formatting** | *80-prozentig, 12-jährig* | *80 Prozentig* |
+| **Units** | *1.500 km* | *1500km* |
+| **Ellipsis** | *Mutter wüsste …* | *Mutter wüsste...* |
+| **Pricing** | *50 €* | *50€* (space required) |
+| **UI Copy** | *Jetzt buchen* | *Jetzt Buchen* |
+| **Addressing** | *du* | *Sie, Du* (capitalized in text) |
+| **Clarity** | *Flüge vergleichen* | *Flüge vergleichen, um Preise zu sehen...* |
+| **Sustainability**| *20 % geringerer Ausstoß* | *Dies ist ein nachhaltiger Flug* |
+| **Discounts** | *Du erhältst einen Rabatt* | *Skyscanner bietet Rabatte* |
+| **Structure** | *Aktive Stimme (Active voice)* | *Passiv, Nominalstil* |
+| **Tone** | *Hilfreicher, lockerer Ton* | *Unnötig emotional oder steif* |
+
+## Workflow Reminders
+1. **Prioritize Meaning**: Rearrange sentences as needed for natural German flow.
+2. **Action-Oriented**: Prefer short, imperative sentences for CTAs.
+3. **Consistency**: Use the same UI labels throughout the product.
+4. **Cultural Check**: If content (imagery/gestures) seems inappropriate, flag to Skyscanner.
+5. **No External Links**: Do not include internal or external URLs in final copy.
+
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (German). Additive.
+
+### Register (mandatory)
+- Informal **du / dir / deine** (lowercase in-sentence). Flag **Sie/Ihnen** in non-legal content as **Compliance**.
+- Prefer short active sentences; flag objective **Nominalstil** / bureaucratic run-ons that block comprehension as **Style**.
+
+### Geo naming
+- Use established German exonyms / official forms consistently; do not invent spellings.
+- Never duplicate “Flughafen/Airport” in airport-name placeholders.
+
+### SEO body readability (objective Style only)
+- If one SEO body paragraph packs multiple distinct ideas and is objectively hard to scan, flag **Style** and split into shorter paragraphs in `updated_sentence` / `corrected_content`.
+- No synonym-only or preference rewrites.

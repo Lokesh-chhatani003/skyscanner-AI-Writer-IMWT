@@ -1,0 +1,11 @@
+# requirements.txt
+google-genai
+openpyxl
+pyyaml
+python-docx
+tenacity
+beautifulsoup4
+html5lib
+lxml
+tzdata
+playwright

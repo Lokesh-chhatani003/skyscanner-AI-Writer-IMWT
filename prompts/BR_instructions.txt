@@ -1,0 +1,122 @@
+# PT-BR Style Guide for Skyscanner
+
+## Critical Requirements
+**Tone of Voice**: Be a **Geeky Travel Pal**. Tone must be **playful, geeky, and helpful**.
+- **Playful**: Use a conversational, lively rhythm. Avoid corporate jargon and "trying too hard" to be funny.
+- **Geeky**: Show excitement for data/patterns. Explain complex info simply (knowledgeable friend, not a lecture).
+- **Helpful**: Foundation of all copy. Prioritize clarity over wordplay.
+- **Localization**: If wordplay (rhyme/pun) doesn't adapt naturally, **discard it**. Prioritize meaning and cultural fit over literal translation.
+- **Formality**: Always use **"você" / "vocês"**. **Never use "tu"**.
+
+## Linguistic Guidelines
+
+### Punctuation & Spacing
+- **Commas**: Use sparingly. Split long sentences to avoid confusion.
+- **Exclamation Marks**: Use rarely. Suitable only for clear CTAs or direct dialogue. Do not use for "marketing excitement."
+- **Quotes**: Use **double quotes (" ")** first; **single quotes (' ')** only for nested items. Use straight quotes, not curly.
+- **Slashes**: No spaces before/after slashes between words or numbers (e.g., `dispositivo móvel/celular`, not `dispositivo móvel / celular`).
+- **Semicolons**: Avoid. Use to separate full sentences only; do not use for lists of single words.
+- **Currency**: Use a **non-breaking space** between currency symbol and value (e.g., `US$ 100`, not `US$100`).
+- **Ampersands**: Translate as "e" (e.g., `Voos e hotéis`), unless part of a proper brand name (e.g., `Dolce & Gabbana`).
+
+### Capitalization & Dates
+- **Sentence Case**: Mandatory for titles and CTAs.
+- **Dates**:
+    - Full: `11 de janeiro de 2026`.
+    - First of month: `1º de fevereiro`.
+    - Abbreviated: `11/1/2026` (no zero-padding, no trailing zeros).
+- **Colon**: Do not capitalize the word after a colon on the same line.
+
+### Addressing Users
+- **Active Voice**: Mandatory for all headlines and CTAs.
+- **Inclusivity**: Use gender-neutral language. Avoid stereotypes or assumptions about age, family status, or ability.
+
+## Technical Requirements
+
+### URLs
+- **Format**: All lowercase, no special characters (use basic Latin), no spaces.
+- **Separator**: Use hyphen (`-`) for word separation.
+
+### Placeholders (Tags/Variables)
+- **Integrity**: **Do not translate, delete, or change placeholders**. Keep exact syntax.
+- **Spacing**: Ensure spaces exist before/after tags to prevent words "gluing" together when populated.
+- **Prepositions**: If a placeholder causes preposition issues (e.g., city name), rephrase to avoid them (e.g., `@@city@@: os preços...` instead of `em @@city@@`).
+
+### Airport Names
+- **Translation**: Never add the word "aeroporto" if it is not in the source name.
+- **Example**: Fly from `@@airport-name@@` Airport -> `Parta do Aeroporto @@airport-name@@`.
+
+## Content Type Guidelines
+
+### UI
+- Short, clear, action-focused. One idea per string. Use consistent terminology (e.g., always "Alerta de Preço").
+
+### Marketing
+- Creative, fluid, inspirational. Focus on traveler benefits.
+
+### SEO
+- Natural language, no keyword stuffing. Clear headings.
+
+### Legal / Policies
+- **Neutrality**: Precise, factual, unemotional. No jokes or idioms. Do not interpret; stick strictly to the source.
+
+### Sustainability Content (Strict Rules)
+- **Avoid Greenwashing**: Never imply a flight is "sustainable", "green", "clean", or "eco".
+- **Comparatives Only**: Use relative statements (e.g., "emits 20% less carbon than...").
+- **Avoid Vague Terms**: Do not use "natural", "non-toxic", or "environmentally friendly" without verifiable, standard criteria.
+- **Avoid Imagery**: Do not use nature-themed metaphors that imply aviation is harmless.
+
+## Brand & Legal Constraints
+
+### Skyscanner Brand Name
+- **Immutable**: Never translate "Skyscanner".
+
+### Feature Naming
+- **Meaning over Literal**: If an English name is misleading (e.g., "Packages" sounding like postal parcels), use the local equivalent (e.g., "pacotes de viagem"). Only keep English names if widely understood.
+
+### "Best" & Superlatives
+- **Restriction**: Do not claim "best prices" or "best deals" (unsubstantiated/competitive claim).
+- **Exceptions**: Only use "Best" if there is an explicit disclaimer explaining how "best" is measured. Otherwise, use subjective terms like "epic prices" or "amazing deals".
+
+### "Discount" & "Deals"
+- **Legal Restriction**: Skyscanner never offers discounts.
+- **Phrasing**:
+    - Never use "Skyscanner offers a discount". Use neutral phrasing: "You are offered a discount".
+    - **Never** translate "price drops" or "deals" as "desconto" (discount). This is legally incorrect.
+
+### Anglicisms
+- **Use Sparingly**: Only use if widely accepted (e.g., brand names, common tech terms). Ensure they fit the tone.
+
+## Quick Reference: Dos and Don'ts
+
+| Category | Do | Don't |
+| :--- | :--- | :--- |
+| **CTA** | `Reserve já` | `Reserve` (if longer than 1 word) |
+| **Punctuation** | `Ops, parece que não funcionou` | `Ops!!!! Parece que não funcionou...` |
+| **Slashes** | `móvel/celular` | `móvel / celular` |
+| **Dates** | `11/1/2026` | `11/01/2026` |
+| **Airport** | `Parta do Aeroporto Charles de Gaulle` | `Parta do Aeroporto Aeroporto Charles de Gaulle` |
+| **Discounts** | Use "ofertas", "redução de preço" | Use "desconto" (for price drops/deals) |
+| **Address** | Use "você" | Use "tu" |
+| **Sustainability**| "emite 20% menos carbono" | "voo sustentável/verde" |
+
+
+## SEO / Editorial LQA Addendum (Jan 2026 + MosAIQ edit patterns)
+Source: Style Guide Jan 2026 (Portuguese Brazil) and client training edits. Additive — does not override Critical Requirements above.
+
+### Register (mandatory)
+- Always use **você / vocês**. Flag any **tu / tua / teu / teus / tuas** or second-person *tu* verb forms as **Compliance** (Major unless isolated typo).
+- Style guide wins even if a human gold edit left some *tu* forms.
+
+### Geo naming & articles
+- Use official/common local names; keep consistent. Prefer natural Brazilian Portuguese articles where required for regions/states (e.g. **A Bahia**, **O Rio Grande do Sul**) when omission sounds ungrammatical.
+- Correct place-name prepositions (e.g. **Praia de Laranjeiras**, **orla do Rio Guaíba**) when the established local form requires them.
+- Do not invent new place names; only fix clear article/preposition/established-name issues.
+
+### SEO body readability (objective Style only)
+- For SEO/editorial body under an H2: if a **single paragraph packs multiple distinct ideas** and is objectively hard to scan on first reading, flag **Style** and provide a split in `updated_sentence` / `corrected_content` (separate short paragraphs with blank lines between).
+- Do **not** flag synonym preference, mild repetition, or “sounds nicer” rewrites.
+- Prefer clarity: commas where needed to separate clauses; avoid synonym-only lexical swaps.
+
+### Typography
+- Prefer spaced hyphen for airport name connectors when an en-dash confuses display (e.g. `Salvador - Deputado` over `Salvador–Deputado`) if it improves scanability without changing meaning.

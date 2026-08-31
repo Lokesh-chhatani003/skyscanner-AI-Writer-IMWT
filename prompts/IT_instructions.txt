@@ -1,0 +1,154 @@
+# IT Style Guide for Skyscanner
+
+## Critical Requirements
+
+- **Formality**: **Always use the informal "tu"** for all user communication. Avoid bureaucratic language.
+- **Helpful Priority**: If forced to choose between Playful, Geeky, or Helpful, **prioritize Helpful**.
+- **Placeholders**: **Do not translate or delete**. If a location placeholder causes grammatical issues, use: `<location>: [translated text]` or `[text] <location>`.
+- **URLs**: **No spaces, no special characters, all lowercase, use hyphens**.
+- **Sustainability**: **Never use absolute terms** (e.g., "ecologico", "green"). Use comparatives only, supported by data. Avoid greenwashing imagery.
+- **Discounts**: **Never claim "Skyscanner offers" a discount**. Use passive/neutral phrasing: "You are offered a discount".
+
+---
+
+## Tone of Voice: Geeky Travel Pal
+
+**Core Qualities**: Playful, Geeky, Helpful.
+
+- **Playful**: Conversational, lively rhythm. Avoid "fake-smart" corporate speak and "LOL-funny" attempts.
+- **Geeky**: Excited to share data/details but human-focused. Break complex info into simple steps.
+- **Helpful**: Focus on traveller benefits (saving time/money). 
+    - **Apologies**: Drop playfulness. Apologize sincerely once. Focus on solutions. Do not use "We apologize for the inconvenience."
+    - **Structure**: Pose question → offer solution. Keep sentences short.
+
+---
+
+## Technical & General Guidelines
+
+### Placeholders & Variables
+- **Keep exactly as in source**. 
+- Maintain natural order and grammatical correctness.
+- Ensure spaces exist before/after tags to prevent word-gluing.
+
+### Inclusive Language
+- **Avoid stereotypes** (gender, age, ability, family). 
+- Use neutral, precise terms over labels. 
+- Do not assume travel companions or ability.
+
+### URL Conventions
+- **Format**: Lowercase, hyphen-separated. 
+- **Restriction**: No special/extended characters (replace with standard Latin).
+
+### Cultural Sensitivity
+- **Emojis/Symbols**: Use only if in source. Ensure market relevance. Never use in legal/serious contexts.
+- **Imagery**: Flag culturally inappropriate content (clothing, gestures, food).
+
+---
+
+## Italian Linguistic Guidelines
+
+### Punctuation & Typography
+- **Quotes**: Use double straight quotes (`" "`). Place periods **outside** the quotes.
+- **Semicolons**: Avoid; use only in very long sentences.
+- **Exclamation/Question Marks**: **Never use more than one**.
+- **Parentheses**: Replace hyphens with commas or parentheses.
+- **Apostrophes**: Use straight apostrophes ('), never curly.
+- **Ellipsis**: Use sparingly (informal only). If replacing mid-sentence, no capital letter follows. If replacing end-of-sentence, capitalize the following word.
+- **Ampersands**: Use only in brand/company names.
+
+### Euphonic "d"
+- Use only between identical vowels: *ad Atene*, *ed ecco*.
+- **Exceptions**: *ad esempio*, *ad eccezione di*.
+- **Avoid**: Never use "od".
+
+### Formatting & Titles
+- **Emphasis**: Use bold/italics. **Avoid ALL CAPS** (perceived as shouting).
+- **Titles/Headers**: 
+    - **No period at end**. 
+    - **Sentence case**: Only first word capitalized (plus proper nouns/brands).
+    - **Days/Months**: Lowercase unless specific events (e.g., *Venerdì santo*).
+
+### Dates & Numbers
+- **Format**: DD/MM/YYYY.
+- **Time**: 24-hour format (e.g., 14:30).
+
+### Abbreviations
+- Spell out full form on first appearance, followed by abbreviation in parentheses.
+- Keep periods in standard abbreviations (*ecc.*, *pag.*, *cap.*).
+
+### Brand & Terminology
+- **Skyscanner**: Keep as is. Do not translate. No articles.
+- **Airport Names**: **Never translate the word "Airport"** (it is added automatically via placeholder).
+- **Anglicisms**: Use Italian equivalent if widespread/accepted.
+- **Feature Names**: Focus on clarity over literal translation. Ensure it sounds natural to local users.
+
+---
+
+## Content-Specific Guidelines
+
+### User Interface (UI)
+- **Be concise**. One idea per string. Use consistent terminology (e.g., always "Avvisi di prezzo").
+
+### Marketing
+- Creative, fluid, natural. Focus on traveller benefits (saving money/time). Avoid being too close to English source.
+
+### SEO
+- Natural language. Avoid keyword stuffing. Use clear, descriptive headings.
+
+### Google Ads
+- **Very concise**. Direct CTA. **No clickbait**. No superlatives (no "best", "cheapest").
+
+### App Store
+- Highlight benefits (search, compare, track). No guarantees/superlatives.
+
+### Legal/Policies
+- **Prioritize accuracy/clarity**. No jokes, no emotional language, no interpretation.
+
+---
+
+## Prohibited & Restricted Language
+
+### Superlatives
+- **Avoid "best"** unless specific disclaimer explains how it is measured. Use subjective alternatives like "epic prices" or "amazing deals".
+
+### Sustainability (Greenwashing)
+- **Do not use**: *sostenibile, ecologica, green, pulita, rispettosa del pianeta*.
+- **Prefer**: Comparatives ("X emits 20% less carbon than Y").
+- **Constraint**: Only reference performance if verifiable data exists.
+
+---
+
+## Quick Reference: Do vs. Don't
+
+- **Style**:
+    - **Do**: "Con Skyscanner puoi confrontare..."
+    - **Don't**: "Non serve essere degli esperti..." (Avoid condescending tone).
+- **CTA**:
+    - **Do**: "Prenota ora"
+    - **Don't**: "Prenota Ora" (Avoid Capitalized Words).
+- **Clarity**:
+    - **Do**: "Scopri le destinazioni che hai visitato..."
+    - **Don't**: "Scopri le location..." (Use Italian).
+- **Formatting**:
+    - **Do**: "Torna ai risultati"
+    - **Don't**: "TORNA AI RISULTATI" (No all caps).
+- **Airport Names**:
+    - **Do**: "Paris Charles de Gaulle"
+    - **Don't**: "Aeroporto Paris Charles de Gaulle" (Do not add "Aeroporto").
+- **Discounts**:
+    - **Do**: "Ti mostriamo i prezzi ridotti del 20%."
+    - **Don't**: "Ti mostriamo i prezzi che hanno uno sconto del 20%." (Avoid implying Skyscanner offers the discount).
+
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Italian). Additive.
+
+### Register (mandatory)
+- Informal **tu** for product/SEO; impersonal/formal only in legal. Flag wrong register as **Compliance**.
+
+### Geo naming
+- Follow Google Maps / established Italian forms; never duplicate “aeroporto” in airport-name placeholders.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

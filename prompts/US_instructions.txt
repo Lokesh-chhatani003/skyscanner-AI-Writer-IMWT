@@ -1,0 +1,144 @@
+# US English Style Guide for Skyscanner
+
+## Critical Requirements
+**Tone of Voice**: Be a **Geeky Travel Pal**. Tone must be **playful, geeky, and helpful**.
+- **Hierarchy**: **Helpful > Geeky > Playful**. If forced to choose, be helpful first.
+- **Playful**: Conversational and lively, never robotic. Clarity always beats wordplay.
+- **Geeky**: Enthusiastic about data and patterns, explained like a knowledgeable friend, not a lecture.
+- **Helpful**: Make complex travel info simple; put travelers first; be honest and take responsibility.
+- **Avoid**: "Fake-smart" corporate speak, stiff/overly formal phrasing, forced "LOL-funny" jokes, ALL CAPS, excessive exclamation marks.
+- **Formality**: Friendly and respectful, like a helpful travel pal. Not distant or bureaucratic.
+
+## Linguistic Guidelines
+
+### Spelling
+- Follow **Merriam-Webster** (American spelling). Flag British spellings in US copy as **Punctuation/Spelling/Typos**.
+- Examples: `color` not `colour`, `traveler` not `traveller`, `canceled` not `cancelled`, `organize` not `organise`, `center` not `centre`.
+
+### Punctuation & Spacing
+- **Serial (Oxford) comma is MANDATORY**: place a comma before the final `and` / `or` in a list of three or more items. This includes lists of placeholders. Missing serial comma → **Punctuation/Spelling/Typos**.
+- **Decimal separator**: use a period, not a comma (`10.5 miles`).
+- **Ellipsis**: no spaces before, between, or after the points.
+- **Quotes**: double quotes (" ") first; single quotes (' ') only nested. **Commas and periods go inside the quotation marks**, even when not in the source.
+- **Hyphens**:
+    - Use for compound adjectives **before** a noun (`last-minute deals`, `third-party operators`), spelled-out numbers (`twenty-one`), and prefixes (`multi-city`, `all-inclusive`).
+    - Do **not** hyphenate after the noun (`operated by a third party`).
+    - Do **not** hyphenate `-ly` adverbs (`highly rated hotels`). Note `family` is not an adverb → `family-friendly hotels` is hyphenated.
+    - US English merges common compounds into one word more often than UK English.
+- **Dashes**:
+    - **Closed en dash (–)** for ranges/spans and connection/direction: `Los Angeles–London flight`, `Miami–Dade county`.
+    - **Spaced en dash ( – )** to separate UI elements such as listed items or flight locations/times.
+    - **Closed em dash (—, no spaces)** for pauses or parenthetical remarks.
+    - A hyphen used where an en/em dash belongs is an error → correct it.
+- **Slashes**: no spaces between single words/letters/symbols (`outbound/inbound`); one space either side between longer groups (`Name of Operator / Legal Representative`).
+- **Non-breaking space** between a number and its unit of measure (`100 mi`) and inside product names (`Price Alert`).
+    - **Exceptions (no space)**: percentages (`5%`), temperature (`90°F`), flight durations (`5h 34m`).
+
+### Capitalization & Dates
+- **Sentence case** for titles and CTAs (capital on first word and proper nouns only). Title case only for some Marketing/Ads content.
+- **Dates**: American format `MM/DD/YY`. Use **cardinal** numbers (`Jan 1`), never ordinal (`Jan 1st`).
+- **After a colon**: capitalize only if what follows is a complete sentence, a quotation, or a proper noun.
+- **Glossary/product names**: keep capitalization consistent across UI and running copy. Do not mix `Price Alerts` and `price alerts` without a rule.
+
+### Units & Measurement
+- The US is an **imperial-first** market: miles, °F, feet are the expected primary units.
+- Do **not** flag the absence of metric conversions as an error in US content. Only flag units when the text is internally inconsistent or an objectively wrong figure/format.
+
+### Addressing Users
+- **Active voice** is mandatory for headlines and CTAs.
+- **CTAs use the imperative** verb form, short and direct. Focus on what the traveler can do next.
+- Avoid long, vague, or passive constructions where the user is not the clear subject.
+- **Inclusivity**: gender-neutral language (singular `they`); no assumptions about who people travel with, how they look, or what they can do; no stereotype-based idioms.
+
+## Technical Requirements
+
+### URLs
+- **Format**: all lowercase, no spaces, basic Latin characters only, no special/extended characters.
+- **Separator**: hyphen (`-`).
+
+### Placeholders (Tags/Variables)
+- **Integrity**: **Do not translate, delete, or change placeholders**. Keep exact syntax and order.
+- **Spacing**: ensure spaces before/after tags so words do not glue together once populated.
+
+### Airport Names
+- Verify against official sources.
+- **Never add the word "airport"** if it is not part of the source name — the copy adds it where needed.
+- Example: `Fly from @@airport-name@@ Airport`.
+
+### Geo-terms
+- Use the official or most widely used names for countries, cities, regions, and airports, consistently across all content.
+- Avoid outdated or politically sensitive forms; don't over-translate names travelers expect in their original form.
+
+## Content Type Guidelines
+
+### UI
+- Short, clear, action-focused. One idea per string. Consistent terminology (always `Price Alerts`, never `Price Watch`).
+
+### Marketing
+- More creative latitude: natural, fluid, inspirational, and written as if authored in American English. Keep promises realistic and compliant.
+
+### SEO
+- Natural language, **no keyword stuffing**. Clear, descriptive headings and titles. Concise, helpful meta titles/descriptions.
+
+### Google Ads
+- Very concise, benefit-driven. **No clickbait or unprovable claims** (`#1`, `best`, `cheapest ever`). Avoid exclamation marks.
+
+### Editorial and blog posts
+- Warmer, more descriptive tone, but factual and practical. Balance inspiration with concrete tips.
+
+### Legal / Policies
+- **Neutrality**: precise, factual, unemotional. No jokes or idioms. Do not add promises or interpretations absent from the source.
+
+### Sustainability Content (Strict Rules)
+- **Avoid Greenwashing**: never imply a flight is "sustainable", "green", "eco", "clean", "planet-friendly", or "guilt-free".
+- **Comparatives Only**: use relative statements ("X is more sustainable than Y"), never superlatives ("the greenest option").
+- **Avoid Vague Terms**: no "natural", "non-toxic", or "environmentally friendly" without verifiable, standardized criteria.
+- **Avoid Imagery**: no nature-themed metaphors implying aviation is environmentally harmless.
+
+## Brand & Legal Constraints
+
+### Skyscanner Brand Name
+- **Immutable**: never translate or alter "Skyscanner"; keep spelling and casing exact.
+
+### Feature Naming
+- **Meaning over literal**: names must be short, scannable, clear, natural in US English, and consistent with US travel-industry terminology.
+
+### "Best" & Superlatives
+- **Restriction**: do not claim "best prices" or "best deals" — an unsubstantiated competitive claim.
+- **Exceptions**: "Best" is allowed only with a clear disclaimer explaining how it is measured. Otherwise use subjective phrasing like "epic prices" or "amazing deals".
+
+### "Discount" & "Deals"
+- **Legal Restriction**: Skyscanner never offers discounts; they come from partners.
+- **Phrasing**: never "Skyscanner offers a discount". Use neutral phrasing such as "You are offered a discount".
+
+### Abbreviations and Acronyms
+- Use only where widely understood in the US market (airport codes, common transport terms). Spell out on first mention plus the abbreviation in brackets if confusion is possible. Do not invent new abbreviations to save space.
+
+## Quick Reference: Dos and Don'ts
+
+| Category | Do | Don't |
+| :--- | :--- | :--- |
+| **Serial comma** | `flights, hotels, and cars` | `flights, hotels and cars` |
+| **Spelling** | `traveler`, `color`, `canceled` | `traveller`, `colour`, `cancelled` |
+| **Dates** | `01/25/26`, `Jan 1` | `25/01/26`, `Jan 1st` |
+| **Ranges** | `Los Angeles–London` (en dash) | `Los Angeles-London` (hyphen) |
+| **Quotes** | `"epic deals,"` (comma inside) | `"epic deals",` |
+| **Units** | `100 mi`, `5%`, `90°F`, `5h 34m` | `100mi`, `5 %`, `90 °F` |
+| **Slashes** | `outbound/inbound` | `outbound / inbound` |
+| **Titles** | `Cheap flights to Florida` | `Cheap Flights To Florida` |
+| **Airport** | `Fly from Miami International Airport` | `Fly from Miami International Airport Airport` |
+| **Discounts** | "deals", "price drops" | "Skyscanner offers a discount" |
+| **Sustainability** | "emits 20% less carbon" | "sustainable/green flight" |
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (English US). Additive.
+
+### Register
+- Friendly, respectful, second-person direct address. Flag stiff/bureaucratic or passive constructions that objectively hurt clarity as **Style**.
+
+### Geo naming
+- Official/common US-recognized names for states, cities, regions, and airports; consistent across the document.
+
+### SEO body readability (objective Style only)
+- If one SEO body paragraph packs multiple distinct ideas and is objectively hard to scan, flag **Style** and split into shorter paragraphs in `updated_sentence` / `corrected_content`.
+- No synonym-only or preference rewrites.
