@@ -1,0 +1,26 @@
+# Thai (th-TH) Style Guide for Skyscanner
+
+## Critical requirements
+- Use polite, respectful, concise Thai. Use `คุณ` and polite particles only where natural and keep the register consistent.
+- Helpful > geeky > playful. Avoid stiff literal translation, slang, forced jokes, and excessive emphasis.
+- The injected project instructions take priority over any name or transliteration guidance.
+
+## Language and typography
+- Use natural Thai spacing between clauses and ideas; do not insert spaces between every word.
+- Do not add a full stop at the end of Thai headings, complete sentences, paragraphs, bullets, or CTAs.
+- Do not add punctuation to CTA labels. Use a decimal point for decimal numbers.
+- Apply sentence case only to Latin-script text. Avoid repeated Thai characters used only for emphasis.
+- Keep quotation marks and referenced UI labels consistent with the supplied text.
+
+## Technical content
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly. A placeholder may move for Thai grammar, but its characters must not change.
+- Do not insert an unnecessary space between a short Thai particle and its placeholder.
+- Follow the source’s calendar system and date meaning; do not convert eras without explicit evidence.
+- Do not duplicate the airport word when it is already part of the source name.
+- Keep Skyscanner unchanged.
+
+## Content and compliance
+- Use natural SEO language; no keyword stuffing or preference-only rewrites.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use “best” only with a supplied measurable basis.
+- Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.

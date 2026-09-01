@@ -1,0 +1,25 @@
+# Polish (pl-PL) Style Guide for Skyscanner
+
+## Critical requirements
+- Address the reader directly, but do not use `Pan`/`Pani`. Capitalize direct-address pronouns such as `Ty`, `Tobie`, `Ciebie`, `Wy`, `Wam`, and `Was`.
+- Prefer gender-neutral constructions and keep the form of address consistent.
+- Use active voice and short imperative CTAs. Helpful > geeky > playful.
+- The global project-specific exclusion in the master prompt takes priority over any name or geo-name guidance.
+
+## Language and typography
+- Use Polish quotation marks `„…”` and the ellipsis character `…`.
+- Use an en dash, not an em dash, for parenthetical breaks and ranges where appropriate.
+- Use sentence case; do not end headings with a full stop. Avoid excessive exclamation marks.
+- Keep list capitalization and punctuation consistent.
+
+## Technical content
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly.
+- Do not duplicate the airport word when it is already part of the source name.
+- Keep Skyscanner unchanged.
+
+## Content and compliance
+- Use natural SEO language; no keyword stuffing or preference-only rewrites.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use neutral wording about offers and price reductions.
+- Use “best” only with a supplied measurable basis.
+- Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.

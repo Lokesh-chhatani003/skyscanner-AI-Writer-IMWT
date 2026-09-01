@@ -1,0 +1,26 @@
+# Hungarian (hu-HU) Style Guide for Skyscanner
+
+## Critical requirements
+- Use an informal, friendly `tegeződés` register consistently. Keep wording direct, active, concise, and helpful.
+- Helpful > geeky > playful; avoid corporate language, forced jokes, and excessive exclamation marks.
+- The global project-specific exclusion in the master prompt takes priority over any name or geo-name guidance.
+
+## Language and typography
+- Use Hungarian quotation marks `„…”`. Do not put a comma after `Szia`.
+- Use `…` without a preceding space. Avoid em dashes; use the correct hyphen or closed en dash for ranges and routes.
+- Use non-breaking spaces between numbers and units where required, but no space before `%`. Never output the literal text `&nbsp;`.
+- Use sentence case and do not end headings with a full stop.
+- Write dates in Hungarian order, for example `2025. március 25.`.
+- After a colon, use lowercase unless a complete sentence, quotation, or proper name follows.
+
+## Technical content
+- Use short active CTAs appropriate to the informal register.
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly.
+- Do not duplicate the airport word when it is already present in the source name.
+- Keep Skyscanner unchanged.
+
+## Content and compliance
+- Use natural SEO language; no keyword stuffing or preference-only rewrites.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use “best” only with a supplied measurable basis.
+- Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.

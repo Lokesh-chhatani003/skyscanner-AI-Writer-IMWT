@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # CONFIGURATION FOR THE SKYSCANNER AI-LQA PIPELINE (CSV / DOCX)
-# Languages: BR, DE, ES, FR, IT, NL, US, PT
+# Languages: AR-SA, CS-CZ, EL-GR, HU-HU, PL-PL, PT-PT, TH-TH, TR-TR
 # -----------------------------------------------------------------------------
 
 # --- API and Model Settings ---
@@ -21,6 +21,8 @@ paths:
 
 # --- File Names ---
 file_names:
+  project_instructions: "project_skyscanner_exclusions.txt"
+
   # Agent 1
   system_prompt: "system.txt"
   user_prompt: "user.txt"
@@ -39,6 +41,13 @@ file_names:
 
 # --- Language Mapping ---
 lang_map:
+  SA: "ar-SA"
+  CZ: "cs-CZ"
+  GR: "el-GR"
+  HU: "hu-HU"
+  PL: "pl-PL"
+  TH: "th-TH"
+  TR: "tr-TR"
   DE: "de-DE"
   ES: "es-ES"
   FR: "fr-FR"
@@ -50,7 +59,7 @@ lang_map:
 
 # --- Pipeline / Batching Controls ---
 pipeline: &pipeline_defaults
-  max_batches_per_window: 30
+  max_batches_per_window: 10
   window_pause_seconds: 10
   combine_reports_per_language: true
   drop_empty_sections: true
@@ -61,7 +70,6 @@ batching:
 
 # --- Selection / Limits (independent of batching windows) ---
 limits:
-  # Cap sections/batches per language (useful for CSV smoke tests; null = no cap).
   max_hr_sections_per_language: null
   max_final_batches_per_language: null
   max_words_per_language: null
@@ -72,7 +80,7 @@ scoring:
 
 # --- Parsing / Batching Mode ---
 parsing:
-  input_format: "csv"                # "csv" | "docx" | "html" | "auto"
+  input_format: "docx"               # "csv" | "docx" | "html" | "auto"
   csv_heading_tag: "h3"              # Split CSV content_html on this tag
   split_mode: "heading"              # DOCX/HTML heading mode
   heading_level_preference: 2        # DOCX H2 batches under H1 URL

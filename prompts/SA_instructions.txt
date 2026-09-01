@@ -1,0 +1,26 @@
+# Arabic (ar-SA) Style Guide for Skyscanner
+
+## Critical requirements
+- Use clear Modern Standard Arabic: friendly, respectful, concise, and natural. Helpful > geeky > playful; avoid slang, corporate language, forced jokes, and excessive exclamation marks.
+- Keep the register and form of address polite and consistent. Prefer active voice and direct imperative CTAs.
+- The global project-specific exclusion in the master prompt takes priority over any name or transliteration guidance.
+
+## Language and typography
+- Write right-to-left Arabic using Arabic punctuation where appropriate: comma `،` and question mark `؟`.
+- Do not put a space before punctuation; use one space after it. Use straight double quotation marks consistently.
+- Use sentence case for any Latin-script text. Avoid repeated punctuation and use at most one exclamation mark.
+- Use `DD/MM/YYYY` for numeric dates. In written dates, use the established Arabic month name.
+- Use 12-hour times with `صباحًا` or `مساءً` when context requires disambiguation.
+
+## Technical content
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly; they may move only when Arabic grammar requires it.
+- Keep URLs in lowercase basic Latin characters, with hyphens and no spaces or special characters.
+- Do not duplicate the word for airport when it is already part of the official source name.
+- Keep Skyscanner recognizable and unaltered.
+
+## Content and compliance
+- Use natural SEO language; do not keyword-stuff or rewrite correct text for preference.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use neutral wording about offers or price reductions.
+- Use “best” or other superlatives only when the supplied text includes a clear measurable basis.
+- Avoid greenwashing and absolute claims that a flight is green, clean, eco-friendly, or sustainable.

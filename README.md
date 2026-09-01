@@ -3,14 +3,14 @@
 ## Project Overview
 This repository runs a 3-agent LQA pipeline for localized Skyscanner content.
 
-**Primary input (current):** `input/*.csv` with columns `page_url,content_html` (HTML bodies split on `<h3>`).
-**Also supported:** `*.docx` (MosAIQ H1/H2) and legacy `*.html` via `parsing.input_format: auto`.
+**Primary input (current):** `input/*.docx` (MosAIQ H1/H2).
+**Also supported:** CSV and legacy HTML by changing `parsing.input_format`.
 
 It produces per-language **scorecard** (Excel + JSON) and a **client-ready edited file** (CSV or DOCX matching the input) under `output/<LANG>/`.
 
 The main entrypoint is `lqa_pipeline.py`.
 
-**Languages:** BR, DE, ES, FR, IT, NL, US, PT
+**Current ticket languages:** SA, CZ, GR, HU, PL, PT, TH, TR
 
 ## 3-Agent Architecture
 1. Agent 1 (Draft Auditor) — proposes objective LQA findings per H2 batch.
@@ -21,7 +21,7 @@ The main entrypoint is `lqa_pipeline.py`.
 1. Load `config.yaml`.
 2. Resolve Gemini API key (`GEMINI_API_KEY` first, `config.yaml` fallback).
 3. Load prompts, locale packs (`prompts/<LANG>_instructions.txt`), and glossary v2.
-4. Discover `input/*.docx` and infer language from filename (`-br-`, `-de-`, …).
+4. Discover `input/*.docx` and infer language from filename (`-sa-`, `-cz-`, `-gr-`, …).
 5. Parse DOCX into H2 batches.
 6. Run Agent 1 and Agent 2 in windows; retry failed Agent 2 batches once.
 7. Run Agent 3 once per language.
@@ -68,7 +68,7 @@ $env:GEMINI_API_KEY = "<your-real-gemini-api-key>"
 ```
 
 ### Key config sections
-- `lang_map`: BR/DE/ES/FR/IT/NL → locale codes
+- `lang_map`: ticket/runtime codes → locale codes (for example, SA → ar-SA and GR → el-GR)
 - `file_names.glossary`: `Skyscanner_Glossary_v2.xlsx`
 - `file_names.edited_output_prefix`: `Edited`
 - `parsing.input_format`: `docx` (or `html` / `auto`)
@@ -78,7 +78,7 @@ $env:GEMINI_API_KEY = "<your-real-gemini-api-key>"
 ## Input Preparation
 Place processable files in `input/`.
 
-### CSV (primary)
+### CSV (optional)
 Required columns:
 - `page_url` — full page URL (also used as Candidate in the scorecard)
 - `content_html` — HTML body; split into batches on `<h3>` (configurable via `parsing.csv_heading_tag`)

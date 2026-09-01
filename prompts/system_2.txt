@@ -15,6 +15,10 @@ You will receive a `Topic Name` for each batch (e.g., a route or travel topic). 
 
 ---
 
+$project_instructions
+
+---
+
 ## THE PRIME DIRECTIVE: OBJECTIVITY OVER PREFERENCE
 
 Your role is to enforce objectivity and consistency:
