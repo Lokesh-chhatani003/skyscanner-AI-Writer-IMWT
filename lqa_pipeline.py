@@ -25,6 +25,8 @@ from urllib.parse import urlparse
 
 import yaml
 from docx import Document
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 from google import genai
 from google.genai import types
 from tenacity import retry, stop_after_attempt, wait_random_exponential
@@ -886,20 +888,35 @@ def normalize_issue(issue: Dict[str, Any]) -> Dict[str, Any]:
     return out
 
 
+def _is_agent_operational_error(issue: Dict[str, Any]) -> bool:
+    message = str(issue.get("issue", ""))
+    return message.startswith(("Agent 2 error:", "Agent 2 returned an unexpected payload"))
+
+
+def _issues_for_reporting_and_scoring(
+    issues: List[Dict[str, Any]],
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    reported = [normalize_issue(issue) for issue in issues]
+    for issue in reported:
+        if _is_agent_operational_error(issue):
+            issue["score_deduction"] = 0
+    return reported, [issue for issue in reported if not _is_agent_operational_error(issue)]
+
+
 def aggregate_metrics(
     issues: List[Dict[str, Any]],
     ewt: int,
     pass_threshold: float = 90.0,
 ) -> Dict[str, Any]:
-    norm = [normalize_issue(i) for i in issues]
-    apt = sum(i.get("score_deduction", 0) for i in norm)
+    reported, scorable = _issues_for_reporting_and_scoring(issues)
+    apt = sum(i.get("score_deduction", 0) for i in scorable)
     pwpt = (apt / ewt) if ewt > 0 else 0.0
     mqm = max(0.0, 100.0 - (pwpt * 1000.0))
-    crit_cnt = sum(1 for i in norm if i.get("severity") == "Critical")
+    crit_cnt = sum(1 for i in scorable if i.get("severity") == "Critical")
     status = "Pass" if (mqm >= pass_threshold and crit_cnt == 0) else "Fail"
 
     by_cat_points = defaultdict(int)
-    for i in norm:
+    for i in scorable:
         cat = i.get("type_of_issue", "")
         if cat in ALLOWED_CATEGORIES:
             by_cat_points[cat] += i.get("score_deduction", 0)
@@ -912,7 +929,7 @@ def aggregate_metrics(
         categories.append({"category": cat, "apt": cat_apt, "pwpt": cat_pwpt, "mqm": cat_mqm})
 
     sev_counts = defaultdict(int)
-    for i in norm:
+    for i in scorable:
         sev_counts[i.get("severity", "")] += 1
 
     return {
@@ -924,7 +941,8 @@ def aggregate_metrics(
         "status": status,
         "categories": categories,
         "severity_counts": dict(sev_counts),
-        "issues": norm,
+        "issues": reported,
+        "scorable_issues": scorable,
     }
 
 
@@ -1111,7 +1129,7 @@ def write_language_report(
     if overall_feedback_override and isinstance(overall_feedback_override, dict):
         overall_feedback = overall_feedback_override
     else:
-        overall_feedback = summarize_overall(metrics["issues"], ewt)
+        overall_feedback = summarize_overall(metrics["scorable_issues"], ewt)
 
     ts = datetime.now(ZoneInfo("Africa/Cairo")).strftime("%Y%m%d_%H%M%S")
     report_path = output_dir / f"{prefix}_{lang_code}_{ts}.xlsx"
@@ -1153,7 +1171,7 @@ def build_agent3_rollup(
 ) -> Dict[str, Any]:
     """Compact quantitative rollup for Agent 3 input."""
     ewt = compute_ewt(evaluated_text_all)
-    norm = [normalize_issue(i) for i in issues]
+    _, norm = _issues_for_reporting_and_scoring(issues)
 
     severity_counts = Counter(i.get("severity", "") for i in norm)
     by_cat_points = defaultdict(int)
@@ -1306,11 +1324,33 @@ def parse_docx_sections_to_df(
     return rows
 
 
+def _apply_docx_language_formatting(doc: Document, lang_code: Optional[str]) -> None:
+    if lang_code != "TH":
+        return
+    for paragraph in doc.paragraphs:
+        for run in paragraph.runs:
+            run.font.name = "Tahoma"
+            properties = run._element.get_or_add_rPr()
+            fonts = properties.find(qn("w:rFonts"))
+            if fonts is None:
+                fonts = OxmlElement("w:rFonts")
+                properties.insert(0, fonts)
+            for font_kind in ("ascii", "hAnsi", "eastAsia", "cs"):
+                fonts.set(qn(f"w:{font_kind}"), "Tahoma")
+            language = properties.find(qn("w:lang"))
+            if language is None:
+                language = OxmlElement("w:lang")
+                properties.append(language)
+            for language_kind in ("val", "eastAsia", "bidi"):
+                language.set(qn(f"w:{language_kind}"), "th-TH")
+
+
 def write_edited_docx(
     original_path: Path,
     section_rows: List[Dict[str, Any]],
     corrections_by_section_id: Dict[str, str],
     output_path: Path,
+    lang_code: Optional[str] = None,
 ) -> Path:
     """
     Rebuild an edited DOCX from the original structure.
@@ -1411,6 +1451,8 @@ def write_edited_docx(
             out.add_paragraph(text)
 
     _flush_body()
+
+    _apply_docx_language_formatting(out, lang_code)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     out.save(str(output_path))
@@ -1609,6 +1651,48 @@ def _build_corrected_content_fallback(original_content: str, findings: List[Dict
     return text
 
 
+_PLACE_NAME_RE = re.compile(r"(?i)place name|city name|geographic name|location name")
+_LOCALIZATION_RE = re.compile(
+    r"(?i)transliterat|locali[sz]|latin (?:alphabet|script)|written in greek|greek spelling"
+)
+_LATIN_LETTER_RE = re.compile(r"[A-Za-z\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u00ff]")
+
+
+def apply_project_finding_rules(
+    lang_code: str,
+    original_content: str,
+    findings: List[Dict[str, Any]],
+    corrected_content: Any,
+) -> Tuple[List[Dict[str, Any]], str, List[Dict[str, Any]]]:
+    if lang_code != "GR":
+        corrected = corrected_content if isinstance(corrected_content, str) and corrected_content.strip() else (
+            _build_corrected_content_fallback(original_content, findings) if findings else original_content
+        )
+        return findings, corrected, []
+
+    removed = []
+    kept = []
+    for finding in findings:
+        explanation = f"{finding.get('issue', '')} {finding.get('solution', '')}"
+        evidence = f"{finding.get('text', '')} {finding.get('updated_sentence', '')}"
+        if (
+            _PLACE_NAME_RE.search(explanation)
+            and _LOCALIZATION_RE.search(explanation)
+            and _LATIN_LETTER_RE.search(evidence)
+        ):
+            removed.append(finding)
+        else:
+            kept.append(finding)
+
+    if removed:
+        corrected = _build_corrected_content_fallback(original_content, kept)
+    elif isinstance(corrected_content, str) and corrected_content.strip():
+        corrected = corrected_content
+    else:
+        corrected = _build_corrected_content_fallback(original_content, kept) if kept else original_content
+    return kept, corrected, removed
+
+
 # ─────────────────────────── MAIN PIPELINE ─────────────────────────────────
 def _build_iso_to_short_map(lang_map: Dict[str, str]) -> Dict[str, str]:
     iso_to_short: Dict[str, str] = {}
@@ -1681,6 +1765,76 @@ def _normalize_requested_language(
     raise ValueError(f"Unknown language code: {requested}")
 
 
+def discover_input_files(
+    input_dir: Path,
+    input_format: str,
+    lang_map: Dict[str, str],
+    requested_language: Optional[str] = None,
+) -> Dict[str, List[Path]]:
+    files_by_lang: Dict[str, List[Path]] = defaultdict(list)
+    extensions = {
+        "csv": ("*.csv",),
+        "docx": ("*.docx",),
+        "html": ("*.html",),
+        "auto": ("*.csv", "*.docx", "*.html"),
+    }
+    for pattern in extensions.get(input_format, ()):
+        for input_file in sorted(input_dir.glob(pattern)):
+            lang_code = _infer_lang_code_for_input_file(input_file, lang_map)
+            if not lang_code:
+                logging.warning("Skipping %s: could not infer language code from filename.", input_file.name)
+            elif requested_language is None or lang_code == requested_language:
+                files_by_lang[lang_code].append(input_file)
+    return files_by_lang
+
+
+def render_system_prompt(
+    template: str,
+    lang_code: str,
+    locale_instructions: str,
+    project_instructions: str,
+) -> str:
+    return (
+        template.replace("$lang", lang_code)
+        .replace("$locale_instructions", locale_instructions)
+        .replace("$project_instructions", project_instructions)
+    )
+
+
+def write_agent_audit(
+    output_path: Path,
+    lang_code: str,
+    section_rows: List[Dict[str, Any]],
+    agent1_results: List[Dict[str, Any]],
+    agent2_results: List[Dict[str, Any]],
+) -> Path:
+    def count_findings(results: List[Dict[str, Any]]) -> int:
+        return sum(
+            len(result.get("review_findings", []))
+            for result in results
+            if isinstance(result, dict) and isinstance(result.get("review_findings"), list)
+        )
+
+    payload = {
+        "language": lang_code,
+        "agent1_finding_count": count_findings(agent1_results),
+        "agent2_finding_count": count_findings(agent2_results),
+        "sections": [
+            {
+                "section_id": row.get("section_id"),
+                "source_file": Path(str(row.get("source_file", ""))).name,
+                "agent1": agent1_results[index],
+                "agent2": agent2_results[index],
+            }
+            for index, row in enumerate(section_rows)
+        ],
+    }
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    logging.info("[%s] Saved Agent 1/2 audit -> %s", lang_code, output_path)
+    return output_path
+
+
 async def main(selected_language: Optional[str] = None):
     """Three-agent, windowed per-language processing for DOCX sections."""
     file_handler: Optional[logging.FileHandler] = None
@@ -1722,6 +1876,12 @@ async def main(selected_language: Optional[str] = None):
             system_prompt_template_2 = f.read()
         with open(prompts_dir / config["file_names"]["user_prompt_2"], "r", encoding="utf-8") as f:
             user_prompt_template_2 = f.read()
+        project_prompt_name = config["file_names"].get("project_instructions")
+        project_instructions = (
+            (prompts_dir / project_prompt_name).read_text(encoding="utf-8")
+            if project_prompt_name
+            else ""
+        )
 
         # Load prompts (Agent 3)
         with open(prompts_dir / config["file_names"]["system_prompt_3"], "r", encoding="utf-8") as f:
@@ -1760,27 +1920,10 @@ async def main(selected_language: Optional[str] = None):
         edited_prefix = config["file_names"].get("edited_output_prefix", "Edited")
 
         # Discover inputs grouped by language
-        files_by_lang: Dict[str, List[Path]] = defaultdict(list)
         lang_map_cfg: Dict[str, str] = config.get("lang_map", {}) or {}
-
-        discovered: List[Path] = []
-        if input_format in {"csv", "auto"}:
-            discovered.extend(sorted(input_dir.glob("*.csv")))
-        if input_format in {"docx", "auto"}:
-            discovered.extend(sorted(input_dir.glob("*.docx")))
-        if input_format in {"html", "auto"}:
-            discovered.extend(sorted(input_dir.glob("*.html")))
-
-        for input_file in discovered:
-            lang_code = _infer_lang_code_for_input_file(input_file, lang_map_cfg)
-            if not lang_code:
-                logging.warning(
-                    "Skipping %s: could not infer language code from filename.",
-                    input_file.name,
-                )
-                continue
-            if requested_language is None or lang_code == requested_language:
-                files_by_lang[lang_code].append(input_file)
+        files_by_lang = discover_input_files(
+            input_dir, input_format, lang_map_cfg, requested_language
+        )
 
         if not files_by_lang:
             logging.info("No CSV/DOCX/HTML input files found. Exiting.")
@@ -1797,11 +1940,17 @@ async def main(selected_language: Optional[str] = None):
                 logging.warning(f"No instructions file for {lang_code}. Using empty instructions.")
                 locale_instructions = "No language-specific instructions provided."
 
-            system_prompt_1 = system_prompt_template_1.replace("$lang", lang_code).replace(
-                "$locale_instructions", locale_instructions
+            system_prompt_1 = render_system_prompt(
+                system_prompt_template_1,
+                lang_code,
+                locale_instructions,
+                project_instructions,
             )
-            system_prompt_2 = system_prompt_template_2.replace("$lang", lang_code).replace(
-                "$locale_instructions", locale_instructions
+            system_prompt_2 = render_system_prompt(
+                system_prompt_template_2,
+                lang_code,
+                locale_instructions,
+                project_instructions,
             )
 
             terms = glossary_terms.get(lang_code, "N/A")
@@ -1896,6 +2045,8 @@ async def main(selected_language: Optional[str] = None):
 
             total_sections = len(section_rows)
             logging.info(f"[{lang_code}] Total batches to process: {total_sections}")
+            lang_output_dir = output_dir / lang_code
+            lang_output_dir.mkdir(parents=True, exist_ok=True)
 
             # ── PASS 1: Agent 1
             agent1_results: List[Dict[str, Any]] = [None] * total_sections  # type: ignore
@@ -2030,6 +2181,15 @@ async def main(selected_language: Optional[str] = None):
                     except Exception as exc:  # noqa: BLE001
                         agent2_results[idx] = {"error": f"Retry failed: {exc}"}
 
+            audit_ts = datetime.now(ZoneInfo("Africa/Cairo")).strftime("%Y%m%d_%H%M%S")
+            write_agent_audit(
+                lang_output_dir / f"Agent_Audit_{lang_code}_{audit_ts}.json",
+                lang_code,
+                section_rows,
+                agent1_results,
+                agent2_results,
+            )
+
             # Consolidate findings + collect corrected_content for edited DOCX
             consolidated_issues: List[Dict[str, Any]] = []
             corrections_by_section_id: Dict[str, str] = {}
@@ -2051,7 +2211,7 @@ async def main(selected_language: Optional[str] = None):
                             "solution": "",
                             "updated_sentence": "",
                             "severity": "Major",
-                            "score_deduction": 3,
+                            "score_deduction": 0,
                         }
                     )
                     corrections_by_section_id[sid] = row.get("content") or ""
@@ -2068,13 +2228,26 @@ async def main(selected_language: Optional[str] = None):
                             "solution": "",
                             "updated_sentence": "",
                             "severity": "Major",
-                            "score_deduction": 3,
+                            "score_deduction": 0,
                         }
                     )
                     corrections_by_section_id[sid] = row.get("content") or ""
                     continue
 
                 findings = res.get("review_findings", []) or []
+                findings, corrected, removed = apply_project_finding_rules(
+                    lang_code,
+                    row.get("content") or "",
+                    findings,
+                    res.get("corrected_content"),
+                )
+                if removed:
+                    logging.info(
+                        "[%s][%s] Removed %d excluded Latin-place-name finding(s).",
+                        lang_code,
+                        sid,
+                        len(removed),
+                    )
                 for f in findings:
                     f = dict(f)
                     f["source_file"] = source_file
@@ -2083,15 +2256,7 @@ async def main(selected_language: Optional[str] = None):
                     f.pop("question", None)
                     consolidated_issues.append(f)
 
-                corrected = res.get("corrected_content")
-                if isinstance(corrected, str) and corrected.strip():
-                    corrections_by_section_id[sid] = corrected
-                elif findings:
-                    corrections_by_section_id[sid] = _build_corrected_content_fallback(
-                        row.get("content") or "", findings
-                    )
-                else:
-                    corrections_by_section_id[sid] = row.get("content") or ""
+                corrections_by_section_id[sid] = corrected
 
             evaluated_text_all = "\n\n".join(
                 r["content"] for r in section_rows if r.get("content")
@@ -2137,10 +2302,6 @@ async def main(selected_language: Optional[str] = None):
                 logging.warning(
                     f"[{lang_code}] Agent 3 error or invalid payload, using fallback: {agent3_output}"
                 )
-
-            # Per-locale output folder: output/BR, output/DE, ...
-            lang_output_dir = output_dir / lang_code
-            lang_output_dir.mkdir(parents=True, exist_ok=True)
 
             source_suffixes = {
                 Path(r["source_file"]).suffix.lower()
@@ -2206,6 +2367,7 @@ async def main(selected_language: Optional[str] = None):
                             section_rows=section_rows,
                             corrections_by_section_id=corrections_by_section_id,
                             output_path=out_path,
+                            lang_code=lang_code,
                         )
                 except Exception as exc:  # noqa: BLE001
                     logging.error(

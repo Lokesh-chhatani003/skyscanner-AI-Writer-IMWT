@@ -3,7 +3,7 @@
 ## Project-specific exclusions (ticket 2026_8983 — highest priority)
 - Ignore place names written in the Latin alphabet. Do not flag, transliterate, translate, or rewrite them.
 - Ignore missing accents/tonos in section headings. Do not flag or add those accents.
-- The global project-specific proper-name exclusion in the master prompt takes priority over any geo-name guidance.
+- The injected project instructions take priority over any geo-name guidance.
 
 ## Critical requirements
 - Use the formal plural `εσείς` / `σας` consistently, with a friendly and helpful tone.

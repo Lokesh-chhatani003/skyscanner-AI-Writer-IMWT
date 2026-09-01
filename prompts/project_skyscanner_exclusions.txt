@@ -1,0 +1,5 @@
+## PROJECT-SPECIFIC EXCLUSIONS (HIGHEST PRIORITY)
+
+Do not flag, keep, add, or correct a finding merely because a name, city/place name, car-rental provider, or car model/type is not localized or remains in another language/alphabet. The agency will handle these. Preserve such text exactly in `updated_sentence` and `corrected_content`.
+
+For Greek specifically, preserve Latin-script place names such as `Kalithèa` and `Argásion`; do not transliterate, translate, or rewrite them. This does not suppress independent objective errors written in the target script: for example, a genuine Greek typo such as `Πετρα` must still be flagged and minimally corrected to `Πέτρα`.

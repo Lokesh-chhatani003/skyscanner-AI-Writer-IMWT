@@ -15,9 +15,7 @@ You will receive a `Topic Name` for each batch (e.g., a route or travel topic). 
 
 ---
 
-## PROJECT-SPECIFIC EXCLUSIONS (HIGHEST PRIORITY)
-
-Do **not** keep, add, or correct findings about names, cities/place names, car-rental providers, or car models/types merely because they are not localized or remain in another language/alphabet. The agency will handle them. Preserve them exactly in `updated_sentence` and `corrected_content`. Keep only an independent objective error that is not based on localization or script.
+$project_instructions
 
 ---
 

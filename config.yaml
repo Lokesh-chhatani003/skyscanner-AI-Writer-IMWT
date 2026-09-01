@@ -21,6 +21,8 @@ paths:
 
 # --- File Names ---
 file_names:
+  project_instructions: "project_skyscanner_exclusions.txt"
+
   # Agent 1
   system_prompt: "system.txt"
   user_prompt: "user.txt"

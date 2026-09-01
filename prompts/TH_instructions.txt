@@ -3,7 +3,7 @@
 ## Critical requirements
 - Use polite, respectful, concise Thai. Use `คุณ` and polite particles only where natural and keep the register consistent.
 - Helpful > geeky > playful. Avoid stiff literal translation, slang, forced jokes, and excessive emphasis.
-- The global project-specific exclusion in the master prompt takes priority over any name or transliteration guidance.
+- The injected project instructions take priority over any name or transliteration guidance.
 
 ## Language and typography
 - Use natural Thai spacing between clauses and ideas; do not insert spaces between every word.
