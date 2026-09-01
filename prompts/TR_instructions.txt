@@ -1,0 +1,26 @@
+# Turkish (tr-TR) Style Guide for Skyscanner
+
+## Critical requirements
+- Use the friendly formal `Siz` register consistently. Use modern formal imperatives such as `-ın/-in`; avoid informal `sen` and unnecessarily archaic `-ınız/-iniz` forms.
+- Use active voice and short direct CTAs. Helpful > geeky > playful.
+- Refer to the country as `Türkiye`, not `Turkey`, when translating the country name.
+- The global project-specific exclusion in the master prompt takes priority over any name or geo-name guidance.
+
+## Language and typography
+- Do not automatically put commas after conditional `-se/-sa` clauses or verbal-adverb clauses; add one only when Turkish grammar or clarity requires it.
+- Do not surround repeated conjunctions with unnecessary commas.
+- Use straight quotation marks consistently and the single ellipsis character `…`. Avoid em dashes.
+- Use sentence case and do not end headings with a full stop.
+- Write numeric dates as `DD.MM.YYYY`.
+
+## Technical content
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly.
+- URLs must be lowercase and use hyphens; transliterate Turkish URL characters (`ç→c`, `ğ→g`, `ı→i`, `ö→o`, `ş→s`, `ü→u`).
+- Do not duplicate the airport word when it is already part of the source name.
+- Keep Skyscanner unchanged.
+
+## Content and compliance
+- Use natural SEO language; no keyword stuffing or preference-only rewrites.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use “best” only with a supplied measurable basis.
+- Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.

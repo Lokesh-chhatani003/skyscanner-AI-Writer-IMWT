@@ -1,0 +1,26 @@
+# Czech (cs-CZ) Style Guide for Skyscanner
+
+## Critical requirements
+- Use a friendly but formal V-form consistently. Write `vám`, `váš`, and `vás` in lowercase except at the start of a sentence.
+- Prefer gender-neutral wording. Use slash forms only when no clear neutral alternative exists.
+- Helpful > geeky > playful. Keep language direct, active, concise, and free of corporate jargon.
+- The global project-specific exclusion in the master prompt takes priority over any geo-name guidance.
+
+## Language and typography
+- Use Czech quotation marks `„…“` and the ellipsis character `…`. Avoid excessive exclamation marks.
+- Use sentence case for headings and CTAs. Days and months are lowercase.
+- Use a non-breaking space where Czech requires it: between a number and unit or percent sign, in large numbers, and after a one-letter preposition. Never output the literal text `&nbsp;`.
+- Write dates as `12. května 2025` or `12. 5. 2025` according to context.
+- Keep list punctuation and capitalization consistent.
+
+## Technical content
+- Use short, active imperative CTAs in the formal register.
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly.
+- Do not duplicate `letiště` when the source airport name already contains it.
+- Keep Skyscanner unchanged; ordinary Czech inflection is acceptable only when grammatically required.
+
+## Content and compliance
+- Use natural SEO language; no keyword stuffing or preference-only rewrites.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts; keep price/offer wording neutral.
+- Use “best” only with a supplied measurable basis. Avoid absolute sustainability or green claims.

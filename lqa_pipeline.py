@@ -9,6 +9,7 @@
 
 from __future__ import annotations
 
+import argparse
 import asyncio
 import csv
 import json
@@ -40,6 +41,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 logger = logging.getLogger(__name__)
+GEMINI_REQUEST_TIMEOUT_SECONDS = 600
 
 
 # ─────────────────────── GEMINI HELPER FUNCTIONS ──────────────────────────
@@ -84,10 +86,13 @@ async def _call_gemini_once(
     if "gemini-3" in llm_model:
         config_params["thinking_config"] = types.ThinkingConfig(thinking_level="high")
 
-    response = await client.aio.models.generate_content(
-        model=llm_model,
-        contents=parts["prompt"],
-        config=types.GenerateContentConfig(**config_params),
+    response = await asyncio.wait_for(
+        client.aio.models.generate_content(
+            model=llm_model,
+            contents=parts["prompt"],
+            config=types.GenerateContentConfig(**config_params),
+        ),
+        timeout=GEMINI_REQUEST_TIMEOUT_SECONDS,
     )
     if not response.text:
         raise ValueError("Empty response from Gemini")
@@ -1037,6 +1042,7 @@ def _write_scorecard_sheet(
 def _write_findings_sheet(wb: Workbook, findings: List[Dict[str, Any]]):
     ws = wb.create_sheet(title="Detailed Findings")
     headers = [
+        "Source File",
         "Candidate",          # renamed from "url"
         "text",
         "issue",
@@ -1052,6 +1058,7 @@ def _write_findings_sheet(wb: Workbook, findings: List[Dict[str, Any]]):
     for it in findings:
         ws.append(
             [
+                Path(str(it.get("source_file") or "")).name,
                 it.get("candidate") or it.get("url", "") or "",
                 it.get("text", ""),
                 it.get("issue", ""),
@@ -1064,7 +1071,7 @@ def _write_findings_sheet(wb: Workbook, findings: List[Dict[str, Any]]):
         )
 
     last_row = ws.max_row
-    tab = Table(displayName="Findings", ref=f"A1:H{last_row}")
+    tab = Table(displayName="Findings", ref=f"A1:I{last_row}")
     style = TableStyleInfo(
         name="TableStyleMedium2",
         showFirstColumn=False, showLastColumn=False, showRowStripes=True, showColumnStripes=False
@@ -1073,8 +1080,8 @@ def _write_findings_sheet(wb: Workbook, findings: List[Dict[str, Any]]):
     ws.add_table(tab)
 
     for col_letter, width in [
-        ("A", 48), ("B", 60), ("C", 40), ("D", 24),
-        ("E", 12), ("F", 14), ("G", 40), ("H", 60)
+        ("A", 32), ("B", 48), ("C", 60), ("D", 40), ("E", 24),
+        ("F", 12), ("G", 14), ("H", 40), ("I", 60)
     ]:
         ws.column_dimensions[col_letter].width = width
         for cell in ws[col_letter]:
@@ -1662,12 +1669,27 @@ def _infer_lang_code_for_input_file(input_file: Path, lang_map: Dict[str, str]) 
     return None
 
 
-async def main():
+def _normalize_requested_language(
+    requested_language: Optional[str], lang_map: Dict[str, str]
+) -> Optional[str]:
+    if not requested_language:
+        return None
+    requested = requested_language.strip().upper()
+    for code in lang_map:
+        if code.upper() == requested:
+            return code
+    raise ValueError(f"Unknown language code: {requested}")
+
+
+async def main(selected_language: Optional[str] = None):
     """Three-agent, windowed per-language processing for DOCX sections."""
     file_handler: Optional[logging.FileHandler] = None
     log_file_path: Optional[Path] = None
     try:
         config = load_config()
+        requested_language = _normalize_requested_language(
+            selected_language, config.get("lang_map", {}) or {}
+        )
         api_key = resolve_api_key(config)
 
         # Paths
@@ -1680,12 +1702,15 @@ async def main():
 
         # Add file logging now that we know output_dir
         ts_run = datetime.now(ZoneInfo("Africa/Cairo")).strftime("%Y%m%d_%H%M%S")
-        log_file_path = output_dir / f"lqa_run_{ts_run}.log"
+        log_scope = f"_{requested_language}" if requested_language else ""
+        log_file_path = output_dir / f"lqa_run{log_scope}_{ts_run}.log"
         file_handler = logging.FileHandler(log_file_path, encoding="utf-8")
         file_handler.setLevel(logging.INFO)
         file_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
         logging.getLogger().addHandler(file_handler)
         logger.info("File logging enabled → %s", log_file_path)
+        if requested_language:
+            logger.info("Language filter active → %s", requested_language)
 
         # Load prompts (Agent 1 & 2)
         with open(prompts_dir / config["file_names"]["system_prompt"], "r", encoding="utf-8") as f:
@@ -1748,13 +1773,14 @@ async def main():
 
         for input_file in discovered:
             lang_code = _infer_lang_code_for_input_file(input_file, lang_map_cfg)
-            if lang_code:
-                files_by_lang[lang_code].append(input_file)
-            else:
+            if not lang_code:
                 logging.warning(
                     "Skipping %s: could not infer language code from filename.",
                     input_file.name,
                 )
+                continue
+            if requested_language is None or lang_code == requested_language:
+                files_by_lang[lang_code].append(input_file)
 
         if not files_by_lang:
             logging.info("No CSV/DOCX/HTML input files found. Exiting.")
@@ -2010,11 +2036,13 @@ async def main():
             for idx, row in enumerate(section_rows):
                 url = row.get("url_path") or ""
                 candidate = row.get("candidate_name") or row.get("topic_name") or ""
+                source_file = Path(str(row.get("source_file") or "")).name
                 sid = row.get("section_id") or f"row_{idx}"
                 res = agent2_results[idx]
                 if not isinstance(res, dict):
                     consolidated_issues.append(
                         {
+                            "source_file": source_file,
                             "url": url,
                             "candidate": candidate,
                             "text": "",
@@ -2031,6 +2059,7 @@ async def main():
                 if "error" in res:
                     consolidated_issues.append(
                         {
+                            "source_file": source_file,
                             "url": url,
                             "candidate": candidate,
                             "text": "",
@@ -2048,6 +2077,7 @@ async def main():
                 findings = res.get("review_findings", []) or []
                 for f in findings:
                     f = dict(f)
+                    f["source_file"] = source_file
                     f["url"] = url
                     f["candidate"] = candidate
                     f.pop("question", None)
@@ -2202,4 +2232,7 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    parser = argparse.ArgumentParser(description="Run the Skyscanner LQA pipeline.")
+    parser.add_argument("--language", help="Process one configured short code, for example GR.")
+    args = parser.parse_args()
+    asyncio.run(main(args.language))

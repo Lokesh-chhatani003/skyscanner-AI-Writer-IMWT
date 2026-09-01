@@ -1,5 +1,9 @@
 # European Portuguese (pt-PT) Style Guide for Skyscanner
 
+## Project-specific exclusions (ticket 2026_8983)
+- Ignore corrupted or duplicated section headings. Do not flag, correct, or rewrite them.
+- The global project-specific proper-name exclusion in the master prompt takes priority over geo-name guidance below.
+
 ## Critical Requirements
 **Tone of Voice**: Be a **Geeky Travel Pal**. Tone must be **playful, geeky, and helpful**.
 - **Hierarchy**: **Helpful > Geeky > Playful**. If forced to choose, be helpful first.

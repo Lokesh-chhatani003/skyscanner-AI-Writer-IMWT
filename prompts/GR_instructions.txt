@@ -1,0 +1,29 @@
+# Greek (el-GR) Style Guide for Skyscanner
+
+## Project-specific exclusions (ticket 2026_8983 — highest priority)
+- Ignore place names written in the Latin alphabet. Do not flag, transliterate, translate, or rewrite them.
+- Ignore missing accents/tonos in section headings. Do not flag or add those accents.
+- The global project-specific proper-name exclusion in the master prompt takes priority over any geo-name guidance.
+
+## Critical requirements
+- Use the formal plural `εσείς` / `σας` consistently, with a friendly and helpful tone.
+- Prefer active voice and formal imperative CTAs. Clarity takes priority over wordplay.
+- Keep Skyscanner unchanged and use the feminine article where required: `η Skyscanner`, never `το Skyscanner`.
+
+## Language and typography
+- Use the Greek decimal comma and locale-appropriate punctuation. Use one ellipsis character `…`, straight quotation marks consistently, and no more than one exclamation mark.
+- Use sentence case for headings and CTAs.
+- Write dates as `16 Μαρτίου 2025` or `16/03/2025`; write time in 24-hour form such as `15:30`.
+- Apply standard final-n rules; `δεν` always keeps final `ν`.
+- Distinguish interrogative `πού`/`πώς`, comparative `σαν` from attributive `ως`, and indefinite `μια` from numeric `μία`.
+
+## Technical content
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly.
+- Do not duplicate the word for airport when it is already part of the source name.
+- CTA translations must remain buttons/actions; for example, “Cancel” may require the noun `Ακύρωση` depending on UI context.
+
+## Content and compliance
+- Use natural SEO language; no keyword stuffing or preference-only rewrites.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use “best” only with a supplied measurable basis.
+- Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.
