@@ -38,8 +38,10 @@
 - **Active voice** for headlines and CTAs.
 - CTAs in the **imperative** (short, direct), consistent with formal register (not *tu* imperatives).
 
-### Units
-- Metric-first market. Missing mandated metric presentation when only imperial is shown → **Compliance**.
+### Currency & Units (home market: Portugal)
+- **Home-market currency**: the **euro**, written after the value with a non-breaking space (`52 €`). Use the euro for **every** price, **whatever the destination** — never the destination's currency. `$45 por dia` for a US destination → **Accuracy · Major** → `45 € por dia`.
+- **Home-market measurement system**: **metric** (km, m, °C, litros, kg). Convert destination measurements to metric and show **only** the metric value. Missing metric presentation when only imperial is shown → **Compliance**.
+- **Exception — speed limits** (and other posted road signage at the destination): keep the **destination's unit first**, then the metric value in parentheses: `100 mph (cerca de 160 km/h)`. This exception overrides the metric-only rule above. A speed limit shown in only one unit, or with km/h first → **Compliance · Major**.
 
 ## Technical Requirements
 

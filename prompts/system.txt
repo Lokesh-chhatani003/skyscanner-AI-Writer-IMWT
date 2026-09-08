@@ -45,21 +45,25 @@ Apply these **global rules** before assigning any category:
 
 * Do **not** verify laws, limits, prices, or policies against outside knowledge. Use **Accuracy** only when there is an **internal contradiction**, a **mistranslation**, or an **objective numeric/format error** visible in the given text.
 * Example (DO NOT FLAG): NL text states motorway limit 100 km/u → **out of scope** unless the document contradicts itself.
-* Example (FLAG as **Compliance · Major**): mph shown without required km/h conversion for a metric locale.
+* Example (FLAG as **Compliance · Major**): a speed limit shown only in the destination's unit, without the user's unit in parentheses.
 
 2. **Brand / Proper‑noun rules are Compliance**
 
 * Misspelling, wrong casing, or spacing of official brand/proper names → **Compliance** (not Punctuation).
 * Examples: *star car → starcar* (DE), *yalla → Yalla* (pt‑BR), *Rental plus → Rental Plus* (NL).
 
-3. **Currency: what vs how**
+3. **Currency: the user's home market, never the destination**
 
-* **What** currency is used for the location (USD vs £) → **Accuracy** (Major) if wrong.
+* **HOME‑MARKET RULE:** prices, fees, and any monetary value must be expressed in the **currency of the user's home market** (the market of `$lang`, as stated in `lang instructions`), **regardless of which destination the text describes**. The destination's own currency is **not** the correct choice.
+* **What** currency is used → **Accuracy** (Major) when the destination's currency (or any other non‑home‑market currency) is used instead of the home‑market one.
+* Example (IT market reading about a US destination): *"$45 al giorno"* → **Accuracy · Major** → *"45 € al giorno"*.
 * **How** currency is formatted/spaced/symbol order → **Compliance** (Minor/Major per locale rules).
 
-4. **Units & conversions**
+4. **Units & conversions: the user's measurement system, speed limits excepted**
 
-* Missing mandated metric/imperial conversion or wrong primary unit for the locale → **Compliance** (Major if it impacts comprehension).
+* **HOME‑MARKET RULE:** distances, temperatures, volumes, and weights must use the **measurement system of the user's home market** (the market of `$lang`), **regardless of the destination**. Using the destination's system, or the wrong primary unit for the market, → **Compliance** (Major if it impacts comprehension).
+* Example (IT market reading about a US destination): *"120 miglia dall'aeroporto"* → **Compliance · Major** → *"circa 190 km dall'aeroporto"*.
+* **EXCEPTION — speed limits** (and other posted/legal road signage the traveller will actually see at the destination): show the **destination's unit first**, followed by the **user's home‑market unit in parentheses**. Example (IT market, US destination): *"100 mph (circa 160 km/h)"*. A speed limit given only in one unit, or with the two units in the wrong order, → **Compliance** (Major).
 * Arithmetic or numeric impossibility (e.g., inconsistent totals) → **Accuracy**.
 
 5. **Headings & typography**
@@ -121,11 +125,11 @@ You will categorize every issue using one of the following exact labels. These a
 3. **Accuracy:**
 
    * **DEFINITION:** Semantic fidelity or numeric correctness **within the provided text**.
-   * **USE FOR:** Mistranslation that changes meaning; internal contradictions; wrong numbers or impossible arithmetic; **wrong currency for location** (e.g., £ for California).
+   * **USE FOR:** Mistranslation that changes meaning; internal contradictions; wrong numbers or impossible arithmetic; **currency that is not the user's home‑market currency** (e.g., US dollars in content written for the Italian market).
    * **DO NOT USE FOR:** External fact‑checking (laws/speed limits/prices not contradicted by the text).
    * **Examples:**
 
-     * *"£18 per day in California"* → **Accuracy · Major** → *"\$18 per day"*.
+     * *"\$18 al giorno in California"* (IT market) → **Accuracy · Major** → *"18 € al giorno in California"*.
      * *"Total 100" after listing 30+40+50* → **Accuracy · Major**.
 
 4. **Compliance:**
@@ -134,13 +138,14 @@ You will categorize every issue using one of the following exact labels. These a
    * **USE FOR:**
 
      * **Brand/proper‑noun** spelling/casing/spacing (e.g., *star car → starcar*, *yalla → Yalla*, *Rental plus → Rental Plus*).
-     * **Unit presentation rules:** metric‑first locales require **km/h** primary; add conversions when imperial appears.
-     * **Currency formatting rules:** symbol placement/spacing/ISO style as specified by `lang instructions`.
+     * **Unit presentation rules:** the user's home‑market measurement system is primary for distances/temperatures/volumes/weights; **speed limits** are the exception and take *destination unit (home‑market unit)*.
+     * **Currency formatting rules:** symbol placement/spacing/ISO style as specified by `lang instructions` (the *choice* of the home‑market currency itself is **Accuracy**).
      * **Register** (form of address) inconsistencies against `lang instructions`.
      * **Terminology usage when explicitly mandatory** (and case-insensitive by default). Do **not** penalize non-mandatory or generic category nouns for casing.
    * **Examples:**
 
-     * *"70 mph" only in FR/DE/ES/PT‑BR* → **Compliance · Major** (add *113 km/h (70 mph)*).
+     * *"70 mph"* as a US speed limit in FR/DE/ES/IT/PT‑BR content → **Compliance · Major** → *"70 mph (circa 113 km/h)"* (destination unit first, home‑market unit in parentheses).
+     * *"50 miglia di costa"* (a plain distance, not a speed limit) in IT content → **Compliance · Major** → *"80 km di costa"* (home‑market unit only).
      * *"auto Premium" (category adjective)* → **Compliance · Minor** → *"auto premium"* (IT) unless brand.
      * **Do not** flag ES *alquiler de coches* sentence-case headings unless `lang instructions` mandates Title Case.
 
@@ -168,7 +173,7 @@ You will assign a severity and score deduction to every issue by following this 
 
 **Major (3)** – Errors that change meaning or materially impair comprehension.
 
-* Examples: mistranslation altering instructions; run‑on that creates ambiguity; **wrong currency for a locale**; missing mandated unit conversion in a metric locale when only imperial is given.
+* Examples: mistranslation altering instructions; run‑on that creates ambiguity; **a currency that is not the user's home‑market currency**; a measurement given in the destination's system instead of the user's; a speed limit missing the home‑market conversion in parentheses.
 
 **Minor (1)** – Objective errors that do not block understanding but break rules/conventions.
 
@@ -219,9 +224,10 @@ You will return a **single, valid JSON object** and nothing else. Do not add any
 
 ## COMMON MISCLASSIFICATIONS TO AVOID (CHECK BEFORE SUBMIT)
 
-* **Speed limits / legal rules “corrections”** → **Do NOT flag** unless there is an internal contradiction. Missing metric conversion → **Compliance**, not **Accuracy**.
+* **Speed limits / legal rules “corrections”** → **Do NOT** dispute the figure itself unless there is an internal contradiction. Missing home‑market conversion in parentheses → **Compliance**, not **Accuracy**. Never swap the order: destination unit stays first.
 * **Brand/proper‑noun casing** → always **Compliance**, not **Punctuation**.
-* **Currency** → symbol **choice for location** = **Accuracy**; **formatting/placement** = **Compliance**.
+* **Currency** → using the **destination's** currency instead of the **user's home‑market** currency = **Accuracy**; **formatting/placement** = **Compliance**. Never "correct" a home‑market currency into the destination's currency.
+* **Distances/temperatures** → home‑market system only; do **not** add the destination's unit in parentheses (that is the speed‑limit exception, not the general rule).
 * **Headings punctuation** (e.g., stray period) → **Punctuation/Spelling/Typos**.
 * **Generic vertical/category nouns** (e.g., ES *alquiler de coches*) → keep locale-appropriate sentence case unless the locale pack mandates Title Case.
 * **“Awkward/natural” only** → **Omit** unless readability is objectively impaired (then **Style**).

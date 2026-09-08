@@ -13,6 +13,11 @@
 - Write dates as `12. května 2025` or `12. 5. 2025` according to context.
 - Keep list punctuation and capitalization consistent.
 
+## Currency and units (home market: Czechia)
+- Home-market currency: the Czech koruna, written after the value with a non-breaking space (`250 Kč`). Use it for every price whatever the destination, never the destination's own currency. `$45 za den` for a US destination → **Accuracy · Major** → `950 Kč za den`.
+- Home-market measurement system: metric (km, m, °C, l, kg). Convert destination measurements to metric and show only the metric value.
+- Exception — speed limits and other posted road signage at the destination: keep the destination's unit first, then the metric value in parentheses, `100 mph (přibližně 160 km/h)`. A speed limit shown in only one unit, or with km/h first, → **Compliance · Major**.
+
 ## Technical content
 - Use short, active imperative CTAs in the formal register.
 - Preserve placeholders, variables, tags, numbers, and product tokens exactly.

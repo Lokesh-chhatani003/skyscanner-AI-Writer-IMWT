@@ -39,8 +39,13 @@
 - **Katakana**: Avoid overuse. Prioritize Hiragana or Kanji where natural. Research appropriate terms rather than direct Katakana transliteration.
 - **Numbers/Units**:
     - **Rounding**: Round down decimals < 0.5; round up decimals ≥ 0.5.
-    - **Measurements**: Convert imperial to metric. Do not convert airline miles.
+    - **Measurements**: Convert imperial to metric and show only the metric value. Do not convert airline miles. **Speed limits are the exception** — see below.
     - **Time**: Prefer 24-hour clock.
+
+## Currency & Units (home market: Japan)
+- **Home-market currency**: the **yen** (`¥` before the value, or `円` after it — follow the pattern already used in the text). Use the yen for **every** price, **whatever the destination** — never the destination's currency. `$45/日` for a US destination → **Accuracy · Major** → `6,800円/日`.
+- **Home-market measurement system**: **metric** (km, m, °C, リットル, kg), per the Measurements rule above.
+- **Exception — speed limits** (and other posted road signage at the destination): keep the **destination's unit first**, then the metric value in parentheses: `時速100マイル（約160km/h）`. This exception **overrides** the metric-only Measurements rule above. A speed limit shown in only one unit, or with the metric value first → **Compliance · Major**.
 - **Airport Names**: Keep as official source. Do not add "Airport" if it creates duplication (e.g., "Fly from [Name] Airport").
 
 ---

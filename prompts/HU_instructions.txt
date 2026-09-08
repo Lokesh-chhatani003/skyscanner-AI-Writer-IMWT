@@ -13,6 +13,11 @@
 - Write dates in Hungarian order, for example `2025. március 25.`.
 - After a colon, use lowercase unless a complete sentence, quotation, or proper name follows.
 
+## Currency and units (home market: Hungary)
+- Home-market currency: the forint, written after the value with a non-breaking space (`16 000 Ft`). Use it for every price whatever the destination, never the destination's own currency. `$45 naponta` for a US destination → **Accuracy · Major** → `16 000 Ft naponta`.
+- Home-market measurement system: metric (km, m, °C, liter, kg). Convert destination measurements to metric and show only the metric value.
+- Exception — speed limits and other posted road signage at the destination: keep the destination's unit first, then the metric value in parentheses, `100 mph (kb. 160 km/h)`. A speed limit shown in only one unit, or with km/h first, → **Compliance · Major**.
+
 ## Technical content
 - Use short active CTAs appropriate to the informal register.
 - Preserve placeholders, variables, tags, numbers, and product tokens exactly.

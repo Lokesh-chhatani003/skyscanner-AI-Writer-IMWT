@@ -36,6 +36,12 @@
 - **Feature Names**: Focus on clarity/meaning. Avoid literal translations if awkward. Check local competitor usage.
 - **Abbreviations**: Use only if widely known (e.g., airport codes). Write full term + (abbr) on first mention.
 
+## Currency & Units (home market: South Korea)
+
+- **Home-market currency**: the **won** (`₩` before the value, or `원` after it — follow the pattern already used in the text). Use the won for **every** price, **whatever the destination** — never the destination's currency. `$45/일` for a US destination → **Accuracy · Major** → `60,000원/일`.
+- **Home-market measurement system**: **metric** (km, m, °C, 리터, kg). Convert destination measurements to metric and show **only** the metric value.
+- **Exception — speed limits** (and other posted road signage at the destination): keep the **destination's unit first**, then the metric value in parentheses: `시속 100마일(약 160km/h)`. A speed limit shown in only one unit, or with the metric value first → **Compliance · Major**.
+
 ## Legal, Brand & Specific Constraints
 
 - **Skyscanner Brand**: Never translate the brand name.

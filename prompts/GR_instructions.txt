@@ -17,6 +17,11 @@
 - Apply standard final-n rules; `δεν` always keeps final `ν`.
 - Distinguish interrogative `πού`/`πώς`, comparative `σαν` from attributive `ως`, and indefinite `μια` from numeric `μία`.
 
+## Currency and units (home market: Greece)
+- Home-market currency: the euro, written after the value with a non-breaking space (`52 €`). Use it for every price whatever the destination, never the destination's own currency. `$45 την ημέρα` for a US destination → **Accuracy · Major** → `45 € την ημέρα`.
+- Home-market measurement system: metric (χλμ., μ., °C, λίτρα, κιλά). Convert destination measurements to metric and show only the metric value.
+- Exception — speed limits and other posted road signage at the destination: keep the destination's unit first, then the metric value in parentheses, `100 mph (περίπου 160 χλμ./ώρα)`. A speed limit shown in only one unit, or with the metric value first, → **Compliance · Major**.
+
 ## Technical content
 - Preserve placeholders, variables, tags, numbers, and product tokens exactly.
 - Do not duplicate the word for airport when it is already part of the source name.
