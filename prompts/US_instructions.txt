@@ -40,9 +40,11 @@
 - **After a colon**: capitalize only if what follows is a complete sentence, a quotation, or a proper noun.
 - **Glossary/product names**: keep capitalization consistent across UI and running copy. Do not mix `Price Alerts` and `price alerts` without a rule.
 
-### Units & Measurement
-- The US is an **imperial-first** market: miles, °F, feet are the expected primary units.
+### Currency & Units (home market: United States)
+- **Home-market currency**: **US dollar ($)**. Use it for every price, **whatever the destination** — never the destination's currency. `€45 per day` for an Italian destination → **Accuracy · Major** → `$45 per day`.
+- **Home-market measurement system**: **imperial-first** — miles, °F, feet are the expected primary units. Convert destination measurements into imperial and show only the imperial value.
 - Do **not** flag the absence of metric conversions as an error in US content. Only flag units when the text is internally inconsistent or an objectively wrong figure/format.
+- **Exception — speed limits** (and other posted road signage at the destination): keep the **destination's unit first**, then the imperial value in parentheses: `130 km/h (around 80 mph)` for a European destination. A speed limit shown in only one unit, or with mph first → **Compliance · Major**.
 
 ### Addressing Users
 - **Active voice** is mandatory for headlines and CTAs.

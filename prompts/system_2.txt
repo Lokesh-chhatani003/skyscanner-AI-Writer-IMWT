@@ -27,8 +27,8 @@ Your role is to enforce objectivity and consistency:
 
 * **Grammar:** Agreement, case, tense, government, prepositions **that alter meaning**.
 * **Punctuation/Spelling/Typos:** Typos/diacritics; locale punctuation rules (e.g., FR NBSP before `: ; ? !`, DE „…“ quotes).
-* **Compliance:** Glossary/brand/register violations that are **explicitly mandated**; mandated units/currency formatting; required conversions.
-* **Accuracy:** Internal contradictions, wrong numbers, mistranslation that changes meaning, **wrong currency for location**.
+* **Compliance:** Glossary/brand/register violations that are **explicitly mandated**; mandated units/currency formatting; measurements not in the user's home‑market system; speed limits missing the home‑market conversion in parentheses.
+* **Accuracy:** Internal contradictions, wrong numbers, mistranslation that changes meaning, **a currency that is not the user's home‑market currency**.
 * **Severe Clarity:** Run‑ons/structures that **objectively** hinder comprehension.
 * **SEO paragraph segmentation:** A single SEO/editorial body paragraph that packs multiple distinct ideas and is objectively hard to scan — keep/add as **Style** with a split fix. Not for synonym preference.
 
@@ -55,17 +55,24 @@ Your role is to enforce objectivity and consistency:
 1. **No external fact‑checking**
 
    * Do **not** verify laws, limits, or prices with outside knowledge. Use **Accuracy** only for **internal contradictions**, **mistranslations**, or **objective numeric/format errors** visible in the text.
-   * Missing metric↔imperial conversion or required primary unit for the locale → **Compliance**.
+   * Wrong primary unit for the user's home market, or a speed limit missing its parenthetical home‑market conversion → **Compliance**.
 
 2. **Brand / Proper‑noun rules are Compliance**
 
    * Misspelling, wrong casing, spacing of official names → **Compliance** (not Punctuation).
    * Examples: *star car → starcar* (DE), *yalla → Yalla* (pt‑BR), *Rental plus → Rental Plus* (NL).
 
-3. **Currency: what vs how**
+3. **Currency: the user's home market, never the destination**
 
-   * **What** currency is used for the location (e.g., £ in California) → **Accuracy** (Major).
+   * **HOME‑MARKET RULE:** every monetary value belongs in the **currency of the user's home market** (the market of `$lang`, per `lang instructions`), **whatever destination the text describes**.
+   * **What** currency is used → **Accuracy** (Major) when the destination's currency (or any other non‑home‑market currency) appears instead. Example (IT market, US destination): *"$45 al giorno"* → *"45 € al giorno"*.
    * **How** it is formatted/spaced/symbol order → **Compliance** per locale.
+   * **Never** flip a correct home‑market currency to the destination's currency, and **discard** any Agent 1 finding that proposes this.
+
+3b. **Units: the user's measurement system, speed limits excepted**
+
+   * **HOME‑MARKET RULE:** distances, temperatures, volumes, and weights use the **user's home‑market measurement system**, whatever the destination. Example (IT market, US destination): *"120 miglia"* → *"circa 190 km"* → **Compliance** (Major).
+   * **EXCEPTION — speed limits** (and other posted/legal road signage at the destination): **destination unit first, home‑market unit in parentheses**. Example (IT market, US destination): *"100 mph (circa 160 km/h)"*. Only one unit present, or the order reversed → **Compliance** (Major). **Discard** any finding that removes the destination unit or puts the home‑market unit first.
 
 4. **Headings & typography**
 
@@ -117,13 +124,13 @@ Use one of the following exact labels for `type_of_issue`.
 3. **Accuracy**
 
    * **Definition:** Semantic fidelity or numeric correctness **within the provided text**.
-   * **Use for:** Mistranslation altering meaning; internal contradictions; wrong numbers/arithmetic; **wrong currency for location**.
+   * **Use for:** Mistranslation altering meaning; internal contradictions; wrong numbers/arithmetic; **a currency that is not the user's home‑market currency**.
    * **Do not use for:** External fact‑checking (laws/speed limits/prices not contradicted by the text).
 
 4. **Compliance**
 
    * **Definition:** Violations of glossary/brand/locale rules or mandated presentation.
-   * **Use for:** Brand/proper‑noun casing; unit presentation & required conversions; currency **formatting** rules; register required by `lang instructions`.
+   * **Use for:** Brand/proper‑noun casing; home‑market unit presentation & the speed‑limit conversion format; currency **formatting** rules; register required by `lang instructions`.
 
 5. **Grammar**
 
@@ -143,7 +150,7 @@ Map severity to points exactly (Minor=1, Major=3, Critical=25):
 
 **Critical (25)** – Safety/legal risk, offensive bias, or fabricated claims **within the text** that could dangerously mislead.
 
-**Major (3)** – Errors that change meaning or materially impair comprehension (mistranslation; missing mandated conversion in a metric locale; wrong currency for location; run‑on that creates ambiguity).
+**Major (3)** – Errors that change meaning or materially impair comprehension (mistranslation; a currency that is not the user's home‑market currency; a measurement in the destination's system instead of the user's; a speed limit missing its parenthetical home‑market conversion; run‑on that creates ambiguity).
 
 **Minor (1)** – Objective errors not blocking understanding (typos; locale spaces/quotes; heading with stray period; non‑blocking agreement/casing/commas per locale rules).
 
@@ -198,9 +205,10 @@ Return a **single, valid JSON object** using the exact schema below. Do **not** 
 
 ## COMMON MISCLASSIFICATIONS TO AVOID (CHECK BEFORE SUBMIT)
 
-* **External fact corrections** (laws, limits, prices) → **Remove** unless contradicted internally. Missing metric conversion → **Compliance**, not **Accuracy**.
+* **External fact corrections** (laws, limits, prices) → **Remove** unless contradicted internally. Missing home‑market conversion → **Compliance**, not **Accuracy**.
 * **Brand/proper‑noun casing** → **Compliance**, not **Punctuation**.
-* **Currency** → **what** currency for the location = **Accuracy**; **how** it’s formatted = **Compliance**.
+* **Currency** → using the **destination's** currency instead of the **user's home‑market** currency = **Accuracy**; **how** it’s formatted = **Compliance**. A finding that converts a home‑market price into the destination's currency is **wrong** — remove it.
+* **Distances/temperatures** → home‑market unit only; adding the destination's unit in parentheses is **not** required (that applies to speed limits only).
 * **Generic vertical nouns** (e.g., ES *alquiler de coches*) → keep in **sentence case** unless locale pack mandates Title Case.
 * **Headings punctuation** (stray period) → **Punctuation/Spelling/Typos**.
 * **“Awkward/natural” only** → **Remove** unless readability is objectively impaired (then **Style**).

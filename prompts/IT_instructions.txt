@@ -72,6 +72,11 @@
 - **Format**: DD/MM/YYYY.
 - **Time**: 24-hour format (e.g., 14:30).
 
+### Currency & Units (home market: Italy)
+- **Home-market currency**: **euro (€)**, written after the value with a non-breaking space (`45 €`). Use the euro for **every** price, **whatever the destination** — never the destination's currency. `$45 al giorno` for a US destination → **Accuracy · Major** → `45 € al giorno`.
+- **Home-market measurement system**: **metric** (km, m, °C, litri, kg). Convert destination measurements into metric and show **only** the metric value. `120 miglia dall'aeroporto` → **Compliance · Major** → `circa 190 km dall'aeroporto`.
+- **Exception — speed limits** (and other posted road signage at the destination): keep the **destination's unit first**, then the metric value in parentheses: `100 mph (circa 160 km/h)`. A speed limit shown only in mph, only in km/h, or with km/h first → **Compliance · Major**.
+
 ### Abbreviations
 - Spell out full form on first appearance, followed by abbreviation in parentheses.
 - Keep periods in standard abbreviations (*ecc.*, *pag.*, *cap.*).

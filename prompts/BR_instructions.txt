@@ -31,6 +31,11 @@
 - **Active Voice**: Mandatory for all headlines and CTAs.
 - **Inclusivity**: Use gender-neutral language. Avoid stereotypes or assumptions about age, family status, or ability.
 
+### Currency & Units (home market: Brazil)
+- **Currency — on hold, do not change**: the currency convention for pt-BR is under review. **Do not flag, convert, or rewrite the currency symbol** used in the source, and do **not** apply the global home-market currency rule to pt-BR content. Only the **formatting** rule above applies (non-breaking space, e.g. `US$ 100`).
+- **Home-market measurement system**: **metric** (km, m, °C, litros, kg). Convert destination measurements to metric and show **only** the metric value. `18 milhas do centro` → **Compliance · Major** → `cerca de 29 km do centro`.
+- **Exception — speed limits** (and other posted road signage at the destination): keep the **destination's unit first**, then the metric value in parentheses: `100 mph (cerca de 160 km/h)`. A speed limit shown in only one unit, or with km/h first → **Compliance · Major**.
+
 ## Technical Requirements
 
 ### URLs

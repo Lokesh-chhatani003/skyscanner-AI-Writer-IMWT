@@ -12,6 +12,12 @@
 - Use `DD/MM/YYYY` for numeric dates. In written dates, use the established Arabic month name.
 - Use 12-hour times with `صباحًا` or `مساءً` when context requires disambiguation.
 
+## Currency and units (home market: Saudi Arabia)
+- Home-market currency: the Saudi riyal (`ر.س` / `SAR`). Use it for every price whatever the destination, never the destination's own currency. A US-dollar price in ar-SA content → **Accuracy · Major**, converted to riyals.
+- Home-market measurement system: metric (كم، م، °C، لتر، كجم). Convert destination measurements to metric and show only the metric value.
+- Exception — speed limits and other posted road signage at the destination: keep the destination's unit first, then the metric value in parentheses, `100 mph (نحو 160 كم/س)`. A speed limit shown in only one unit, or with the metric value first, → **Compliance · Major**.
+- Keep the Latin-script destination unit unaltered inside the right-to-left sentence; only the parenthetical conversion is written in Arabic.
+
 ## Technical content
 - Preserve placeholders, variables, tags, numbers, and product tokens exactly; they may move only when Arabic grammar requires it.
 - Keep URLs in lowercase basic Latin characters, with hyphens and no spaces or special characters.

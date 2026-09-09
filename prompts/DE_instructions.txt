@@ -31,6 +31,11 @@
   - Use decimal commas; use dots for thousands.
   - Follow **DIN 5008** for dates/time.
 
+## Currency & Units (home market: Germany)
+- **Home-market currency**: the **euro**, written after the value with a non-breaking space (*45 €*). Use the euro for **every** price, **whatever the destination** — never the destination's currency. *$45 pro Tag* for a US destination → **Accuracy · Major** → *45 € pro Tag*.
+- **Home-market measurement system**: **metric** (km, m, °C, Liter, kg). Convert destination measurements to metric and show **only** the metric value. *18 Meilen vom Zentrum* → **Compliance · Major** → *rund 29 km vom Zentrum*.
+- **Exception — speed limits** (and other posted road signage at the destination): keep the **destination's unit first**, then the metric value in parentheses: *100 mph (rund 160 km/h)*. A speed limit shown in only one unit, or with km/h first → **Compliance · Major**.
+
 ## Content-Specific Guidelines
 
 ### Marketing, SEO & Ads

@@ -46,6 +46,11 @@ Our voice must be playful, geeky (data-driven but human), and helpful.
     *   Four-figure numbers: No separator (e.g., `1200`).
 *   **Non-breaking spaces**: Mandatory between number and symbol/unit (e.g., `20 €`).
 
+### Currency & Units (home market: Spain)
+*   **Home-market currency**: the **euro**, written after the value with a non-breaking space (`45 €`). Use the euro for **every** price, **whatever the destination** — never the destination's currency. `$45 al día` for a US destination → **Accuracy · Major** → `45 € al día`.
+*   **Home-market measurement system**: **metric** (km, m, °C, litros, kg). Convert destination measurements to metric and show **only** the metric value. `18 millas del centro` → **Compliance · Major** → `unos 29 km del centro`.
+*   **Exception — speed limits** (and other posted road signage at the destination): keep the **destination's unit first**, then the metric value in parentheses: `100 mph (unos 160 km/h)`. A speed limit shown in only one unit, or with km/h first → **Compliance · Major**.
+
 ### Punctuation
 *   **Quotes**: Use `«angular quotation marks»` instead of English “ ”.
 *   **Sentence Case**: Use for titles and CTAs. Only capitalize first word and proper nouns.

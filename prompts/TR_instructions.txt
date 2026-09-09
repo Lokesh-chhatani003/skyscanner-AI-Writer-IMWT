@@ -13,6 +13,11 @@
 - Use sentence case and do not end headings with a full stop.
 - Write numeric dates as `DD.MM.YYYY`.
 
+## Currency and units (home market: Türkiye)
+- Home-market currency: the Turkish lira, written after the value with a space (`1.500 ₺`). Use it for every price whatever the destination, never the destination's own currency. A US-dollar price in tr-TR content → **Accuracy · Major**, converted to lira.
+- Home-market measurement system: metric (km, m, °C, litre, kg). Convert destination measurements to metric and show only the metric value.
+- Exception — speed limits and other posted road signage at the destination: keep the destination's unit first, then the metric value in parentheses, `100 mph (yaklaşık 160 km/s)`. A speed limit shown in only one unit, or with the metric value first, → **Compliance · Major**.
+
 ## Technical content
 - Preserve placeholders, variables, tags, numbers, and product tokens exactly.
 - URLs must be lowercase and use hyphens; transliterate Turkish URL characters (`ç→c`, `ğ→g`, `ı→i`, `ö→o`, `ş→s`, `ü→u`).

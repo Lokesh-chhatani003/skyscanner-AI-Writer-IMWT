@@ -12,6 +12,11 @@
 - Apply sentence case only to Latin-script text. Avoid repeated Thai characters used only for emphasis.
 - Keep quotation marks and referenced UI labels consistent with the supplied text.
 
+## Currency and units (home market: Thailand)
+- Home-market currency: the baht (`฿` before the value, or `บาท` after it — follow the pattern already used in the text). Use it for every price whatever the destination, never the destination's own currency. A US-dollar price in th-TH content → **Accuracy · Major**, converted to baht.
+- Home-market measurement system: metric (กม., ม., °C, ลิตร, กก.). Convert destination measurements to metric and show only the metric value.
+- Exception — speed limits and other posted road signage at the destination: keep the destination's unit first, then the metric value in parentheses, `100 mph (ประมาณ 160 กม./ชม.)`. A speed limit shown in only one unit, or with the metric value first, → **Compliance · Major**.
+
 ## Technical content
 - Preserve placeholders, variables, tags, numbers, and product tokens exactly. A placeholder may move for Thai grammar, but its characters must not change.
 - Do not insert an unnecessary space between a short Thai particle and its placeholder.

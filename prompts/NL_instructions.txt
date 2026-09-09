@@ -40,6 +40,11 @@ Our tone is **playful, geeky, and helpful**.
     - Colon: First letter after colon is lowercase unless it's a name, full sentence, or quote.
 - **Abbreviations**: Only if widely understood (e.g., airport codes). Define first, then abbreviate.
 
+## Currency & Units (home market: the Netherlands)
+- **Home-market currency**: the **euro**, symbol before the value with a space (`€ 45`). Use the euro for **every** price, **whatever the destination** — never the destination's currency. `$45 per dag` for a US destination → **Accuracy · Major** → `€ 45 per dag`.
+- **Home-market measurement system**: **metric** (km, m, °C, liter, kg). Convert destination measurements to metric and show **only** the metric value. `18 mijl van het centrum` → **Compliance · Major** → `ongeveer 29 km van het centrum`.
+- **Exception — speed limits** (and other posted road signage at the destination): keep the **destination's unit first**, then the metric value in parentheses: `100 mph (ongeveer 160 km/u)`. A speed limit shown in only one unit, or with the metric value first → **Compliance · Major**.
+
 ## Content-Specific Rules
 - **UI**: Short, clear, action-focused. One idea per string. Consistent terminology.
 - **Marketing**: Natural, fluid, inspirational, compliant. Focus on benefits.

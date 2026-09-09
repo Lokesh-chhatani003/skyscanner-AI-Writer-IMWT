@@ -12,6 +12,11 @@
 - Use sentence case; do not end headings with a full stop. Avoid excessive exclamation marks.
 - Keep list capitalization and punctuation consistent.
 
+## Currency and units (home market: Poland)
+- Home-market currency: the złoty, written after the value with a non-breaking space (`180 zł`). Use it for every price whatever the destination, never the destination's own currency. `$45 za dzień` for a US destination → **Accuracy · Major** → `180 zł za dzień`.
+- Home-market measurement system: metric (km, m, °C, l, kg). Convert destination measurements to metric and show only the metric value.
+- Exception — speed limits and other posted road signage at the destination: keep the destination's unit first, then the metric value in parentheses, `100 mph (około 160 km/h)`. A speed limit shown in only one unit, or with km/h first, → **Compliance · Major**.
+
 ## Technical content
 - Preserve placeholders, variables, tags, numbers, and product tokens exactly.
 - Do not duplicate the airport word when it is already part of the source name.
