@@ -1,0 +1,229 @@
+# CZ <- Czech Style Guide - 2025.docx
+# candidates=113
+
+[Our Tone of Voice] Our brand promise is to be a helpful, honest travel ally. Our tone of voice should always support this:
+
+[1.1 Playful] Our tone is playful. We write with a light, natural energy. Playfulness helps us feel human and builds trust – but it must never reduce clarity.
+
+[1.1 Playful] Use these tools when they feel natural and keep meaning clear (and when they work in your language):
+
+[1.1 Playful] More vivid adjectives – e.g. “jiskřivý východ slunce” instead of “pěkný východ slunce”
+
+[1.1 Playful] Use these tools sparingly and only if they localise well:
+
+[1.1 Playful] Always choose clarity over wordplay. If a device is hard to adapt or sounds unnatural in your language, do not use it.
+
+[1.2 Geeky] Keep the tone enthusiastic but controlled. It should feel like a knowledgeable friend, not a lecture.
+
+[1.3 Helpful] Helpful is our foundation. If you must choose between playful, geeky and helpful, be helpful first.
+
+[1.3 Helpful] Focus on what they need to know, not on us.
+
+[1.3 Helpful] Start with the benefit or instruction, then explain how we know.
+
+[1.3 Helpful] Always apologise if something is our fault. If it isn’t, show empathy instead.
+
+[1.3 Helpful] Avoid cold phrases like “We apologise for the inconvenience.
+
+[1.3 Helpful] Use short sentences and simple structures.
+
+[1.3 Helpful] Do not overuse possessive pronouns (e.g. "své", "váš"). While English uses them frequently, in Czech they are often unnecessary or redundant.
+
+[URL requirements] No spaces - If you need to separate words, use a standard hyphen -.
+
+[URL requirements] Only Latin characters. For languages with non-Latin alphabets, keep the URL content in English. The only exception is Greek, which should use transliteration:
+
+[Placeholders, variables and tags] Placeholders, variables and tags are there to make the text dynamic (e.g. inserting a city, date or price) or to format it. They must not be translated, deleted or changed.
+
+[Placeholders, variables and tags] Always keep them exactly as in the source, placed in the correct order, and make sure the sentence is still natural and grammatically correct in your language. Make sure to insert spaces where needed before/after the tags to avoid words being glued together when the placeholders are populated.
+
+[Placeholders, variables and tags] With numbers, this less elegant workaround may sometimes be necessary to avoid grammatical issues.
+
+[Inclusive language] Our language should be inclusive, welcoming and respectful to all travellers. When translating for Skyscanner, avoid stereotypes, unnecessary references to gender, family, age, ability, or background, and choose wording that includes as many people as possible. Always prefer neutral, precise terms over clichés or labels.
+
+[Inclusive language] Use gender-neutral language where possible.
+
+[Inclusive language] Do not assume who people travel with, how they look, or what they can do.
+
+[Inclusive language] Avoid jokes or idioms that rely on stereotypes about nationality, age, gender, religion, or any other group.
+
+[Inclusive language] Focus on travellers’ needs and situations, not on labels.
+
+[Punctuation and spacing] Czech punctuation rules are extremely complex. When in doubt, always check the Czech Academy of Sciences reference website for more information: http://prirucka.ujc.cas.cz/, section Pravopis – interpunkce.
+
+[Commas] In lists, the formatting must be consistent within the list and across the entire article. Choose one of the following approaches and do not mix them:
+
+[Commas] Full sentences
+ Each item starts with a capital letter and ends with a full stop. Preferred for long or complex items.
+
+[Ellipsis] In Czech, use the ellipsis character (…) where possible, as this is the grammatically correct form.
+
+[Ellipsis] Do not overuse ellipsis, as it can make the text feel vague or informal.
+
+[Exclamation marks] In Czech, exclamation marks should be used only to express genuine enthusiasm or in the case of strong marketing messages (e.g. Tahle nabídka vážně stojí za to!). Use them sparingly and only when they add clear value.
+
+[Quotation marks] Unless required otherwise, always use Czech quotation marks: „ “ (Alt + 0132 and Alt + 0147).
+
+[Hyphens (-) and Dashes (–)] There is an important distinction between these two punctuation marks. Hyphens are used at the morphological level (i.e. within word structures, such as e-mail or Rakousko-Uhersko). Dashes (en dashes, Alt + 0150) are used at the sentence level to separate words or clauses.
+
+[Semicolon] In Czech, semicolons are rarely used. In most cases, it is preferable to split the sentence or connect clauses using a standard conjunction.
+
+[Semicolon] Do not insert the HTML code &nbsp;.
+
+[Semicolon] If the technical environment (CAT tool, UI) does not support non-breaking spaces, they do not need to be handled manually.
+
+[Emphasis and intensifiers] In Czech, emphasis is often achieved through linguistic means rather than formatting. In CAT tools and UI environments where italics or bold are not always available, emphasis should primarily be conveyed through:
+
+[Emphasis and intensifiers] Formatting options (bold, italics) should be used only where they are technically supported and allowed. Avoid using ALL CAPS and excessive exclamation marks, as they can feel disruptive or unprofessional.
+
+[References] When you refer to other content (pages, features, sections, or links), use clear and consistent names and, where relevant, the exact label used in the UI. Do not modify or paraphrase UI element names; always place them in czech quotation marks and avoid using any other form of emphasis.
+
+[Titles and CTAs] In Czech, we use sentence case.
+
+[Titles and CTAs] Use a capital letter only for the first word of a title or CTA and for proper nouns.
+
+[Titles and CTAs] All other words should be written in lower case.
+
+[Titles and CTAs] Title case (capitalising every word) is not used in Czech.
+
+[Titles and CTAs] Exceptions may apply only to specific marketing or advertising content, where context requires it.
+
+[Date format] Do not mix different date formats within the same text.
+
+[Glossary terms / product names] Use capital letters only for official, branded names of tools or features. If a term is descriptive rather than a fixed product name, keep it lower-case.
+
+[Glossary terms / product names] Keep capitalisation the same in UI and running copy, and do not switch between different styles (for example, avoid mixing “Upozornění na cenu” and “upozornění na cenu” without a clear rule).
+
+[The use of Anglicisms] Avoid unnecessary Anglicisms if there is a clear, natural equivalent in the target language. Only keep English words when they are widely used and expected by travellers (for example, brand names or common digital terms). Make sure any English term you keep fits the tone and formality of your market and stays consistent across the product.
+
+[Abbreviations and acronyms] Use abbreviations and acronyms only when they are widely understood by travellers in your market (for example: airport codes, well-known transport terms). If there is a risk of confusion, write the full term on first mention and add the abbreviation in brackets. Avoid creating new abbreviations just to save space.
+
+[Formality and T/V policy] How we address users (formal vs informal “you”) must follow the norms and expectations of each language and market. In general, we aim for a friendly, respectful tone that feels like a helpful travel pal, not overly formal or distant.
+
+[Formality and T/V policy] In Czech, users are addressed using the formal form (V-form), but with a friendly, approachable and natural tone. The goal is to sound respectful and helpful without being distant, bureaucratic or overly formal.
+
+[Formality and T/V policy] Use standard Czech, but avoid:
+
+[Formality and T/V policy] overly formal or official phrasing,
+
+[Formality and T/V policy] bookish or archaic language,
+
+[Formality and T/V policy] unnecessarily complex sentence structures.
+
+[Formality and T/V policy] The chosen level of formality must be applied consistently across the entire product (UI, marketing content, emails and help content). Avoid switching between forms unless there is a clear, documented exception (for example, specific legal text that must use a different level of formality).
+
+[Formality and T/V policy] Write personal and possessive pronouns (e.g., "vám", "váš", "vás") with a lowercase "v", unless they appear at the beginning of a sentence.
+
+[3.7.2.	Use of forward slash (/) for gender forms] When both gender forms need to be expressed, use a forward slash (/) rather than brackets.
+
+[3.7.2.	Use of forward slash (/) for gender forms] At the same time, try to avoid gendered forms whenever possible by using neutral phrasing or rewording the sentence, for example by changing the grammatical person or sentence structure.
+
+[3.7.2.	Use of forward slash (/) for gender forms] Use the forward slash only when a natural neutral alternative is not possible and the source structure requires it (especially in UI strings).
+
+[CTAs and active voice] Use the active voice wherever possible, especially in headlines and CTAs (calls to action). The active voice is usually clearer, and it sounds more like a direct conversation with our users.
+
+[CTAs and active voice] CTAs should be short, direct and written in the active voice.
+
+[CTAs and active voice] In the case of CTAs, we always use the imperative form (e.g. Klikněte, Zaregistrujte se, Využijte), as this form performs better and is an important marketing tool.
+
+[CTAs and active voice] For secondary or purely functional buttons, we use the infinitive, but keep it short, neutral and descriptive (e.g. Zobrazit lety, Pokračovat).
+
+[CTAs and active voice] Focus on what the user can do next, using clear verbs and simple structures.
+
+[CTAs and active voice] Avoid long or vague phrases and avoid passive constructions where the user is not the clear subject.
+
+[CTAs and active voice] When adapting to each language, keep CTAs natural and action-oriented, in line with local expectations for apps and websites.
+
+[Transliteration] Follow common local usage and official standards when transliterating place names, stations, and key travel terms. Be consistent within the language: don’t mix different transliteration systems in the same text. Do not invent new spellings or “localise” brand names that are normally kept in Latin script. If there is an established local exonym (well-known local version of a place name), use that; otherwise use the standard transliteration.
+
+[Geo-terms] Use the official or most widely used local names for countries, cities, regions and airports, and keep them consistent across all content. Avoid outdated, politically sensitive or rarely used forms, and don’t over-translate when travellers expect the original name (for example in airport names or well-known landmarks).
+
+[Geo-terms] You may consult authoritative sources such as the Czech Academy of Sciences reference website for standard Czech place names and spelling.
+
+[Airport names] When translating airport names, refer to the official sources to make sure the name is correct.
+
+[Airport names] In Czech, distinguish between translation and retaining the official name. Airport names are generally not translated and should be used in their official form; translation is appropriate only if a well-established and commonly used Czech equivalent exists.
+
+[Airport names] Never add the word “airport” when translating an airport name to avoid duplication; it’s usually used to populate placeholders in a running copy, and the term “airport” is added to the copy when needed.
+
+[Airport names] Leťte z letiště @@airport-name@@
+
+[Emojis and symbols] Use emojis and symbols sparingly and only where they support clarity or add a light, on-brand touch.
+
+[Emojis and symbols] Avoid replacing key words with emojis, and never use emojis in legal, policy or serious problem/incident messages.
+
+[Imagery] In the Czech context, there is generally a high tolerance for an informal and relaxed visual style. Nevertheless, extreme or clearly inappropriate cases should be flagged, especially stereotypical or mocking portrayals of people, gender roles or identity, and politically or religiously sensitive imagery. When in doubt, flag the content for review.
+
+[User Interface (UI)] One idea per string; avoid ambiguity and extra words.
+
+[User Interface (UI)] Use the same wording consistently across product (e.g. always “upozornění na cenu”, not sometimes “cenové upozornění”).
+
+[Marketing] There is more room for creativity for Marketing content – we want the copy to sound natural, fluid and inspirational. Avoid sticking too close to the source text and make sure the translation feels like it has been created in the target language originally.
+
+[Marketing] Use the playful, geeky, helpful Skyscanner voice, but keep promises realistic and compliant
+
+[SEO] Prioritise natural language, not keyword stuffing
+
+[SEO] Write the way travellers actually search and think, while keeping our tone.
+
+[SEO] Use clear, descriptive headings and titles
+
+[SEO] Keep meta titles and descriptions concise and helpful
+
+[Google Ads] Be very concise; use clear benefits and a direct call to action. There are usually strict character limits.
+
+[Google Ads] Avoid clickbait and unprovable claims (“jasná jednička”, “nejlepší”, “nejlevnější ze všech”).
+
+[Google Ads] Avoid exclamation marks and other unnecessary punctuation.
+
+[Google Ads] Use common search language that travellers would type.
+
+[App store] Use simple, natural phrases that work well in screenshots and previews.
+
+[App store] Avoid superlatives and guarantees.
+
+[Editorial and blog posts] Use a warmer, more descriptive tone, but keep it factual and practical.
+
+[Legal, Policies, Terms and Conditions] Be precise and neutral; avoid jokes, idioms and emotional language.
+
+[Legal, Policies, Terms and Conditions] Do not add promises or interpretations that are not in the source text
+
+[Use of Skyscanner brand] The name Skyscanner is a core part of our brand identity and must be treated consistently across all languages. It should remain recognisable, correctly spelled, and used in a way that feels natural to the local audience while still protecting the brand.
+
+[Use of Skyscanner brand] Never translate or adapt the meaning of the name (e.g. never translate “sky” or “scanner”).
+
+[Use of Skyscanner brand] Do not add articles unless they are required in your language and sound natural.
+
+[Use of Skyscanner brand] If in doubt, always use Skyscanner in English and flag questions to Skyscanner.
+
+[Use of Skyscanner brand] In Czech, the name Skyscanner is always used in its original form and is never translated. Light inflection is acceptable in running text where it sounds natural, but the base form Skyscanner is preferred.
+
+[Feature naming] Avoid direct, word-for-word translations if they sound strange, misleading, or carry unintended meanings. Only use the English name if it is already widely known and expected in your market.
+
+[The use of “Best”] Be careful with the use of “best” and superlatives in general. We are unable to claim that we can find travellers the “best prices” and “best deals” as this is an objective claim versus our competition that we would not be able to substantiate.
+
+[The use of “Best”] We can, however, use “Best” when there is a clear disclaimer explaining how "best" is measured.
+
+[The use of “Best”] For example, we can sort our flight results by “Best” results since we have a disclaimer clearly explaining how this is measured:
+
+[The use of “Best”] Generally, when the English copy says “best”, it’s safe to translate it the same way. When this is not the case, do not use “best” or other superlatives. Instead, use subjective claims such as “skvělé ceny” or “báječné nabídky”.
+
+[The use of “Discount”] Skyscanner never offer discounts to users. Any discounts come from partners (for example Trip.com), not by Skyscanner.
+
+[The use of “Discount”] For this and especially for legal reasons we can therefore never imply that “we offer” or “Skyscanner offers” a discount. This must be translated in a neutral way, i.e. “You are offered a discount”.
+
+[The use of “Discount”] Never use the translation or equivalent of “discount” when the English source refers to a “deal” or “price drops” – these are not discounts but results of price fluctuation and it would be legally incorrect to refer to discounts.
+
+[Translating sustainability-related content] When localising content about anything related to sustainability for Skyscanner, it’s essential to communicate responsibly and avoid greenwashing. Travel has an undeniable environmental impact, and our language must reflect this honestly and transparently. Use the following principles when translating or adapting sustainability-related content:
+
+[Translating sustainability-related content] Prefer comparatives over absolutes. Use relative statements such as “X is more sustainable than Y”, rather than implying that any option is fully sustainable.
+
+[Translating sustainability-related content] Avoid superlatives. Do not use expressions like “nejekologičtější let” or “nejzelenější možnost”, as they can overstate environmental benefits.
+
+[Translating sustainability-related content] Use transparent and factual language. Base all claims on clear, measurable data.
+
+[Translating sustainability-related content] Steer clear of vague or unregulated terms. Avoid words like ‘přírodní’, ‘zelený’, ‘netoxický’, and ‘šetrný k planetě’, unless the statement is supported by verifiable, standardised criteria.
+
+[Translating sustainability-related content] Do not make unsubstantiated claims. Only reference environmental performance when data is available. Never imply that a flight or travel option is “udržitelná,” “eko,” “zelená,” “čistá,” “šetrná k planetě,” or “bez výčitek.”
+
+[Translating sustainability-related content] Avoid reinforcing “green” imagery or symbolism. Be cautious with metaphors and word associations that might imply aviation is environmentally harmless. Overuse of green or nature-themed language can unintentionally suggest a level of sustainability that does not exist in commercial aviation today.

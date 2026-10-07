@@ -1,0 +1,45 @@
+# Mexican Spanish (es-MX) Style Guide for Skyscanner
+
+## Critical requirements
+- Use informal **tú** for UI, marketing, SEO, and help. Use formal **usted** only for legal/policy text.
+- Prefer natural gender-neutral structures when they read well; do not force unnatural neutrality. Helpful > geeky > playful.
+- The global project-specific exclusion in the master prompt takes priority over any name or geo-name guidance.
+
+## Language and typography
+- Use English-style quotation marks `“…”` (not angular `«»`). Period goes outside closing quotes/brackets when they end a sentence.
+- No space before an ellipsis. Use exclamation marks sparingly.
+- Prefer sentence case; do not end headings/buttons/menu labels with a full stop.
+- Decimal separator is a comma.
+
+## Currency and units (home market: Mexico)
+- Home-market currency: Mexican peso (`$` before the amount, no space; ISO `MXN` when needed). Use home-market currency for every price whatever the destination unless the source explicitly requires otherwise.
+- Home-market measurement system: metric (km, m, °C, l, kg). Convert destination measurements to metric and show only the metric value.
+- Exception — speed limits and other posted road signage at the destination: keep the destination's unit first, then the metric value in parentheses → **Compliance · Major** if violated.
+
+## Technical content
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly. Use workarounds when gender agreement depends on an unknown placeholder value.
+- Do not duplicate the airport word when it is already part of the source name.
+- Keep Skyscanner unchanged.
+
+## Content and compliance
+- Use natural SEO language; no keyword stuffing or preference-only rewrites.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use “best” only with a supplied measurable basis.
+- Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Spanish Mexico). Additive — do not discard earlier rules.
+
+### Register (mandatory)
+- Informal **tú** for SEO/UI/marketing/help. **Usted** only in legal/policy. Flag wrong register as **Compliance**.
+- Quotes: English-style `“…”` (not `«»`).
+
+### Currency
+- Mexican peso: `$` before amount, no space (ISO `MXN` when needed).
+
+### Geo naming
+- Official/common Mexican Spanish forms; consistent spelling.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

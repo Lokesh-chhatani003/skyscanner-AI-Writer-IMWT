@@ -1,0 +1,242 @@
+# TR <- Turkish Style Guide - 2025.docx
+# candidates=127
+
+[Our Tone of Voice] Our brand promise is to be a helpful, honest travel ally. Our tone of voice should always support this:
+
+[1.1 Playful] Our tone is playful. We write with a light, natural energy. Playfulness helps us feel human and builds trust – but it must never reduce clarity.
+
+[1.1 Playful] Use these tools when they feel natural and keep meaning clear (and when they work in your language):
+
+[1.1 Playful] Use these tools sparingly and only if they localise well:
+
+[1.1 Playful] Always choose clarity over wordplay. If a device is hard to adapt or sounds unnatural in your language, do not use it.
+
+[1.2 Geeky] Keep the tone enthusiastic but controlled. It should feel like a knowledgeable friend, not a lecture.
+
+[1.2 Geeky] Instead of: We have the low-down on maximum baggage weight allowances across most major airlines so you can avoid fees and stress.
+
+[1.3 Helpful] Helpful is our foundation. If you must choose between playful, geeky and helpful, be helpful first.
+
+[1.3 Helpful] Focus on what they need to know, not on us.
+
+[1.3 Helpful] Start with the benefit or instruction, then explain how we know.
+
+[1.3 Helpful] Always apologise if something is our fault. If it isn’t, show empathy instead.
+
+[1.3 Helpful] Avoid cold phrases like “Yaşadığınız sorun için özür dileriz”.
+
+[1.3 Helpful] Use short sentences and simple structures.
+
+[URL requirements] No spaces - If you need to separate words, use a standard hyphen -.
+
+[Placeholders, variables and tags] Placeholders, variables and tags are there to make the text dynamic (e.g. inserting a city, date or price) or to format it. They must not be translated, deleted or changed.
+
+[Placeholders, variables and tags] Always keep them exactly as in the source, placed in the correct order, and make sure the sentence is still natural and grammatically correct in your language. Make sure to insert spaces where needed before/after the tags to avoid words being glued together when the placeholders are populated.
+
+[Placeholders, variables and tags] When you encounter this type of technical constraint, it is recommended to rewrite the sentence (a linguistic workaround) to avoid violating grammar rules.
+
+[Inclusive language] Our language should be inclusive, welcoming and respectful to all travellers. When translating for Skyscanner, avoid stereotypes, unnecessary references to gender, family, age, ability, or background, and choose wording that includes as many people as possible. Always prefer neutral, precise terms over clichés or labels.
+
+[Inclusive language] Use gender-neutral language where possible.
+
+[Inclusive language] Do not assume who people travel with, how they look, or what they can do.
+
+[Inclusive language] Avoid jokes or idioms that rely on stereotypes about nationality, age, gender, religion, or any other group.
+
+[Inclusive language] Focus on travellers’ needs and situations, not on labels.
+
+[Inclusive language] Words and expressions that may carry religious or political connotations should be avoided. Terms that could be offensive toward religious institutions must not be used.
+
+[Inclusive language] Especially in user interface (UI) text, visual-focused verbs such as “bakın” or “görün” should be avoided so as not to exclude users with visual impairments. Instead, use action-oriented, neutral verbs like “gezinin”, “açın”, or “gidin”.
+
+[Commas] Comma usage is often optional in Turkish, but consistency and clarity must be maintained at all times. Avoid excessive use of commas, as this can negatively affect the fluency and readability of the text. For overly long sentences, restructuring the text into two or more shorter, clearer sentences is often preferable to using extensive punctuation.
+
+[Commas] Adverbial Clauses: Avoid using a comma after conditional clauses ending in -se or -sa (if/when), or after verbal adverbs, unless omitting the comma causes ambiguity or significant difficulty in reading.
+
+[Commas] • Repetitive Conjunctions: Do not use commas before or after repetitive conjunctions such as "hem... hem de", "ne... ne", or "ister... ister".
+
+[Commas] • Adverbial Clauses (Zarf-Fiil): Avoid using a comma after phrases containing adverbial suffixes (zarf-fiil) like "-iken" (while), "-dığında/-diğinde" (when), "-dıkça/-dikçe" (as long as/whenever), or conditional clauses ending in "-se" or "-sa" (if/when), unless omitting the comma causes ambiguity or reading difficulties.
+
+[Exclamation marks] • Avoid Overuse: Do not automatically copy the exclamation mark from the source English text. If the mark is unnecessary or does not align with the desired tone, replace it with a period (full stop).
+
+[Exclamation marks] • Interrogation: Avoid combining exclamation and question marks (e.g. "?!" or "!?").
+
+[Ellipsis] Ellipsis points must consist of exactly three dots (…), never two or four. In contexts like software translations, ellipses are typically used at the end of a sentence that describes an ongoing operation, often formed in the present continuous tense. There should generally be no space immediately preceding the ellipsis points.
+
+[Ellipsis] • Example: Güncellemeler indiriliyor… (Downloading updates...)
+
+[Quotation Marks] Straight quotation marks are the mandated style for Turkish localization.
+
+[Quotation Marks] Types: Use double straight quotation marks ( " " ) for standard quotations or when referencing UI elements or titles within running text. Use single straight quotation marks ( ' ' ) only for a quotation enclosed within another quotation.
+
+[Quotation Marks] Suffixes: When adding an inflectional suffix to a quoted element, the suffix should be placed directly after the closing quotation mark, without an intervening space.
+
+[Quotation Marks] ◦ Example: Menüden "Bağlı Hesaplar"ı seçin.
+
+[Quotation Marks] ◦ Example (Quote within a quote): "Lütfen gereksiz dosyaları 'Sil' düğmesine basarak silin." iletisini görüyorum.
+
+[Hyphens] The use of hyphens is generally limited in Turkish and should be avoided in structures where English mandates them, except for specific instances.
+
+[Hyphens] • Compound Words: Do not use hyphens to link parts of compound words in the English style. Compound nouns should typically be rendered as two separate words or as a single merged word.
+
+[Hyphens] ◦ Example: Next-generation devices (English) -> Yeni nesil cihazlar (Correct)
+
+[Hyphens] • Exceptions: Hyphens are retained in widely accepted loanwords such as "e-posta" (email) or "e-ticaret" (e-commerce).
+
+[Hyphens] • Ranges/Minus Sign: The hyphen is used to denote ranges (e.g. numbers, dates) or as a minus sign, and should be written without spaces before or after.
+
+[Hyphens] ◦ Example: sayfa 5-19 arasında
+
+[Dashes] Turkish employs the hyphen and the En dash (–) similarly, primarily for ranges. The Em dash (—) should be avoided in general running text.
+
+[Dashes] • Em Dash (—): This emphasis technique used in English (for parenthetical statements or comments) is not applicable in Turkish and must be replaced. Alternatives include splitting the thought into separate sentences, or using commas, colons, or parentheses.
+
+[Full stops] • Spacing: Use only a single space after a period. Do not duplicate spaces even if the English source uses double spaces.
+
+[Full stops] • Parentheses: If a complete sentence is enclosed within parentheses, the full stop must be placed inside the parentheses.
+
+[Emphasis and intensifiers] Sometimes we use formatting and wording to emphasise key information for it to be easy to spot, or as an intensifier for a part of the message.
+
+[Emphasis and intensifiers] As a rule of thumb, prefer simple formatting (bold or italics) for emphasis and avoid using ALL CAPS or too many exclamation marks, as they can feel like shouting or spammy marketing.
+
+[References] When you refer to other content (pages, features, sections, links), use clear, consistent names and, where relevant, the exact label used in the UI. Indicate the tools used in your language for references (quotation marks, italics…)
+
+[Titles and CTAs] The rules for capitalization and punctuation in titles, headings, and Calls to Action (CTAs) in Turkish localization generally follow Turkish Language Association (TDK) rules while adhering to specific brand style preferences for brevity and tone.
+
+[Titles and CTAs] Titles, headings, and subheadings should not end with a full stop (period). This rule also applies to section titles.
+
+[Titles and CTAs] Items within bulleted lists or phrases (even if not complete sentences) should generally begin with a capital letter. List items that are full sentences should end with a period.
+
+[Titles and CTAs] As a rule of thumb, we avoid title case and prefer sentence case, unless the language’s standard rules say otherwise, except for some Marketing and Ads content.
+
+[Titles and CTAs] Use a capital letter for the first word and for any proper nouns and keep the rest in lower case.
+
+[Months and days] 1. Short Date Format: The format is DD.MM.YYYY, consistently using the period (dot) as the separator. Slashes (/) should be avoided for date separation.
+
+[Months and days] ◦ Example (Avoid): 07/01/2018
+
+[Capital letter after colon] 2. Lowercase Required: Use lowercase if the text following the colon introduces a phrase, a fragment, or a list of items that are not full sentences.
+
+[Glossary terms / product names] Glossary terms and product feature names should follow a consistent capitalisation pattern across the product. Use sentence case for descriptive unless they are treated as branded names in your language.
+
+[Glossary terms / product names] Keep capitalisation the same in UI and running copy, and do not switch between different styles (for example, avoid mixing “Price Alerts” and “price alerts” without a clear rule).
+
+[The use of Anglicisms] Avoid unnecessary Anglicisms if there is a clear, natural equivalent in the target language. Only keep English words when they are widely used and expected by travellers (for example, brand names or common digital terms). Make sure any English term you keep fits the tone and formality of your market and stays consistent across the product.
+
+[Abbreviations and acronyms] Use abbreviations and acronyms only when they are widely understood by travellers in your market (for example: airport codes, well-known transport terms). If there is a risk of confusion, write the full term on first mention and add the abbreviation in brackets. Avoid creating new abbreviations just to save space.
+
+[Addressing our users – Formality and T/V policy] Skyscanner aims for a friendly, respectful tone that feels like a helpful travel companion, rather than being overly formal or distant. However, given the nature of the platform, which involves significant transactional elements, major financial decisions, and the handling of personal data, the informal address (sen or buddy language) is generally inappropriate and may be perceived as disrespectful or unserious in the Turkish market.
+
+[Addressing our users – Formality and T/V policy] Therefore, the Formal You (Siz) should be the standard form of address for all consumer-facing content.
+
+[Addressing our users – Formality and T/V policy] Avoid switching between forms unless there is a clear, documented exception (for example, specific legal text that must use a different level of formality).
+
+[Addressing our users – Formality and T/V policy] 1. Grammatical Form: When using the Siz form, the verb should use the corresponding second-person plural imperative ending, such as -ın or -in (e.g. yapın, kullanın, deneyin).
+
+[Addressing our users – Formality and T/V policy] 2. Avoid Archaic Formality: The overly polite, archaic imperative form ending in -ınız or -iniz (e.g. yapınız, ediniz) must be strictly avoided, as it creates an authoritative, stiff, and bureaucratic tone.
+
+[CTAs and active voice] Use the active voice wherever possible, especially in headlines and CTAs. The active voice is usually clearer, and it sounds more like a direct conversation with our users.
+
+[CTAs and active voice] CTAs should be short, direct and written in the active voice.
+
+[CTAs and active voice] The mandated verbal format for CTAs in Turkish is the Imperative form.
+
+[CTAs and active voice] Focus on what the user can do next, using clear verbs and simple structures.
+
+[CTAs and active voice] Avoid long or vague phrases and avoid passive constructions where the user is not the clear subject.
+
+[CTAs and active voice] When addressing the user in the Skyscanner Turkish localization, the platform requires the Formal Second Person Plural (Siz) form—the "Friendly Siz"—to maintain a respectful, professional tone appropriate for handling transactional or financial decisions.
+
+[CTAs and active voice] Use the formal imperative corresponding to the "Siz" address, typically ending in the suffix -ın or -in (e.g. yapın, planlayın, bulun).
+
+[CTAs and active voice] Explicitly avoid the overly archaic formal imperative (-ınız or -iniz; e.g. yapınız), as this sounds bureaucratic and stiff. Similarly, avoid the singular, informal imperative (sen form; e.g. tıkla, yap), as it contradicts the established respectful tone.
+
+[Transliteration] Follow common local usage and official standards when transliterating place names, stations, and key travel terms. Be consistent within the language: don’t mix different transliteration systems in the same text. Do not invent new spellings or “localise” brand names that are normally kept in Latin script. If there is an established local exonym (well-known local version of a place name), use that; otherwise use the standard transliteration.
+
+[Geo-terms] Use the official or most widely used local names for countries, cities, regions and airports, and keep them consistent across all content. Avoid outdated, politically sensitive or rarely used forms, and don’t over-translate when travellers expect the original name (for example in airport names or well-known landmarks).
+
+[Geo-terms] The country name Turkey should be consistently rendered as Türkiye in all relevant source copy, reflecting the official international change.
+
+[Airport names] When translating airport names, refer to the official sources to make sure the name is correct.
+
+[Airport names] For airport names originating from non-Latin scripts (e.g. Arabic, Chinese, Japanese) that must be rendered in Turkish text, use the most widely accepted and official Turkish transliteration that is familiar to Turkish travelers. For Turkish (a Latin-based language), follow the standard name but ensure proper Turkish spelling (orthography) is applied.
+
+[Airport names] Do not manually add “Havalimanı” when the placeholder already includes it to avoid duplication; it’s usually used to populate placeholders in a running copy, and the term “airport” is added to the copy when needed.
+
+[Airport names] Fly from @@airport-name@@ Airport
+
+[Emojis and symbols] Use emojis and symbols sparingly and only where they support clarity or add a light, on-brand touch.
+
+[Emojis and symbols] Avoid replacing key words with emojis, and never use emojis in legal, policy or serious problem/incident messages.
+
+[Emojis and symbols] Ensure that any symbols or emojis used are universally understood and appropriate in the Turkish market. Symbols that are widely used in English (like &, #, and @) should typically be avoided or replaced with their Turkish equivalents (e.g. replace & with "ve"), as they are not standard in Turkish running text.
+
+[Emojis and symbols] When an emoji or symbol in the source copy is culturally inappropriate, or its meaning is unclear in the Turkish market, linguists must flag it to the PM.
+
+[Imagery] Images should be adapted to avoid culture-clashes and should not contain visuals that may feel "alien or irrelevant" to Turkish travelers. Neglecting this visual adaptation is considered a localization pitfall.
+
+[Imagery] If any imagery or references are deemed culturally inappropriate, confusing, or irrelevant, they must be flagged immediately.
+
+[Imagery] Imagery and references must be examined for potential religious or political connotations that could cause offense or create misunderstandings.
+
+[Imagery] • Religious Sensitivity: Religious references can be sensitive in the Turkish market and should be handled with care. Avoid symbols or references that are offensive to religious institutions. For instance, do not use terms or images related to pilgrimage sites or concepts that carry specific religious weight (e.g. references to Mecca or gospel truth).
+
+[Imagery] • Political/Ethnic Identity: Due to the political environment and diverse ethnic and regional identities in Turkey, caution should be exercised. Imagery or content that refers to sensitive political events or attempts to mock diverse regional identities must be strictly avoided.
+
+[User Interface (UI)] One idea per string; avoid ambiguity and extra words.
+
+[User Interface (UI)] Use the same wording consistently across product (e.g. always “Price Alerts”, not sometimes “Price Watch”).
+
+[Marketing] There is more room for creativity for Marketing content – we want the copy to sound natural, fluid and inspirational. Avoid sticking too close to the source text and make sure the translation feels like it has been created in the target language originally.
+
+[Marketing] Use the playful, geeky, helpful Skyscanner voice, but keep promises realistic and compliant
+
+[SEO] Prioritise natural language, not keyword stuffing
+
+[SEO] Write the way travellers actually search and think, while keeping our tone.
+
+[SEO] Use clear, descriptive headings and titles
+
+[SEO] Keep meta titles and descriptions concise and helpful
+
+[Google Ads] Be very concise; use clear benefits and a direct call to action. There are usually strict character limits.
+
+[Google Ads] Avoid clickbait and unprovable claims (no “#1”, “best”, “cheapest ever”).
+
+[Google Ads] Avoid exclamation marks and other unnecessary punctuation.
+
+[Google Ads] Use common search language that travellers would type.
+
+[App store] Use simple, natural phrases that work well in screenshots and previews.
+
+[App store] Avoid superlatives and guarantees.
+
+[Editorial and blog posts] Use a warmer, more descriptive tone, but keep it factual and practical.
+
+[Legal, Policies, Terms and Conditions] Be precise and neutral; avoid jokes, idioms and emotional language.
+
+[Legal, Policies, Terms and Conditions] Do not add promises or interpretations that are not in the source text
+
+[Use of Skyscanner brand] The name Skyscanner is a core part of our brand identity and must be treated consistently across all languages. It should remain recognisable, correctly spelled, and used in a way that feels natural to the local audience while still protecting the brand.
+
+[Use of Skyscanner brand] Never translate or adapt the meaning of the name (e.g. never translate “sky” or “scanner”).
+
+[Use of Skyscanner brand] Do not add articles unless they are required in your language and sound natural.
+
+[Use of Skyscanner brand] If in doubt, always use Skyscanner in English and flag questions to Skyscanner.
+
+[Feature naming] Avoid direct, word-for-word translations if they sound strange, misleading, or carry unintended meanings. Only use the English name if it is already widely known and expected in your market.
+
+[The use of “Best”] Be careful with the use of “best” and superlatives in general. We are unable to claim that we can find travellers the “best prices” and “best deals” as this is an objective claim versus our competition that we would not be able to substantiate.
+
+[The use of “Best”] We can, however, use “Best” when there is a clear disclaimer explaining how "best" is measured.
+
+[The use of “Best”] For example, we can sort our flight results by “Best” results since we have a disclaimer clearly explaining how this is measured:
+
+[The use of “Best”] Generally, when the English copy says “best”, it’s safe to translate it the same way. When this is not the case, do not use “best” or other superlatives. Instead, use subjective claims such as “epic prices” or “amazing deals”.
+
+[The use of “Discount”] Skyscanner never offer discounts to users. Any discounts come from partners (for example Trip.com), not by Skyscanner.
+
+[The use of “Discount”] For this and especially for legal reasons we can therefore never imply that “we offer” or “Skyscanner offers” a discount. This must be translated in a neutral way, i.e. “You are offered a discount”.
+
+[The use of “Discount”] Never use the translation or equivalent of “discount” when the English source refers to a “deal” or “price drops” – these are not discounts but results of price fluctuation and it would be legally incorrect to refer to discounts.

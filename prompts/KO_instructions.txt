@@ -67,3 +67,20 @@
 - *Standard Dictionary of Korean Language (표준국어대사전)*
 - *Korean Standard Spelling Conventions (한글맞춤법)*
 - *Hangulize* (for transliteration)
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Korean). Additive — do not discard earlier rules.
+
+### Register
+- Friendly respectful honorifics; omit explicit “you” when honorific verbs already imply it.
+- Sparing `!`; avoid `!!` / `!!!`, especially in notices/errors/support tone.
+
+### SEO
+- Natural Korean search language; no keyword stuffing; clear descriptive headings.
+
+### Compliance reminders
+- Neutral discount/deal wording; “best” only with measurable basis; no greenwashing absolutes.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

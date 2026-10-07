@@ -1,0 +1,47 @@
+# Chinese Simplified (zh-CN) Style Guide for Skyscanner
+
+## Critical requirements
+- Write clear, natural Simplified Chinese. Helpful > geeky > playful; avoid stiff literal translation and forced wordplay.
+- Prefer short active sentences and direct CTAs.
+- The global project-specific exclusion in the master prompt takes priority over any name or geo-name guidance.
+
+## Language and typography
+- Use Simplified Chinese characters consistently (never mix Traditional).
+- Use Chinese punctuation appropriately. Prefer commas/colons over long em dashes (`——`) when space is tight.
+- Put a space between Chinese characters and Latin letters/emojis where needed for readability.
+- Do not end headings with a full stop. Follow source formatting tags (including italics tags) even if Chinese has no italic glyph.
+- Avoid multiple exclamation marks.
+
+## Currency and units (home market: Mainland China)
+- Prefer CNY/RMB presentation already established in the source when present. Do not invent currency conversions without evidence in the text.
+- Always convert measure units to metric (e.g. inch → cm/m) unless the unit is inside a variable (e.g. `@@miles@@`). Do not convert airline loyalty “miles”.
+- Exception — posted road signage at the destination: keep destination unit first, metric in parentheses when both are required by project rules.
+
+## Technical content
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly; do not add spaces inside tags.
+- URLs stay lowercase Latin with hyphens.
+- Airport names: prefer official/popular Simplified translations (official site → major OTAs → Google Maps); if none, keep Latin source.
+- Keep Skyscanner unchanged.
+
+## Content and compliance
+- Use natural SEO language; no keyword stuffing or preference-only rewrites.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use “best” only with a supplied measurable basis.
+- Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Chinese Simplified). Additive — do not discard earlier rules.
+
+### Script / readability
+- Simplified only. Prefer short active SEO sentences; natural search language, no keyword stuffing.
+- Metric conversions required for measures (except variables / airline miles).
+
+### Airport / geo
+- Prefer official/popular Simplified names; if none, keep Latin source.
+
+### Compliance reminders
+- Neutral discount/deal wording; “best” only with measurable basis; no greenwashing absolutes.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

@@ -30,3 +30,18 @@
 - Do not claim Skyscanner provides discounts. Use neutral wording about offers or price reductions.
 - Use “best” or other superlatives only when the supplied text includes a clear measurable basis.
 - Avoid greenwashing and absolute claims that a flight is green, clean, eco-friendly, or sustainable.
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Arabic). Additive — do not discard earlier rules.
+
+### Register / punctuation
+- MSA with polite consistent address; Arabic comma `،` and question mark `؟`.
+- Do not mirror English exclamation-mark habits.
+
+### Geo naming
+- Prefer commonly used Arabic forms; if no established Arabic form, keep the source Latin spelling (searchability).
+- Airport: transliterate proper nouns; translate descriptive words (e.g. International → دولي).
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

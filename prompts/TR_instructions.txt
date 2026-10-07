@@ -29,3 +29,22 @@
 - Do not externally fact-check laws, prices, limits, or policies.
 - Do not claim Skyscanner provides discounts. Use “best” only with a supplied measurable basis.
 - Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Turkish). Additive — do not discard earlier rules.
+
+### Register (mandatory)
+- Standard address is friendly formal **Siz** with modern imperatives (`-ın/-in`: yapın, kullanın). Flag informal `sen` and archaic `-ınız/-iniz` as **Compliance**.
+- Country name: **Türkiye** (not Turkey).
+
+### Typography reinforcements
+- Straight quotes `"…"`; ellipsis `…`; no em dash — rephrase with comma/colon/parentheses or a new sentence.
+- Sentence case; no full stop at end of headings. Dates: `DD.MM.YYYY`.
+
+### Geo / cultural
+- Official/common local names; consistent spelling.
+- Avoid sensitive religious/political references not present in source.
+
+### SEO body readability (objective Style only)
+- Prefer splitting objectively overlong multi-idea SEO body paragraphs (**Style**) over comma-heavy run-ons.
+- No synonym-only preference edits.

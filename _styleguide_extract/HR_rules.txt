@@ -1,0 +1,214 @@
+# HR <- Croatian Style Guide - 2025.docx
+# candidates=106
+
+[Our Tone of Voice] Our brand promise is to be a helpful, honest travel ally. Our tone of voice should always support this:
+
+[1.1 Playful] Our tone is playful. We write with a light, natural energy. Playfulness helps us feel human and builds trust – but it must never reduce clarity.
+
+[1.1 Playful] Use these tools when they feel natural and keep meaning clear (and when they work in your language):
+
+[1.1 Playful] Use these tools sparingly and only if they localise well:
+
+[1.1 Playful] Always choose clarity over wordplay. If a device is hard to adapt or sounds unnatural in your language, do not use it.
+
+[1.2 Geeky] Keep the tone enthusiastic but controlled. It should feel like a knowledgeable friend, not a lecture.
+
+[1.2 Geeky] Instead of: We have the low-down on maximum baggage weight allowances across most major airlines so you can avoid fees and stress.
+
+[1.3 Helpful] Helpful is our foundation. If you must choose between playful, geeky and helpful, be helpful first.
+
+[1.3 Helpful] Focus on what they need to know, not on us.
+
+[1.3 Helpful] Start with the benefit or instruction, then explain how we know.
+
+[1.3 Helpful] Always apologise if something is our fault. If it isn’t, show empathy instead.
+
+[1.3 Helpful] Avoid cold phrases like “We apologise for the inconvenience.
+
+[1.3 Helpful] Use short sentences and simple structures.
+
+[URL requirements] No spaces - If you need to separate words, use a standard hyphen -.
+
+[URL requirements] Only Latin characters. For languages with non-Latin alphabets, keep the URL content in English. The only exception is Greek, which should use transliteration:
+
+[Placeholders, variables and tags] Placeholders, variables and tags are there to make the text dynamic (e.g. inserting a city, date or price) or to format it. They must not be translated, deleted or changed.
+
+[Placeholders, variables and tags] Always keep them exactly as in the source, placed in the correct order, and make sure the sentence is still natural and grammatically correct in Croatian. Make sure to insert spaces where needed before/after the tags to avoid words being glued together when the placeholders are populated.
+
+[Numbers in UI] If plural has only one variant (dan(a), hotel(a)...), use the parentheses:
+
+[Inclusive language] Our language should be inclusive, welcoming and respectful to all travellers. When translating for Skyscanner, avoid stereotypes, unnecessary references to gender, family, age, ability, or background, and choose wording that includes as many people as possible. Always prefer neutral, precise terms over clichés or labels.
+
+[Inclusive language] Use gender-neutral language where possible.
+
+[Inclusive language] Do not assume who people travel with, how they look, or what they can do.
+
+[Inclusive language] Avoid jokes or idioms that rely on stereotypes about nationality, age, gender, religion, or any other group.
+
+[Inclusive language] Focus on travellers’ needs and situations, not on labels.
+
+[Commas] Use of comma follows standard Croatian orthography. Use Hrvatski pravopis as the main reference.
+
+[Ellipsis] Use of ellipsis follows Hrvatski pravopis.
+
+[Ellipsis] Note that the shortcut for ellipsis is … Alt+0133. Do not confuse it with three consecutive dots.
+
+[Exclamation marks] Use of exclamation marks follows Hrvatski pravopis. Croatian does not use it as liberally as English, therefore, be mindful not to adapt the source copy as you see fit.
+
+[Quotation marks] Besides the uses described in Hrvatski pravopis, QMs in localization serve some specific purposes:
+
+[Quotation marks] For that purpose use standard Croatian quotation marks inserted by pressing Alt+0132 for the opening quote - „ - and Alt+0148 for the closing quote - ”
+
+[Quotation marks] Source: Explore Everywhere search ranks the thriftiest destinations to take off to from your home airport.
+
+[Quotation marks] Croatian: Opcija pretraživanja „Pretraži sve destinacije” prikazuje najpovoljnija odredišta za letove iz vaše polazišne zračne luke.
+
+[Quotation marks] To highligh a specific term.
+
+[Hyphens] Hyphens are used in compound nouns (web-mjesto) or when we need to inflect an acronym (na USB-u).
+
+[Dashes] 📌 Do not use dashes "-/–" to mark a pause in the sentence. When possible, either rephrase, start a new sentence, or use colons/semi-colons:
+
+[Ampersand &] Croatian does not use ampersand, so translate it as the connector “i”.
+
+[Full stops] Use of full stop follows Hrvatski pravopis.
+
+[Months, days, time] Use the following standard abbreviations for days and months:
+
+[Numbers] We use comma as a decimal separator, and point as a thousand separator for all numbers above 999, i.e. 1.000.000,00. Numbers 1 to 10 in descriptive strings are usually written as alphabetic characters, but it is also acceptable to write them in numeric format in order to help users grasp the information quicker (“7 nights” vs. “seven nights”).
+
+[Currencies] When referring to foreign currencies in general, use the currency symbol separated from the number with a non-breaking space. Croatian currency is EUR, and the symbol is €.
+
+[Units of measure] Always localize the unit of measure. When imperial measurement units are used in the source text (e.g. inches, feet, pounds), please specify the original measurement along with the converted metric measurement units, for example “5 in/13 cm”.
+
+[Units of measure] Use the non-breaking space before the unit designation, %, currency, abbreviations of month/year.
+
+[Emphasis and intensifiers] Sometimes we use formatting and wording to emphasise key information for it to be easy to spot, or as an intensifier for a part of the message.
+
+[Emphasis and intensifiers] As a rule of thumb, in Croatian emphasis is achieved through phrasing or sentence structure. Emphasis by formatting (bold or italics) is not common, nor do we use ALL CAPS or many exclamation marks, as they can feel like shouting or spammy marketing.
+
+[References] When you refer to other content (pages, features, sections, links), use clear, consistent names and, where relevant, the exact label used in the UI.
+
+[References] Use the appropriate modifier for the reference - gumb, odjeljak, etc.
+
+[Titles and CTAs] As a rule of thumb, Croatian avoids title case and prefers sentence case.
+
+[Titles and CTAs] Use a capital letter for the first word and for any proper nouns, and keep the rest in lower case.
+
+[Capital letter after colon] As a rule of thumb, Croatian does not use a capital letter after colon, unless a proper noun follows. (This does not include direct speech, which follows its own rules.)
+
+[Glossary terms / product names] Glossary terms and product feature names should follow a consistent capitalisation pattern across the product. Use sentence case for descriptive unless they are treated as branded names in your language.
+
+[Glossary terms / product names] Keep capitalisation the same in UI and running copy, and do not switch between different styles (for example, avoid mixing “Price Alerts” and “price alerts” without a clear rule).
+
+[The use of Anglicisms] Avoid unnecessary Anglicisms if there is a clear, natural equivalent in the target language. Only keep English words when they are widely used and expected by travellers (for example, brand names or common digital terms). Make sure any English term you keep fits the tone and formality of your market and stays consistent across the product.
+
+[Abbreviations and acronyms] Use abbreviations and acronyms only when they are widely understood by travellers in your market (for example: airport codes, well-known transport terms). If there is a risk of confusion, write the full term on first mention and add the abbreviation in brackets. Avoid creating new abbreviations just to save space.
+
+[Addressing our users – Formality and T/V policy] How we address users (formal vs informal “you”) must follow the norms and expectations of each language and market. In general, we aim for a friendly, respectful tone that feels like a helpful travel pal, not overly formal or distant.
+
+[Addressing our users – Formality and T/V policy] While the English word “you” can be interpreted both as formal and informal depending on the context, that is not the case in Croatian.
+
+[Addressing our users – Formality and T/V policy] Therefore, although we are aiming for a friendly and personal tone:
+
+[Addressing our users – Formality and T/V policy] We are using the 2nd person plural - vi whenever we are addressing, encouraging, instructing, prompting the user to do something.
+
+[Addressing our users – Formality and T/V policy] We are using the 2nd person singular - ti whenever the users are addressing, instructing, or telling the system to do something for them.
+
+[CTAs and active voice] Use the active voice wherever possible, especially in headlines and CTAs. The active voice is usually clearer, and it sounds more like a direct conversation with our users.
+
+[CTAs and active voice] CTAs should be short, direct and written in the active voice.
+
+[CTAs and active voice] For that purpose we use imperative plural.
+
+[CTAs and active voice] Focus on what the user can do next, using clear verbs and simple structures.
+
+[CTAs and active voice] Avoid long or vague phrases and avoid passive constructions where the user is not the clear subject.
+
+[CTAs and active voice] When adapting to each language, keep CTAs natural and action-oriented, in line with local expectations for apps and websites.
+
+[Transliteration] Follow common local usage and official standards when transliterating place names, stations, and key travel terms. Be consistent within the language: don’t mix different transliteration systems in the same text. Do not invent new spellings or “localise” brand names that are normally kept in Latin script. If there is an established local exonym (well-known local version of a place name), use that; otherwise use the standard transliteration.
+
+[Geo-terms] Use the official or most widely used local names for countries, cities, regions and airports, and keep them consistent across all content. Avoid outdated, politically sensitive or rarely used forms, and don’t over-translate when travellers expect the original name (for example in airport names or well-known landmarks).
+
+[Airport names] When translating airport names, refer to the official sources to make sure the name is correct.
+
+[Airport names] Never add the word “airport” when translating an airport name to avoid duplication; it’s usually used to populate placeholders in a running copy, and the term “airport” is added to the copy when needed.
+
+[Airport names] Fly from @@airport-name@@ Airport
+
+[Emojis and symbols] Use emojis and symbols sparingly and only where they are used in the source.
+
+[Emojis and symbols] Avoid replacing key words with emojis, and never use emojis in legal, policy or serious problem/incident messages.
+
+[User Interface (UI)] One idea per string; avoid ambiguity and extra words.
+
+[User Interface (UI)] Use the same wording consistently across product (e.g. always “Price Alerts”, not sometimes “Price Watch”).
+
+[Marketing] There is more room for creativity for Marketing content – we want the copy to sound natural, fluid and inspirational. Avoid sticking too close to the source text and make sure the translation feels like it has been created in the target language originally.
+
+[Marketing] Use the playful, geeky, helpful Skyscanner voice, but keep promises realistic and compliant
+
+[SEO] Prioritise natural language, not keyword stuffing
+
+[SEO] Write the way travellers actually search and think, while keeping our tone.
+
+[SEO] Use clear, descriptive headings and titles
+
+[SEO] Keep meta titles and descriptions concise and helpful
+
+[Google Ads] Be very concise; use clear benefits and a direct call to action. There are usually strict character limits.
+
+[Google Ads] Avoid clickbait and unprovable claims (no “#1”, “best”, “cheapest ever”).
+
+[Google Ads] Avoid exclamation marks and other unnecessary punctuation.
+
+[Google Ads] Use common search language that travellers would type.
+
+[App store] Use simple, natural phrases that work well in screenshots and previews.
+
+[App store] Avoid superlatives and guarantees.
+
+[Editorial and blog posts] Use a warmer, more descriptive tone, but keep it factual and practical.
+
+[Legal, Policies, Terms and Conditions] Be precise and neutral; avoid jokes, idioms and emotional language.
+
+[Legal, Policies, Terms and Conditions] Do not add promises or interpretations that are not in the source text
+
+[Use of Skyscanner brand] The name Skyscanner is a core part of our brand identity and must be treated consistently across all languages. It should remain recognisable, correctly spelled, and used in a way that feels natural to the local audience while still protecting the brand.
+
+[Use of Skyscanner brand] Never translate or adapt the meaning of the name (e.g. never translate “sky” or “scanner”).
+
+[Use of Skyscanner brand] Do not add articles unless they are required in your language and sound natural.
+
+[Use of Skyscanner brand] If in doubt, always use Skyscanner in English and flag questions to Skyscanner.
+
+[Feature naming] Avoid direct, word-for-word translations if they sound strange, misleading, or carry unintended meanings. Only use the English name if it is already widely known and expected in your market.
+
+[The use of “Best”] Be careful with the use of “best” and superlatives in general. We are unable to claim that we can find travellers the “best prices” and “best deals” as this is an objective claim versus our competition that we would not be able to substantiate.
+
+[The use of “Best”] We can, however, use “Best” when there is a clear disclaimer explaining how "best" is measured.
+
+[The use of “Best”] For example, we can sort our flight results by “Best” results since we have a disclaimer clearly explaining how this is measured:
+
+[The use of “Best”] Generally, when the English copy says “best”, it’s safe to translate it the same way. When this is not the case, do not use “best” or other superlatives. Instead, use subjective claims such as “epic prices” or “amazing deals”.
+
+[The use of “Discount”] Skyscanner never offers discounts to users. Any discounts come from partners (for example Trip.com), not by Skyscanner.
+
+[The use of “Discount”] For this and especially for legal reasons we can therefore never imply that “we offer” or “Skyscanner offers” a discount. This must be translated in a neutral way, i.e. “You are offered a discount”.
+
+[The use of “Discount”] Never use the translation or equivalent of “discount” when the English source refers to a “deal” or “price drops” – these are not discounts but results of price fluctuation and it would be legally incorrect to refer to discounts.
+
+[Translating sustainability-related content] When localising content about anything related to sustainability for Skyscanner, it’s essential to communicate responsibly and avoid greenwashing. Travel has an undeniable environmental impact, and our language must reflect this honestly and transparently. Use the following principles when translating or adapting sustainability-related content:
+
+[Translating sustainability-related content] Prefer comparatives over absolutes. Use relative statements such as “X is more sustainable than Y”, rather than implying that any option is fully sustainable.
+
+[Translating sustainability-related content] Avoid superlatives. Do not use expressions like “the most ecological flight” or “the greenest option”, as they can overstate environmental benefits.
+
+[Translating sustainability-related content] Use transparent and factual language. Base all claims on clear, measurable data.
+
+[Translating sustainability-related content] Steer clear of vague or unregulated terms. Avoid words like ‘natural’, ‘green’, ‘non-toxic’, and ‘environmentally friendly’, unless the statement is supported by verifiable, standardised criteria.
+
+[Translating sustainability-related content] Do not make unsubstantiated claims. Only reference environmental performance when data is available. Never imply that a flight or travel option is “sustainable,” “eco,” “green,” “clean,” “planet-friendly,” or “guilt-free.”
+
+[Translating sustainability-related content] Avoid reinforcing “green” imagery or symbolism. Be cautious with metaphors and word associations that might imply aviation is environmentally harmless. Overuse of green or nature-themed language can unintentionally suggest a level of sustainability that does not exist in commercial aviation today.

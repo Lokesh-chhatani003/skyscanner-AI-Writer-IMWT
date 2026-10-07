@@ -1,0 +1,47 @@
+# Croatian (hr-HR) Style Guide for Skyscanner
+
+## Critical requirements
+- Address the user with formal/friendly **vi** (2nd person plural) when Skyscanner addresses, encourages, or instructs the user.
+- Use **ti** (2nd person singular) only when the user is instructing the system.
+- Prefer gender-neutral constructions where natural. Helpful > geeky > playful.
+- The global project-specific exclusion in the master prompt takes priority over any name or geo-name guidance.
+
+## Language and typography
+- Follow Hrvatski pravopis. Use Croatian quotation marks `„…”` and the ellipsis character `…` (not three dots).
+- Do not use dashes (`-`/`–`) to mark a pause; rephrase, start a new sentence, or use a colon/semicolon.
+- Translate ampersand as `i`. Avoid excessive exclamation marks.
+- Use sentence case; do not end headings with a full stop.
+- Decimal separator is a comma; thousands separator is a point (`1.000.000,00`). Use a non-breaking space before units, `%`, and currency.
+
+## Currency and units (home market: Croatia)
+- Home-market currency: euro (`€`), symbol separated from the number with a non-breaking space. Use it for every price whatever the destination, never the destination's own currency.
+- Home-market measurement system: metric (km, m, °C, l, kg). Convert destination measurements to metric and show only the metric value.
+- Exception — speed limits and other posted road signage at the destination: keep the destination's unit first, then the metric value in parentheses. A speed limit shown in only one unit, or with km/h first, → **Compliance · Major**.
+
+## Technical content
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly.
+- Do not duplicate the airport word when it is already part of the source name.
+- Keep Skyscanner unchanged.
+
+## Content and compliance
+- Use natural SEO language; no keyword stuffing or preference-only rewrites.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use “best” only with a supplied measurable basis.
+- Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Croatian). Additive — do not discard earlier rules.
+
+### Register (mandatory)
+- Skyscanner → user: **vi**. User → system: **ti**. Keep consistent.
+- Croatian quotes `„…”`; no pause-dashes; ampersand → `i`.
+
+### Currency
+- Home currency EUR with non-breaking space before `€`.
+
+### Geo naming
+- Official/common local names; consistent spelling; no over-translation of expected originals.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

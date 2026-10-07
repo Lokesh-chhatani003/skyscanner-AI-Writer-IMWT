@@ -1,0 +1,53 @@
+# Arabic (ar-SA / AE market) Style Guide for Skyscanner
+
+## Critical requirements
+- Use clear Modern Standard Arabic: friendly, respectful, concise, and natural. Helpful > geeky > playful; avoid slang, corporate language, forced jokes, and excessive exclamation marks.
+- Keep the register and form of address polite and consistent. Prefer active voice and direct imperative CTAs.
+- The global project-specific exclusion in the master prompt takes priority over any name or transliteration guidance.
+
+## Language and typography
+- Write right-to-left Arabic using Arabic punctuation where appropriate: comma `،` and question mark `؟`.
+- Do not put a space before punctuation; use one space after it. Use straight double quotation marks consistently.
+- Do not overuse exclamation marks; prefer comma, colon, or period when English overuses `!`.
+- Avoid hyphens/dashes to join or break Arabic words the English way.
+- Use Arabized (Latin-derived) month/day names for consistency across regions.
+- Use sentence case for any Latin-script text.
+
+## Currency and units (home market: UAE for AE content)
+- Home-market currency for this AE batch: the UAE dirham (`د.إ` / `AED`). Use it for every price whatever the destination, never the destination's own currency, when a price must be localized.
+- Home-market measurement system: metric (كم، م، °C، لتر، كجم). Convert destination measurements to metric and show only the metric value.
+- Exception — speed limits and other posted road signage at the destination: keep the destination's unit first, then the metric value in parentheses. Keep the Latin-script destination unit unaltered inside the RTL sentence.
+
+## Technical content
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly; they may move only when Arabic grammar requires it.
+- Keep URLs in lowercase basic Latin characters, with hyphens and no spaces or special characters.
+- Do not translate city names unless a commonly known Arabic form exists; otherwise keep the source spelling for searchability.
+- Airport names: transliterate proper nouns; translate descriptive words (e.g. International → دولي).
+- Keep Skyscanner recognizable and unaltered.
+
+## Content and compliance
+- Use natural SEO language; do not keyword-stuff or rewrite correct text for preference.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use neutral wording about offers or price reductions.
+- Use “best” or other superlatives only when the supplied text includes a clear measurable basis.
+- Avoid greenwashing and absolute claims that a flight is green, clean, eco-friendly, or sustainable.
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Arabic). Additive — do not discard earlier rules.
+
+### Register / punctuation
+- MSA with polite consistent address; Arabic comma `،` and question mark `؟`.
+- Do not mirror English exclamation-mark habits.
+
+### Geo naming
+- Prefer commonly used Arabic forms; if no established Arabic form, keep the source Latin spelling (searchability).
+- Airport: transliterate proper nouns; translate descriptive words (e.g. International → دولي).
+
+### Compliance reminders
+- Neutral discount/deal wording; no Skyscanner-offered discounts.
+- “Best” only with a measurable basis/disclaimer in the text.
+- No absolute green/eco/sustainable claims.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

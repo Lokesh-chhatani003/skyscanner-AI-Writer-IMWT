@@ -1,0 +1,242 @@
+# TH <- Thai Style Guide - 2025.docx
+# candidates=120
+
+[Our Tone of Voice] Our brand promise is to be a helpful, honest travel ally. Our tone of voice should always support this:
+
+[1.1 Playful] Our tone is playful. We write with a light, natural energy. Playfulness helps us feel human and builds trust – but it must never reduce clarity.
+
+[1.1 Playful] Use these tools when they feel natural and keep meaning clear (and when they work in your language):
+
+[1.1 Playful] Use these tools sparingly and only if they localise well:
+
+[1.1 Playful] Always choose clarity over wordplay. If a device is hard to adapt or sounds unnatural in your language, do not use it.
+
+[1.2 Geeky] Keep the tone enthusiastic but controlled. It should feel like a knowledgeable friend, not a lecture.
+
+[1.2 Geeky] Instead of: We have the low-down on maximum baggage weight allowances across most major airlines so you can avoid fees and stress.
+
+[1.3 Helpful] Helpful is our foundation. If you must choose between playful, geeky and helpful, be helpful first.
+
+[1.3 Helpful] Focus on what they need to know, not on us.
+
+[1.3 Helpful] Start with the benefit or instruction, then explain how we know.
+
+[1.3 Helpful] Always apologise if something is our fault. If it isn’t, show empathy instead.
+
+[1.3 Helpful] Avoid cold phrases like “We apologise for the inconvenience.
+
+[1.3 Helpful] Use short sentences and simple structures.
+
+[URL requirements] No spaces - If you need to separate words, use a standard hyphen -.
+
+[URL requirements] Only Latin characters. For languages with non-Latin alphabets, keep the URL content in English. The only exception is Greek, which should use transliteration:
+
+[Placeholders, variables and tags] Placeholders, variables and tags are there to make the text dynamic (e.g. inserting a city, date or price) or to format it. They must not be translated, deleted or changed.
+
+[Placeholders, variables and tags] Always keep them exactly as in the source, placed in the correct order, and make sure the sentence is still natural and grammatically correct in your language. Make sure to insert spaces where needed before/after the tags to avoid words being glued together when the placeholders are populated.
+
+[Placeholders, variables and tags] In Thai, spaces are typically used to mark clauses or complete ideas, not necessarily between every word. When a placeholder is preceded by a short connecting particle or preposition (such as "ไป"  meaning "to"), omitting the space before the placeholder often results in a more natural reading flow.  However, if the name of the city or place cannot be translated into Thai and must remain in its original English form, the space before the placeholder should not be omitted.
+
+[Placeholders, variables and tags] Thai word order differs from English, particularly in the placement of adjectives, modifiers, and possessive elements. Always review the placement of Placeholders and variables within the Thai sentence structure. If a Placeholder acts as a modifier (describing the product, price, or origin), it must often be moved to a position after the main noun it is modifying.
+
+[Placeholders, variables and tags] Always anticipate the final resulting text. If the Placeholder is a number or a date, pause and consider: Does this need a clarifying word (like "price" or "date") in Thai to sound natural? If yes, insert the appropriate Thai word.
+
+[Inclusive language] Our language should be inclusive, welcoming and respectful to all travellers. When translating for Skyscanner, avoid stereotypes, unnecessary references to gender, family, age, ability, or background, and choose wording that includes as many people as possible. Always prefer neutral, precise terms over clichés or labels.
+
+[Inclusive language] Use gender-neutral language where possible.
+
+[Inclusive language] Do not assume who people travel with, how they look, or what they can do.
+
+[Inclusive language] Avoid jokes or idioms that rely on stereotypes about nationality, age, gender, religion, or any other group.
+
+[Inclusive language] Focus on travellers’ needs and situations, not on labels.
+
+[Ellipsis (...)] The ellipsis (...) is primarily used to denote omitted text in a list or indicate an ongoing process/thought continuity (such as loading or anticipation).
+
+[Ellipsis (...)] The exclamation mark can be used to attract attention and reinforce strong calls-to-action (CTAs).
+
+[Ellipsis (...)] Its usage must be carefully controlled to ensure its visual impact is not diluted by overuse, reserving it primarily for conveying urgency, excitement, or critical alerts (e.g., flash sales, limited seats, or safety warnings).
+
+[Ellipsis (...)] Implement the question mark to ensure users instantly recognize a request for information or action, preventing the text from being misinterpreted as a flat statement.
+
+[Hyphens] The Hyphen is the shortest dash and is most commonly used in Thai for the following purposes:
+
+[Hyphens] Transliteration/Compound Words: Historically used to link parts of long or foreign loanwords (e.g., เว็บ-ไซต์ / Web-site). However, this usage is now rarely seen in modern UI/UX and casual writing, as native Thai speakers often prefer to write compound words without any delimiter.
+
+[Hyphens] In addition, the hyphens are also used to denote ranges, such as numbers, dates, and locations
+
+[Dashes] A dash in English is used to emphasise what follows or to provide additional information. Please do not use it in Thai:
+
+[Full stops] Do not use the Full Stop at the end of a complete sentence, paragraph, title, heading, or bullet point (unless it is a numbered list where the numbers themselves are followed by a full stop).
+
+[Full stops] Use the Full Stop to indicate an abbreviation, usually placed immediately after the shortened word without a space. For example, เวลา 9.00 น.
+
+[Full stops] Use the Full Stop as a decimal point to separate the whole number from the fractional part. For example, ราคา 99.50 บาท
+
+[Emphasis and intensifiers] Sometimes we use formatting and wording to emphasise key information for it to be easy to spot, or as an intensifier for a part of the message.
+
+[Emphasis and intensifiers] As a rule of thumb, prefer simple formatting (bold or italics) for emphasis and avoid using ALL CAPS or too many exclamation marks, as they can feel like shouting or spammy marketing.
+
+[Emphasis and intensifiers] Since Thai lacks uppercase letters, use the following strategies to highlight key information or create urgency.
+
+[Emphasis and intensifiers] 1. Use Strategic Spacing & Boldness Instead of ALL CAPS, use bold text or white space to separate the key benefit from the rest of the sentence. This draws the eye naturally without cluttering the UI.
+
+[Emphasis and intensifiers] 3. Avoid Character Repetition Repeating vowels or symbols (e.g., มากกกก) to show excitement looks unprofessional. Use standard grammar to maintain trust.
+
+[References] When you refer to other content (pages, features, sections, links), use clear, consistent names and, where relevant, the exact label used in the UI. Indicate the tools used in your language for references (quotation marks, italics…)
+
+[Titles and CTAs] As a rule of thumb, we avoid title case and prefer sentence case, unless the language’s standard rules say otherwise, except for some Marketing and Ads content.
+
+[Titles and CTAs] Use a capital letter for the first word and for any proper nouns and keep the rest in lower case.
+
+[Titles and CTAs] This capitalisation applies only to words written with the Latin alphabet. Please use title case — using capital letters for the principal words, e.g.
+
+[Months and days] Preference: Use the full name of the day (e.g., วันจันทร์, วันอังคาร) for better readability, unless constrained by space (e.g., in a small calendar view).
+
+[Months and days] Use the standardized abbreviation system for months (as set by the Royal Institute).
+
+[Months and days] Format: The abbreviation must include a full stop (.) after each part (e.g., ม.ค. for January, ธ.ค. for December).
+
+[Months and days] Year: Use the Common Era (C.E. or A.D.) year (e.g., 2025) to maintain consistency with the source data and international travel standards.
+
+[Capital letter after colon] Thai does not use capitalization (uppercase/lowercase) in its alphabet system. Therefore, the rule for capitalizing the first letter after a colon is not applicable.
+
+[Glossary terms / product names] Glossary terms and product feature names should follow a consistent capitalisation pattern across the product. Use sentence case for descriptive unless they are treated as branded names in your language.
+
+[Glossary terms / product names] Keep capitalization the same in UI and running copy, and do not switch between different styles (for example, avoid mixing “Price Alerts” and “price alerts” without a clear rule).
+
+[Glossary terms / product names] Since Thai has no capitalization, it is difficult for a user to distinguish between a specific product/feature name and a general verb or noun. To ensure clarity, use these two methods:
+
+[The use of Anglicisms] Avoid unnecessary Anglicisms if there is a clear, natural equivalent in the target language. Only keep English words when they are widely used and expected by travellers (for example, brand names or common digital terms). Make sure any English term you keep fits the tone and formality of your market and stays consistent across the product.
+
+[The use of Anglicisms] For Thai, avoid unnecessary English words if a clear and natural Thai equivalent exists. Only keep English terms that are widely accepted in the travel industry (e.g., brand names or common digital terms) to ensure the tone remains professional and trustworthy.
+
+[The use of Anglicisms] Use natural Thai equivalents for common words like "deal" (ดีล), "trip" (ทริป), or "offer" (ข้อเสนอ).
+
+[The use of Anglicisms] Ensure the tone is consistent—if you use a Thai term in one section, don't switch to English in another.
+
+[The use of Anglicisms] Use English just to sound "trendy" if it reduces clarity for the user.
+
+[Abbreviations and acronyms] Use abbreviations and acronyms only when they are widely understood by travellers in your market (for example: airport codes, well-known transport terms). If there is a risk of confusion, write the full term on first mention and add the abbreviation in brackets. Avoid creating new abbreviations just to save space.
+
+[Abbreviations and acronyms] In Thai localization, abbreviations should be handled with care to ensure the user understands the instructions clearly. Because Thai is a script without spaces between words, adding unfamiliar acronyms can disrupt the reading flow.
+
+[Addressing our users – Formality and T/V policy] How we address users (formal vs informal “you”) must follow the norms and expectations of each language and market. In general, we aim for a friendly, respectful tone that feels like a helpful travel pal, not overly formal or distant. For T/V languages, define when to use the formal vs informal form and apply it consistently across UI, marketing, emails and help content.
+
+[Addressing our users – Formality and T/V policy] Avoid switching between forms unless there is a clear, documented exception (for example, specific legal text that must use a different level of formality).
+
+[Addressing our users – Formality and T/V policy] In Thai (which does not have the Latin T/V form distinction), the selection of pronouns and the level of formality is crucial as it determines the brand's "tone."
+
+[Addressing our users – Formality and T/V policy] Establish a friendly, respectful tone ("helpful travel pal") consistent across all content types (UI, Marketing, Help).
+
+[CTAs and active voice] Use the active voice wherever possible, especially in headlines and CTAs. The active voice is usually clearer, and it sounds more like a direct conversation with our users.
+
+[CTAs and active voice] CTAs should be short, direct and written in the active voice.
+
+[CTAs and active voice] Don't add punctuation (including exclamation points).
+
+[CTAs and active voice] Focus on what the user can do next, using clear verbs and simple structures.
+
+[CTAs and active voice] Avoid long or vague phrases and avoid passive constructions where the user is not the clear subject.
+
+[CTAs and active voice] When adapting to each language, keep CTAs natural and action-oriented, in line with local expectations for apps and websites.
+
+[Transliteration] Follow common local usage and official standards when transliterating place names, stations, and key travel terms. Be consistent within the language: don’t mix different transliteration systems in the same text. Do not invent new spellings or “localise” brand names that are normally kept in Latin script. If there is an established local exonym (well-known local version of a place name), use that; otherwise use the standard transliteration.
+
+[Geo-terms] Use the official or most widely used local names for countries, cities, regions and airports, and keep them consistent across all content. Avoid outdated, politically sensitive or rarely used forms, and don’t over-translate when travellers expect the original name (for example in airport names or well-known landmarks).
+
+[Geo-terms] Online Transliteration Database: https://transliteration.orst.go.th/
+
+[Airport names] When translating airport names, refer to the official sources to make sure the name is correct.
+
+[Airport names] Never add the word “airport” when translating an airport name to avoid duplication; it’s usually used to populate placeholders in a running copy, and the term “airport” is added to the copy when needed.
+
+[Airport names] Fly from @@airport-name@@ Airport
+
+[2. IATA Official Sources - Airport Name Verification] To confirm the full, correct, and current name of an airport (and its IATA code) before applying Thai transliteration rules.
+
+[2. IATA Official Sources - Airport Name Verification] IATA Airline and Airport Code Search: https://www.iata.org/en/publications/directories/code-search/
+
+[Emojis and symbols] Use emojis and symbols sparingly and only where they support clarity or add a light, on-brand touch.
+
+[Emojis and symbols] Avoid replacing key words with emojis, and never use emojis in legal, policy or serious problem/incident messages.
+
+[Emojis and symbols] If an emoji is not directly related to travel (️, 🗺️, 🏨) or does not clearly communicate a universal status/emotion (😊, , 💡), it's best to avoid it.
+
+[User Interface (UI)] One idea per string; avoid ambiguity and extra words.
+
+[User Interface (UI)] Use the same wording consistently across product (e.g. always “Price Alerts”, not sometimes “Price Watch”).
+
+[Marketing] There is more room for creativity for Marketing content – we want the copy to sound natural, fluid and inspirational. Avoid sticking too close to the source text and make sure the translation feels like it has been created in the target language originally.
+
+[Marketing] Use the playful, geeky, helpful Skyscanner voice, but keep promises realistic and compliant
+
+[SEO] Prioritise natural language, not keyword stuffing
+
+[SEO] Write the way travellers actually search and think, while keeping our tone.
+
+[SEO] Use clear, descriptive headings and titles
+
+[SEO] Keep meta titles and descriptions concise and helpful
+
+[Google Ads] Be very concise; use clear benefits and a direct call to action. There are usually strict character limits.
+
+[Google Ads] Avoid clickbait and unprovable claims (no “#1”, “best”, “cheapest ever”).
+
+[Google Ads] Avoid exclamation marks and other unnecessary punctuation.
+
+[Google Ads] Use common search language that travellers would type.
+
+[App store] Use simple, natural phrases that work well in screenshots and previews.
+
+[App store] Avoid superlatives and guarantees.
+
+[Editorial and blog posts] Use a warmer, more descriptive tone, but keep it factual and practical.
+
+[Legal, Policies, Terms and conditions] Be precise and neutral; avoid jokes, idioms and emotional language.
+
+[Legal, Policies, Terms and conditions] Do not add promises or interpretations that are not in the source text
+
+[Use of Skyscanner brand] The name Skyscanner is a core part of our brand identity and must be treated consistently across all languages. It should remain recognisable, correctly spelled, and used in a way that feels natural to the local audience while still protecting the brand.
+
+[Use of Skyscanner brand] Never translate or adapt the meaning of the name (e.g. never translate “sky” or “scanner”).
+
+[Use of Skyscanner brand] Do not add articles unless they are required in your language and sound natural.
+
+[Use of Skyscanner brand] If in doubt, always use Skyscanner in English and flag questions to Skyscanner.
+
+[Use of Skyscanner brand] Always use the English spelling, "Skyscanner," in all written Thai content.
+
+[Feature naming] Avoid direct, word-for-word translations if they sound strange, misleading, or carry unintended meanings. Only use the English name if it is already widely known and expected in your market.
+
+[The use of “Best”] Be careful with the use of “best” and superlatives in general. We are unable to claim that we can find travellers the “best prices” and “best deals” as this is an objective claim versus our competition that we would not be able to substantiate.
+
+[The use of “Best”] We can, however, use “Best” when there is a clear disclaimer explaining how "best" is measured.
+
+[The use of “Best”] For example, we can sort our flight results by “Best” results since we have a disclaimer clearly explaining how this is measured:
+
+[The use of “Best”] Generally, when the English copy says “best”, it’s safe to translate it the same way. When this is not the case, do not use “best” or other superlatives. Instead, use subjective claims such as “epic prices” or “amazing deals”.
+
+[The use of “Discount”] Skyscanner never offer discounts to users. Any discounts come from partners (for example Trip.com), not by Skyscanner.
+
+[The use of “Discount”] For this and especially for legal reasons we can therefore never imply that “we offer” or “Skyscanner offers” a discount. This must be translated in a neutral way, i.e. “You are offered a discount”.
+
+[The use of “Discount”] Never use the translation or equivalent of “discount” when the English source refers to a “deal” or “price drops” – these are not discounts but results of price fluctuation and it would be legally incorrect to refer to discounts.
+
+[Translating sustainability-related content] When localising content about anything related to sustainability for Skyscanner, it’s essential to communicate responsibly and avoid greenwashing. Travel has an undeniable environmental impact, and our language must reflect this honestly and transparently. Use the following principles when translating or adapting sustainability-related content:
+
+[Translating sustainability-related content] Prefer comparatives over absolutes. Use relative statements such as “X is more sustainable than Y”, rather than implying that any option is fully sustainable.
+
+[Translating sustainability-related content] Avoid superlatives. Do not use expressions like “the most ecological flight” or “the greenest option”, as they can overstate environmental benefits.
+
+[Translating sustainability-related content] Use transparent and factual language. Base all claims on clear, measurable data.
+
+[Translating sustainability-related content] Steer clear of vague or unregulated terms. Avoid words like ‘natural’, ‘green’, ‘non-toxic’, and ‘environmentally friendly’, unless the statement is supported by verifiable, standardised criteria.
+
+[Translating sustainability-related content] Do not make unsubstantiated claims. Only reference environmental performance when data is available. Never imply that a flight or travel option is “sustainable,” “eco,” “green,” “clean,” “planet-friendly,” or “guilt-free.”
+
+[Translating sustainability-related content] Avoid reinforcing “green” imagery or symbolism. Be cautious with metaphors and word associations that might imply aviation is environmentally harmless. Overuse of green or nature-themed language can unintentionally suggest a level of sustainability that does not exist in commercial aviation today.
+
+[2. Airport Reference] IATA Airline and Airport Code Search (Full Name Verification): https://www.iata.org/en/publications/directories/code-search/
+
+[3. Thai UX/UI Guidance (Supplementary)] Microsoft Terminology: https://msit.powerbi.com/view?r=eyJrIjoiODJmYjU4Y2YtM2M0ZC00YzYxLWE1YTktNzFjYmYxNTAxNjQ0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9

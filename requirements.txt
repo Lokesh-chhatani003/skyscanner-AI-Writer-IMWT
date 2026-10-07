@@ -9,3 +9,6 @@ html5lib
 lxml
 tzdata
 playwright
+janome
+jieba
+pythainlp

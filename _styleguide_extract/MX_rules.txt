@@ -1,0 +1,234 @@
+# MX <- Spanish Mexico Style Guide - 2025.docx
+# candidates=116
+
+[Our Tone of Voice] Our brand promise is to be a helpful, honest travel ally. Our tone of voice should always support this:
+
+[1.1 Playful] Our tone is playful. We write with a light, natural energy. Playfulness helps us feel human and builds trust – but it must never reduce clarity.
+
+[1.1 Playful] Use these tools when they feel natural and keep meaning clear (and when they work in your language):
+
+[1.1 Playful] Use these tools sparingly and only if they localise well:
+
+[1.1 Playful] Always choose clarity over wordplay. If a device is hard to adapt or sounds unnatural in your language, do not use it.
+
+[1.2 Geeky] Keep the tone enthusiastic but controlled. It should feel like a knowledgeable friend, not a lecture.
+
+[1.2 Geeky] Instead of: We have the low-down on maximum baggage weight allowances across most major airlines so you can avoid fees and stress.
+
+[1.3 Helpful] Helpful is our foundation. If you must choose between playful, geeky and helpful, be helpful first.
+
+[1.3 Helpful] Focus on what they need to know, not on us.
+
+[1.3 Helpful] Start with the benefit or instruction, then explain how we know.
+
+[1.3 Helpful] Always apologise if something is our fault. If it isn’t, show empathy instead.
+
+[1.3 Helpful] Avoid cold phrases like “We apologise for the inconvenience.
+
+[1.3 Helpful] Use short sentences and simple structures.
+
+[URL requirements] No spaces - If you need to separate words, use a standard hyphen -.
+
+[Placeholders, variables and tags] Placeholders, variables and tags are there to make the text dynamic (e.g. inserting a city, date or price) or to format it. They must not be translated, deleted or changed.
+
+[Placeholders, variables and tags] Always keep them exactly as in the source, placed in the correct order, and make sure the sentence is still natural and grammatically correct in your language. Make sure to insert spaces where needed before/after the tags to avoid words being glued together when the placeholders are populated.
+
+[Placeholders, variables and tags] If the placeholder is a noun and it needs a feminine/masculine pronoun. Use a workaround.
+
+[Placeholders, variables and tags] Since the car type can be masculine (convertible) or feminine (miniván), we need to avoid articles in the translation.
+
+[Inclusive language] Our language should be inclusive, welcoming and respectful to all travellers. When translating for Skyscanner, avoid stereotypes, unnecessary references to gender, age, ability, or background, and choose wording that includes as many people as possible. Always prefer neutral, precise terms over clichés or labels.
+
+[Inclusive language] Use gender-neutral language where possible.
+
+[Inclusive language] Do not assume who people travel with, how they look, or what they can do.
+
+[Inclusive language] Avoid jokes or idioms that rely on stereotypes about nationality, age, gender, religion, or any other group.
+
+[Inclusive language] Focus on travellers’ needs and situations, not on labels.
+
+[Inclusive language] When possible, prefer structures like “Quienes viajan con niños…”, instead of “Los viajeros que vuelan con niños…” However, don’t treat nouns like “viajeros” as a Don’t. Always prefer the most natural structure. Don’t force gender-neutrality on the text. Spanish speakers are used to the masculine neutral and it’s not forbidden to use it. Just aim for gender neutrality when it is natural to do so and it is allowed to do by the RAE.
+
+[Punctuation and spacing] Punctuation should make reading easier and clarify relationships within and between sentences. Just like excess words, unnecessary punctuation makes a sentence harder to understand.
+
+[Commas] Commas can separate elements in an enumeration. If the last element of the enumeration is introduced by a conjunction (y, e, o, ni), do not write a comma before the conjunction unless it is used in complex sentences for clarity, to separate clauses with different subjects, before adversative conjunctions or to indicate a suppressed verb.
+
+[Commas] If the elements of the enumeration are separated with a semicolon: use a comma or a semicolon before the conjunction.
+
+[Ellipsis] Make sure there are no spaces left before an ellipsis, even though the source text includes them.
+
+[Ellipsis] The use of exclamation marks is common in English content, however use prudently when writing in Spanish, as it can sound overexcited to readers. Feel free to remove or add them but be always considerate of your tone.
+
+[Ellipsis] Use English quotation marks (“”) in your translations. Angular quotation marks («») are commonly used in Spain, but not in Mexico.
+
+[Ellipsis] If there is a quotation inside a sentence which is already in quotation marks, please use the single quotation marks (‘’).
+
+[Ellipsis] Note: If there is a quotation mark or a bracket at the end of a sentence, the period should go outside the closing quotation mark or bracket.
+
+[Ellipsis] Important: Please, make sure that you use quotation marks (“”) and not the double prime symbol (″) which is the representation of inches.
+
+[Hyphens] Hyphenated words are quite unusual in Spanish. If hyphenation is needed, pay special attention to writing conventions for compound words in Spanish. For more information, please click here.
+
+[Dashes] Dashes are a common punctuation marker (equivalent to commas, parentheses) but try not to overuse them in Spanish. If you use them, beware of its correct use. You can find more information about this punctuation mark .
+
+[Full stops] Buttons and text in menus do not require full stops. Same applies to:
+
+[Full stops] For lists in which elements are not grammatical phrases, like single-words, do not use a full stop after each element:
+
+[Emphasis and intensifiers] Sometimes we use formatting and wording to emphasise key information for it to be easy to spot, or as an intensifier for a part of the message.
+
+[Emphasis and intensifiers] As a rule of thumb, prefer simple formatting (bold or italics) for emphasis and avoid using ALL CAPS or too many exclamation marks, as they can feel like shouting or spammy marketing.
+
+[Emphasis and intensifiers] Note: If the source uses more than one exclamation mark, ignore and use only one in your translation.
+
+[References] When you refer to other content (pages, features, sections, links), use clear, consistent names and, where relevant, the exact label used in the UI. Indicate the tools used in your language for references (quotation marks, italics…)
+
+[Titles and CTAs] As a rule of thumb, we avoid title case and prefer sentence case, except for some Marketing and Ads content.
+
+[Titles and CTAs] Use a capital letter for the first word and for any proper nouns and keep the rest in lower case.
+
+[Months and days] Do not capitalize months/days, unless starting a sentence.
+
+[Glossary terms / product names] Glossary terms and product feature names should follow a consistent capitalisation pattern across the product. Use sentence case for descriptive unless they are treated as branded names in your language.
+
+[Glossary terms / product names] Keep capitalisation the same in UI and running copy, and do not switch between different styles (for example, avoid mixing “Price Alerts” and “price alerts” without a clear rule).
+
+[The use of Anglicisms] Avoid unnecessary Anglicisms if there is a clear, natural equivalent in the target language. Only keep English words when they are widely used and expected by travellers (for example, brand names or common digital terms). Make sure any English term you keep fits the tone and formality of your market and stays consistent across the product.
+
+[The use of Anglicisms] Important: Please do not use italics for these terms.
+
+[The use of Anglicisms] Other terms that you would like to use in English should be discussed with the Language Lead.
+
+[Abbreviations and acronyms] Use abbreviations and acronyms only when they are widely understood by travellers in your market (for example: airport codes, well-known transport terms). If there is a risk of confusion, write the full term on first mention and add the abbreviation in brackets. Avoid creating new abbreviations just to save space.
+
+[Abbreviations and acronyms] The English source will tend to abbreviate dates very often. Do not abbreviate in Spanish unless there is a character limitation and the Spanish version does not fit. For correct abbreviation, please follow the shorting rules indicated in the DPD.
+
+[Addressing our users – Formality and T/V policy] We are friendly and direct and we use the informal version of “you” in Spanish (“tú”). Make use of your clear, honest voice to give our users the best experience while using the informal “you”.
+
+[Addressing our users – Formality and T/V policy] The only exception are legal texts. Use formal TOV when translating terms, conditions, disclaimers, policies, etc.
+
+[CTAs and active voice] Use the active voice wherever possible, especially in headlines and CTAs. The active voice is usually clearer, and it sounds more like a direct conversation with our users.
+
+[CTAs and active voice] CTAs should be short, direct, and written in the active voice.
+
+[CTAs and active voice] Focus on what the user can do next, using clear verbs and simple structures.
+
+[CTAs and active voice] Avoid long or vague phrases and avoid passive constructions where the user is not the clear subject.
+
+[CTAs and active voice] When adapting to each language, keep CTAs natural and action-oriented, in line with local expectations for apps and websites.
+
+[CTAs and active voice] Call to actions and buttons are normally short pieces of text that require some action from the user.
+
+[CTAs and active voice] The use of the imperative form is preferred as it connects with the user and seeks their proactive action.
+
+[CTAs and active voice] However, if you find one-word buttons (sometimes two), use the infinitive form of the verb in your translation.
+
+[Transliteration] Follow common local usage and official standards when transliterating place names, stations, and key travel terms. Be consistent within the language: don’t mix different transliteration systems in the same text. Do not invent new spellings or “localise” brand names that are normally kept in Latin script. If there is an established local exonym (well-known local version of a place name), use that; otherwise use the standard transliteration.
+
+[Geo-terms] Use the official or most widely used local names for countries, cities, regions and airports, and keep them consistent across all content. Avoid outdated, politically sensitive or rarely used forms, and don’t over-translate when travellers expect the original name (for example in airport names or well-known landmarks).
+
+[Airport names] When translating airport names, refer to the official sources to make sure the name is correct.
+
+[Airport names] Never add the word “airport” when translating an airport name to avoid duplication; it’s usually used to populate placeholders in a running copy, and the term “airport” is added to the copy when needed.
+
+[Airport names] Fly from @@airport-name@@ Airport
+
+[3.5.1 Numbers, dates and time] Always use commas to separate thousands.
+
+[3.5.1 Numbers, dates and time] When writing numbers for “years, pages, verses, street addresses, postal codes, PO boxes, legal article numbers, decrees, or laws,” do not use periods, commas, or spaces.
+
+[3.5.1 Numbers, dates and time] The RAE maintains that there are cases in which numbers can be written with a combination of digits and words, such as the abbreviation of millions, billions, and so on. However, to use this convention, the last three digits of the number must be zeros (4 million or 10 billion).
+
+[3.5.1 Numbers, dates and time] When using a short format, use a slash as a separator (e.g., 7/9/2026). Don't add commas when using the extended date format (e.g., 7 de septiembre de 2026).
+
+[3.5.2. Currencies] Separate decimals with a comma.  Symbols and ISO Codes: The Mexican Peso is generally identified with ISO code MXN, however, the official peso symbol ($) is used locally when using it place it before the number and with no space between the number and the symbol.
+
+[3.5.2. Currencies] Currencies other than local currency are not localized unless instructed to do so.
+
+[3.5.3. Units of measure] Write in their full form if possible. If character limitation applies, use the symbol instead. Remember to insert a non-breaking space in between.
+
+[3.5.3. Units of measure] Content created in the US and other countries might contain Imperial system measures (i.e. miles or inches instead of kilometers or centimeters). Since our translation will be targeting Mexican users who use the metric system, please adapt these measures accordingly.
+
+[3.5.3. Units of measure] When using a symbol, such as the abbreviation of measurement units (kg, oz) don't use plural forms or add periods.
+
+[3.5.3. Units of measure] The expression “and/or” is incorrect in both Spanish and English. If an exception is made in English, “and/or” should be translated as “o” in Spanish because the conjunction “o” has both values. The scale is not mentioned, no space is needed, if it is mentioned, add a non-breaking space.
+
+[Spanish used in Mexico] Mexico is the biggest Spanish speaking country in the world, with a major cultural influence in how Spanish is perceived globally. There is a strong influence of prehispanic vocabulary in Mexican Spanish with words like “aguacate”, “jitomate”, “cuate” and “popote”. It is imperative to translate everything like it was written originally in Mexican Spanish, otherwise the reader can perceive the translation as written originally for Spain or South America and reject it. Always remember to avoid pronouns like “vos” or “vosotros” or words like “ordenador”, “palta” or “reserva” which are not used in Mexico. Always remember that “americano” for Mexicans is the inhabitant of the continent America and “estadounidense” is the inhabitant of the USA.
+
+[Emojis and symbols] Use emojis and symbols sparingly and only where they support clarity or add a light, on-brand touch.
+
+[Emojis and symbols] Avoid replacing key words with emojis, and never use emojis in legal, policy or serious problem/incident messages.
+
+[Emojis and symbols] 🚫 Emojis that should be avoided in  México
+
+[User Interface (UI)] One idea per string; avoid ambiguity and extra words.
+
+[User Interface (UI)] Use the same wording consistently across product (e.g. always “Price Alerts”, not sometimes “Price Watch”).
+
+[Marketing] There is more room for creativity for Marketing content – we want the copy to sound natural, fluid and inspirational. Avoid sticking too close to the source text and make sure the translation feels like it has been created in the target language originally.
+
+[Marketing] Use the playful, geeky, helpful Skyscanner voice, but keep promises realistic and compliant
+
+[SEO] Prioritise natural language, not keyword stuffing
+
+[SEO] Write the way travellers actually search and think, while keeping our tone.
+
+[SEO] Use clear, descriptive headings and titles
+
+[SEO] Keep meta titles and descriptions concise and helpful
+
+[Google Ads] Be very concise; use clear benefits and a direct call to action. There are usually strict character limits.
+
+[Google Ads] Avoid clickbait and unprovable claims (no “#1”, “best”, “cheapest ever”).
+
+[Google Ads] Avoid exclamation marks and other unnecessary punctuation.
+
+[Google Ads] Use common search language that travellers would type.
+
+[App store] Use simple, natural phrases that work well in screenshots and previews.
+
+[App store] Avoid superlatives and guarantees.
+
+[Editorial and blog posts] Use a warmer, more descriptive tone, but keep it factual and practical.
+
+[Legal, Policies, Terms and Conditions] Be precise and neutral; avoid jokes, idioms and emotional language.
+
+[Legal, Policies, Terms and Conditions] Do not add promises or interpretations that are not in the source text
+
+[Use of Skyscanner brand] The name Skyscanner is a core part of our brand identity and must be treated consistently across all languages. It should remain recognisable, correctly spelled, and used in a way that feels natural to the local audience while still protecting the brand.
+
+[Use of Skyscanner brand] Never translate or adapt the meaning of the name (e.g. never translate “sky” or “scanner”).
+
+[Use of Skyscanner brand] Do not add articles unless they are required in your language and sound natural.
+
+[Use of Skyscanner brand] If in doubt, always use Skyscanner in English and flag questions to Skyscanner.
+
+[Feature naming] Avoid direct, word-for-word translations if they sound strange, misleading, or carry unintended meanings. Only use the English name if it is already widely known and expected in your market.
+
+[The use of “Best”] Be careful with the use of “best” and superlatives in general. We are unable to claim that we can find travellers the “best prices” and “best deals” as this is an objective claim versus our competition that we would not be able to substantiate.
+
+[The use of “Best”] We can, however, use “Best” when there is a clear disclaimer explaining how "best" is measured.
+
+[The use of “Best”] For example, we can sort our flight results by “Best” results since we have a disclaimer clearly explaining how this is measured:
+
+[The use of “Best”] Generally, when the English copy says “best”, it’s safe to translate it the same way. When this is not the case, do not use “best” or other superlatives. Instead, use subjective claims such as “epic prices” or “amazing deals”.
+
+[The use of “Discount”] Skyscanner never offer discounts to users. Any discounts come from partners (for example Trip.com), not by Skyscanner.
+
+[The use of “Discount”] For this and especially for legal reasons we can therefore never imply that “we offer” or “Skyscanner offers” a discount. This must be translated in a neutral way, i.e. “You are offered a discount”.
+
+[The use of “Discount”] Never use the translation or equivalent of “discount” when the English source refers to a “deal” or “price drops” – these are not discounts but results of price fluctuation and it would be legally incorrect to refer to discounts.
+
+[Translating sustainability-related content] When localising content about anything related to sustainability for Skyscanner, it’s essential to communicate responsibly and avoid greenwashing. Travel has an undeniable environmental impact, and our language must reflect this honestly and transparently. Use the following principles when translating or adapting sustainability-related content:
+
+[Translating sustainability-related content] Prefer comparatives over absolutes. Use relative statements such as “X is more sustainable than Y”, rather than implying that any option is fully sustainable.
+
+[Translating sustainability-related content] Avoid superlatives. Do not use expressions like “the most ecological flight” or “the greenest option”, as they can overstate environmental benefits.
+
+[Translating sustainability-related content] Use transparent and factual language. Base all claims on clear, measurable data.
+
+[Translating sustainability-related content] Steer clear of vague or unregulated terms. Avoid words like ‘natural’, ‘green’, ‘non-toxic’, and ‘environmentally friendly’, unless the statement is supported by verifiable, standardised criteria.
+
+[Translating sustainability-related content] Do not make unsubstantiated claims. Only reference environmental performance when data is available. Never imply that a flight or travel option is “sustainable,” “eco,” “green,” “clean,” “planet-friendly,” or “guilt-free.”
+
+[Translating sustainability-related content] Avoid reinforcing “green” imagery or symbolism. Be cautious with metaphors and word associations that might imply aviation is environmentally harmless. Overuse of green or nature-themed language can unintentionally suggest a level of sustainability that does not exist in commercial aviation today.

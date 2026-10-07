@@ -29,3 +29,18 @@
 - Do not externally fact-check laws, prices, limits, or policies.
 - Do not claim Skyscanner provides discounts; keep price/offer wording neutral.
 - Use “best” only with a supplied measurable basis. Avoid absolute sustainability or green claims.
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Czech). Additive — do not discard earlier rules.
+
+### Register (mandatory)
+- Friendly formal **V-form** consistently. Write `vám`/`váš`/`vás` lowercase except sentence-initial.
+- Avoid bureaucratic, bookish, or archaic phrasing while staying respectful.
+
+### Geo naming
+- Official/common Czech forms; consistent across the document.
+- Never duplicate “letiště/airport” when already in the name.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

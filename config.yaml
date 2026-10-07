@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # CONFIGURATION FOR THE SKYSCANNER AI-LQA PIPELINE (CSV / DOCX)
-# Languages: AR-SA, CS-CZ, EL-GR, HU-HU, PL-PL, PT-PT, TH-TH, TR-TR
+# Batch locales (filename codes): AE, CH, CZ, HR, JP, KR, MX, PL, TH, TR, TW
 # -----------------------------------------------------------------------------
 
 # --- API and Model Settings ---
@@ -35,13 +35,15 @@ file_names:
   system_prompt_3: "system_3.txt"
   user_prompt_3: "user_3.txt"
 
-  glossary: "Skyscanner_Glossary_v2.xlsx"
+  glossary: "Copy of Skyscanner_Glossary_v2.xlsx"
   output_report_prefix: "LQA_Report"
   edited_output_prefix: "Edited"
 
 # --- Language Mapping ---
+# Short codes must match tokens in input filenames (e.g. -pl-, -jp-, -ae-).
 lang_map:
   SA: "ar-SA"
+  AE: "ar-SA"      # UAE Arabic batch; glossary column ar-SA
   CZ: "cs-CZ"
   GR: "el-GR"
   HU: "hu-HU"
@@ -56,10 +58,18 @@ lang_map:
   BR: "pt-BR"
   PT: "pt-PT"
   US: "en-US"
+  JA: "ja-JP"
+  JP: "ja-JP"      # filename uses -jp-
+  KO: "ko-KR"
+  KR: "ko-KR"      # filename uses -kr-
+  MX: "es-MX"
+  HR: "hr-HR"
+  CH: "zh-CN"      # Chinese Simplified (China)
+  TW: "zh-TW"      # Chinese Traditional (Taiwan)
 
 # --- Pipeline / Batching Controls ---
 pipeline: &pipeline_defaults
-  max_batches_per_window: 10
+  max_batches_per_window: 100
   window_pause_seconds: 10
   combine_reports_per_language: true
   drop_empty_sections: true

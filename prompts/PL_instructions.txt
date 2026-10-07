@@ -28,3 +28,23 @@
 - Do not claim Skyscanner provides discounts. Use neutral wording about offers and price reductions.
 - Use “best” only with a supplied measurable basis.
 - Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Polish). Additive — do not discard earlier rules.
+
+### Register (mandatory)
+- Do **not** use `Pan`/`Pani`. Use capitalized direct-address forms (`Ty`, `Tobie`, `Ciebie`, `Wy`, `Wam`, `Was`, etc.).
+- Prefer gender-neutral wording; avoid slash forms when a neutral rewrite is natural.
+- Skyscanner may be inflected when Polish grammar requires it (`Skyscannera`, `Skyscannerze`).
+
+### Typography reinforcements
+- Polish quotes `„…”`; ellipsis `…`; en dash `–` (never em dash `—`).
+- No full stop at the end of headings. Avoid excessive `!`.
+
+### Geo naming
+- Official/common local names; consistent spelling; no invented forms.
+- Never duplicate “lotnisko/airport” when already in the name.
+
+### SEO body readability (objective Style only)
+- If one SEO body paragraph packs multiple distinct ideas and is objectively hard to scan, flag **Style** and split into shorter paragraphs in `updated_sentence` / `corrected_content`.
+- No synonym-only or preference rewrites.

@@ -128,3 +128,20 @@ Before finalizing content:
 3. **Accuracy**: Are tags preserved without surrounding spaces?
 4. **Policy**: Are sustainability/discount/superlative rules strictly followed?
 5. **Consistency**: Are terms used identically across the product?
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Japanese). Additive — do not discard earlier rules.
+
+### Units / currency
+- Convert imperial measures to metric with standard rounding; no space before `km` in examples like `5.8km`.
+- Do **not** convert airline loyalty miles. Do not localize currency unless the job explicitly requires it.
+
+### SEO
+- Natural Japanese search language; no keyword stuffing. Spaces around keywords only if still natural.
+
+### Compliance reminders
+- Neutral discount/deal wording; “best” only with measurable basis; no greenwashing absolutes.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

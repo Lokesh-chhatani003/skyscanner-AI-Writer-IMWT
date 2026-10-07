@@ -83,6 +83,10 @@ async def _call_gemini_once(
         "temperature": temp,
         "max_output_tokens": 32_000,
         "response_mime_type": "text/plain",
+        # Align SDK AFC remote-call cap with pipeline concurrency (default is 10).
+        "automatic_function_calling": types.AutomaticFunctionCallingConfig(
+            maximum_remote_calls=100
+        ),
     }
     # thinking_level is Gemini 3 only; 2.x models reject it.
     if "gemini-3" in llm_model:
@@ -844,10 +848,32 @@ def parse_html_sections_to_df_heading(
 
 
 # ──────────────────────── METRICS / AGGREGATION ────────────────────────────
-WORD_RE = re.compile(
-    r"[\w'-]+|[\u4e00-\u9fff]+|[\u3040-\u30ff]+|[\uac00-\ud7af]+|[\u1100-\u11ff]+|[\u3130-\u318f]+",
+# Trados Studio–style word count with *word-based* Asian tokenization:
+#   JP → Janome morphological words (excl. punctuation-only)
+#   ZH/CH/TW → jieba words
+#   TH → pythainlp newmm words
+#   else → Western alphanumeric tokens (+ Asian chars only as fallback mix)
+_ASIAN_CHAR_RE = re.compile(
+    r"["
+    r"\u0e00-\u0e7f"
+    r"\u1100-\u11ff\u3130-\u318f\uac00-\ud7af"
+    r"\u3040-\u30ff"
+    r"\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff"
+    r"\uff66-\uff9d"
+    r"]"
+)
+_WESTERN_WORD_RE = re.compile(
+    r"[A-Za-z0-9]+(?:['\u2019-][A-Za-z0-9]+)*"
+    r"|[\u00c0-\u024f\u0370-\u03ff\u0400-\u04ff\u0600-\u06ff]+"
+    r"(?:['\u2019-][\u00c0-\u024f\u0370-\u03ff\u0400-\u04ff\u0600-\u06ff0-9]+)*",
     re.UNICODE,
 )
+_PUNCT_ONLY_RE = re.compile(r"^[\W_]+$", re.UNICODE)
+WORD_RE = _WESTERN_WORD_RE
+
+_JP_LOCALES = frozenset({"JP", "JA"})
+_ZH_LOCALES = frozenset({"TW", "CH", "ZH", "CN"})
+_TH_LOCALES = frozenset({"TH"})
 
 ALLOWED_CATEGORIES = [
     "Grammar",
@@ -861,9 +887,84 @@ ALLOWED_CATEGORIES = [
 SEVERITY_TO_POINTS = {"Minor": 1, "Major": 3, "Critical": 25}
 
 
-def compute_ewt(text: str) -> int:
-    cleaned = re.sub(r"[<>]|`{1,3}.*?`{1,3}", " ", text, flags=re.S)
-    return len(WORD_RE.findall(cleaned))
+def _count_western_words(text: str) -> int:
+    return len(_WESTERN_WORD_RE.findall(text))
+
+
+def _count_japanese_words(text: str) -> int:
+    """Janome word-based tokenization (Trados Asian word mode)."""
+    try:
+        from janome.tokenizer import Tokenizer
+    except ImportError as exc:  # pragma: no cover
+        raise ImportError("Japanese WC requires janome. pip install janome") from exc
+    tokenizer = getattr(_count_japanese_words, "_tok", None)
+    if tokenizer is None:
+        tokenizer = Tokenizer()
+        setattr(_count_japanese_words, "_tok", tokenizer)
+    n = 0
+    for tok in tokenizer.tokenize(text):
+        surface = tok.surface
+        if not surface or not surface.strip():
+            continue
+        if _PUNCT_ONLY_RE.match(surface):
+            continue
+        n += 1
+    return n
+
+
+def _count_chinese_words(text: str) -> int:
+    """jieba word-based tokenization for zh-CN / zh-TW."""
+    try:
+        import jieba
+    except ImportError as exc:  # pragma: no cover
+        raise ImportError("Chinese WC requires jieba. pip install jieba") from exc
+    n = 0
+    for w in jieba.lcut(text):
+        if not w or not w.strip():
+            continue
+        if _PUNCT_ONLY_RE.match(w):
+            continue
+        n += 1
+    return n
+
+
+def _count_thai_words(text: str) -> int:
+    """pythainlp newmm word-based tokenization."""
+    try:
+        from pythainlp.tokenize import word_tokenize
+    except ImportError as exc:  # pragma: no cover
+        raise ImportError("Thai WC requires pythainlp. pip install pythainlp") from exc
+    n = 0
+    for w in word_tokenize(text, engine="newmm"):
+        if not w or not w.strip():
+            continue
+        if _PUNCT_ONLY_RE.match(w):
+            continue
+        n += 1
+    return n
+
+
+def compute_ewt(text: str, lang_code: Optional[str] = None) -> int:
+    """
+    Trados-style EWT with word-based Asian tokenization when lang_code is set.
+
+    JP/JA → Janome; TW/CH/ZH → jieba; TH → pythainlp; otherwise Western words
+    (plus per-character Asian fallback for mixed untagged text).
+    """
+    cleaned = re.sub(r"[<>]|`{1,3}.*?`{1,3}", " ", text or "", flags=re.S)
+    code = (lang_code or "").strip().upper()
+    if code in _JP_LOCALES:
+        return _count_japanese_words(cleaned)
+    if code in _ZH_LOCALES:
+        return _count_chinese_words(cleaned)
+    if code in _TH_LOCALES:
+        return _count_thai_words(cleaned)
+
+    # Locale-agnostic fallback: Western tokens + Asian characters
+    asian = _ASIAN_CHAR_RE.findall(cleaned)
+    residual = _ASIAN_CHAR_RE.sub(" ", cleaned)
+    western = _WESTERN_WORD_RE.findall(residual)
+    return len(asian) + len(western)
 
 
 def normalize_issue(issue: Dict[str, Any]) -> Dict[str, Any]:
@@ -1118,12 +1219,18 @@ def write_language_report(
     save_raw_json: bool = True,
     overall_feedback_override: Optional[Dict[str, Any]] = None,
     extra_dump: Optional[Dict[str, Any]] = None,
+    ewt_override: Optional[int] = None,
 ):
     """
     Build one XLSX per language with two tabs: Scorecard & Detailed Findings.
     If overall_feedback_override is provided (from Agent 3), it's used verbatim.
+    If ewt_override is set, use that word count instead of recounting evaluated_text.
     """
-    ewt = compute_ewt(evaluated_text)
+    ewt = (
+        int(ewt_override)
+        if ewt_override is not None
+        else compute_ewt(evaluated_text, lang_code=lang_code)
+    )
     metrics = aggregate_metrics(issues_with_url, ewt, pass_threshold=pass_threshold)
 
     if overall_feedback_override and isinstance(overall_feedback_override, dict):
@@ -1170,7 +1277,7 @@ def build_agent3_rollup(
     evaluated_text_all: str,
 ) -> Dict[str, Any]:
     """Compact quantitative rollup for Agent 3 input."""
-    ewt = compute_ewt(evaluated_text_all)
+    ewt = compute_ewt(evaluated_text_all, lang_code=lang_code)
     _, norm = _issues_for_reporting_and_scoring(issues)
 
     severity_counts = Counter(i.get("severity", "") for i in norm)
@@ -2026,7 +2133,7 @@ async def main(selected_language: Optional[str] = None):
                 limit = max_words_per_language
                 limit_with_buffer = int(limit * 1.05)
                 for row in section_rows:
-                    words = compute_ewt(row.get("content", "") or "")
+                    words = compute_ewt(row.get("content", "") or "", lang_code=lang_code)
                     projected = total_words + words
                     if projected <= limit_with_buffer:
                         capped_rows.append(row)

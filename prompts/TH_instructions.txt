@@ -29,3 +29,17 @@
 - Do not externally fact-check laws, prices, limits, or policies.
 - Do not claim Skyscanner provides discounts. Use “best” only with a supplied measurable basis.
 - Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Thai). Additive — do not discard earlier rules.
+
+### Register
+- Friendly, respectful “helpful travel pal” tone; keep pronoun/particle formality consistent across the document.
+- Do not switch register without a documented legal/policy exception.
+
+### Geo naming
+- Official/common Thai usage; consistent transliteration; keep brand names in Latin when expected.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

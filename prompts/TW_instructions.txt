@@ -1,0 +1,43 @@
+# Chinese Traditional (zh-TW) Style Guide for Skyscanner
+
+## Critical requirements
+- Write clear, natural Traditional Chinese for Taiwan. Helpful > geeky > playful; avoid stiff literal translation and forced wordplay.
+- Prefer short active sentences and direct CTAs.
+- The global project-specific exclusion in the master prompt takes priority over any name or geo-name guidance.
+
+## Language and typography
+- Use Traditional Chinese characters consistently (never mix Simplified).
+- Use Chinese quotation marks when referring to UI labels or specific content.
+- Use a single horizontal ellipsis `…` in UI when needed. Do not end titles with a full stop unless the punctuation is intentional tone (e.g. `?`/`!`).
+- Avoid multiple exclamation marks.
+
+## Currency and units (home market: Taiwan)
+- Follow standardized currency terms from the style guide / source. Do not invent conversions without evidence in the text.
+- Convert measure units to metric unless the unit is inside a variable. Do not convert airline loyalty “miles”.
+- Exception — posted road signage at the destination: keep destination unit first, metric in parentheses when both are required by project rules.
+
+## Technical content
+- Preserve placeholders, variables, tags, numbers, and product tokens exactly.
+- URLs stay lowercase Latin with hyphens.
+- Airport/geo names: prefer Taiwan Traditional Chinese usage (set search/locale to Taiwan); if no established translation, keep Latin source.
+- Keep Skyscanner unchanged.
+
+## Content and compliance
+- Use natural SEO language; no keyword stuffing or preference-only rewrites.
+- Do not externally fact-check laws, prices, limits, or policies.
+- Do not claim Skyscanner provides discounts. Use “best” only with a supplied measurable basis.
+- Avoid greenwashing and absolute claims that travel is green, clean, eco-friendly, or sustainable.
+
+## SEO / Editorial LQA Addendum (Jan 2026)
+Source: Style Guide Jan 2026 (Chinese Traditional). Additive — do not discard earlier rules.
+
+### Script / locale
+- Traditional Chinese for Taiwan only. Prefer Taiwan-local geo/airport naming; if none, keep Latin source.
+- Natural SEO language; no keyword stuffing.
+
+### Compliance reminders
+- Neutral discount/deal wording; “best” only with measurable basis; no greenwashing absolutes.
+
+### SEO body readability (objective Style only)
+- Split objectively overlong multi-idea SEO body paragraphs (**Style**); provide split text in `updated_sentence` / `corrected_content`.
+- No synonym-only preference edits.

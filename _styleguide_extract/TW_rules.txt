@@ -1,0 +1,184 @@
+# TW <- Chinese Traditional Style Guide - 2025.docx
+# candidates=91
+
+[Our Tone of Voice] Our brand promise is to be a helpful, honest travel ally. Our tone of voice should always support this:
+
+[1.1 Playful] Our tone is playful. We write with a light, natural energy. Playfulness helps us feel human and builds trust – but it must never reduce clarity.
+
+[1.1 Playful] Use these tools when they feel natural and keep meaning clear (and when they work in your language):
+
+[1.1 Playful] Use these tools sparingly and only if they localise well:
+
+[1.1 Playful] Always choose clarity over wordplay. If a device is hard to adapt or sounds unnatural in your language, do not use it.
+
+[1.2 Geeky] Keep the tone enthusiastic but controlled. It should feel like a knowledgeable friend, not a lecture.
+
+[1.2 Geeky] Instead of: We have the low-down on maximum baggage weight allowances across most major airlines so you can avoid fees and stress.
+
+[1.3 Helpful] Helpful is our foundation. If you must choose between playful, geeky and helpful, be helpful first.
+
+[1.3 Helpful] Focus on what they need to know, not on us.
+
+[1.3 Helpful] Start with the benefit or instruction, then explain how we know.
+
+[1.3 Helpful] Always apologise if something is our fault. If it isn’t, show empathy instead.
+
+[1.3 Helpful] Avoid cold phrases like “We apologise for the inconvenience.
+
+[1.3 Helpful] Use short sentences and simple structures.
+
+[URL requirements] No spaces - If you need to separate words, use a standard hyphen -.
+
+[URL requirements] Only Latin characters. For languages with non-Latin alphabets, keep the URL content in English. The only exception is Greek, which should use transliteration:
+
+[Placeholders, variables and tags] Placeholders, variables and tags are there to make the text dynamic (e.g. inserting a city, date or price) or to format it. They must not be translated, deleted or changed.
+
+[Placeholders, variables and tags] Always keep them exactly as in the source, placed in the correct order, and make sure the sentence is still natural and grammatically correct in your language. Make sure to insert spaces where needed before/after the tags to avoid words being glued together when the placeholders are populated.
+
+[Inclusive language] Our language should be inclusive, welcoming and respectful to all travellers. When translating for Skyscanner, avoid stereotypes, unnecessary references to gender, family, age, ability, or background, and choose wording that includes as many people as possible. Always prefer neutral, precise terms over clichés or labels.
+
+[Inclusive language] Use gender-neutral language where possible.
+
+[Inclusive language] Do not assume who people travel with, how they look, or what they can do.
+
+[Inclusive language] Avoid jokes or idioms that rely on stereotypes about nationality, age, gender, religion, or any other group.
+
+[Inclusive language] Focus on travellers’ needs and situations, not on labels.
+
+[Titles and CTAs] As a rule of thumb, titles and CTAs should be as concise as possible. The purpose is to communicate the main idea at a glance.
+
+[Titles and CTAs] Do not use ending punctuation in titles, except where it is intentionally used for tone or meaning (e.g. question marks, exclamation marks, or ellipses when appropriate).
+
+[Titles and CTAs] Remove unnecessary connectors for rhythm. Articles, conjunctions, and other linking words may be omitted when they do not affect clarity and help improve flow or impact.
+
+[Titles and CTAs] Call to actions and buttons are normally short pieces of text that require certain actions from the user. In most cases, buttons should reflect a specific action that's being taken, such as “Book Now” or “Find your flight”. Keep your button text short and don't add any punctuation.
+
+[Punctuation and spacing] 《重訂標點符號手冊》published by MOE of Taiwan on how to use Chinese punctuation properly.
+
+[Punctuation and spacing] Source: Add all the rooms guests can use--even shared areas
+
+[Punctuation and spacing] UI, use 1 horizontal ellipsis (…) for readability.
+
+[Emphasis and intensifiers] Sometimes we use formatting and wording to emphasise key information for it to be easy to spot, or as an intensifier for a part of the message.
+
+[References] When you refer to other content (pages, features, sections, links), use clear, consistent names and, where relevant, the exact label used in the UI. In Traditional Chinese, when referring to specific content, enclose it in Chinese quotation marks.
+
+[Currencies] Please use the below-standardized terms for different currencies.
+
+[Titles and CTAs] Avoid title case and prefer sentence case, unless the language’s standard rules say otherwise, e.g. World Health Organization (proper noun), or SPA, etc.
+
+[Glossary terms / product names] Glossary terms and product feature names should follow a consistent capitalisation pattern across the product. Use sentence case for descriptive unless they are treated as branded names in your language.
+
+[Glossary terms / product names] Keep capitalisation the same in UI and running copy, and do not switch between different styles (for example, avoid mixing “Drops” and “drops” without a clear rule).
+
+[The use of Anglicisms] Avoid unnecessary Anglicisms if there is a clear, natural equivalent in the target language. Only keep English words when they are widely used and expected by travellers (for example, brand names or common terms written in English). Make sure any English term you keep fits the tone and formality of your market and stays consistent across the product.
+
+[Abbreviations and acronyms] Use abbreviations and acronyms only when they are widely understood by travellers in your market (for example: airport codes, well-known transport terms). If there is a risk of confusion, write the full term on first mention and add the abbreviation in brackets. Avoid creating new abbreviations just to save space.
+
+[Addressing our users – Formality and T/V policy] Avoid switching between forms unless there is a clear, documented exception (for example, specific legal text that must use a different level of formality).
+
+[CTAs and active voice] Use the active voice wherever possible, especially in headlines and CTAs. The active voice is usually clearer, and it sounds more like a direct conversation with our users.
+
+[CTAs and active voice] CTAs should be short, direct and written in the active voice.
+
+[CTAs and active voice] Focus on what the user can do next, using clear verbs and simple structures.
+
+[CTAs and active voice] Avoid long or vague phrases and avoid passive constructions where the user is not the clear subject.
+
+[CTAs and active voice] When adapting to each language, keep CTAs natural and action-oriented, in line with local expectations for apps and websites.
+
+[Transliteration] Follow common local usage and official standards when transliterating place names, stations, and key travel terms. Be consistent within the language: don’t mix different transliteration systems in the same text. Do not invent new spellings or “localise” brand names that are normally kept in Latin script. In Traditional Chinese, established local place names and officially used translations should be prioritised. Where a well-known local name exists, it should be used; otherwise, follow standard transliteration practices used by local authorities or widely adopted mapping services.
+
+[Geo-terms] Use the official or most widely used local names for countries, cities, regions and airports, and keep them consistent across all content. Avoid outdated, politically sensitive or rarely used forms, and don’t over-translate when travellers expect the original name (for example in airport names or well-known landmarks).
+
+[Airport names] When translating airport names, refer to the official sources to make sure the name is correct.
+
+[Airport names] Never add the word “airport” when translating an airport name to avoid duplication; it’s usually used to populate placeholders in a running copy, and the term “airport” is added to the copy when needed.
+
+[Airport names] When translating airport names for placeholders to be used in “Fly from @@airport-name@@ Airport.”
+
+[Airport names] Steps to localize Geo and airport names
+
+[Airport names] Enable Advanced Search or use search operators to refine your results.
+
+[Airport names] Set the location and language to Taiwan and Traditional Chinese. Adjust search settings so results reflect local usage in Taiwan and are displayed in Traditional Chinese.
+
+[Airport names] Select the name that appears most frequently across reliable and authoritative sources.
+
+[Airport names] If there is no clearly established Traditional Chinese translation or search results are very limited, retain the original name in Latin script.
+
+[Emojis and symbols] Use emojis and symbols sparingly and only where they support clarity or add a light, on-brand touch.
+
+[Emojis and symbols] Avoid replacing key words with emojis, and never use emojis in legal, policy or serious problem/incident messages.
+
+[User Interface (UI)] One idea per string; avoid ambiguity and extra words.
+
+[User Interface (UI)] Use the same wording consistently across product (e.g. always “Price Alerts”, not sometimes “Price Watch”).
+
+[Marketing] There is more room for creativity for Marketing content – we want the copy to sound natural, fluid and inspirational. Avoid sticking too close to the source text and make sure the translation feels like it has been created in the target language originally.
+
+[Marketing] Use the playful, geeky, helpful Skyscanner voice, but keep promises realistic and compliant
+
+[SEO] Prioritise natural language, not keyword stuffing
+
+[SEO] Write the way travellers actually search and think, while keeping our tone.
+
+[SEO] Use clear, descriptive headings and titles
+
+[SEO] Keep meta titles and descriptions concise and helpful
+
+[Google Ads] Be very concise; use clear benefits and a direct call to action. There are usually strict character limits.
+
+[Google Ads] Avoid clickbait and unprovable claims (no “#1”, “best”, “cheapest ever”).
+
+[Google Ads] Avoid unnecessary punctuations.
+
+[Google Ads] Use common search language that travellers would type.
+
+[App store] Use simple, natural phrases that work well in screenshots and previews.
+
+[App store] Avoid superlatives and guarantees.
+
+[Editorial and blog posts] Use a warmer, more descriptive tone, but keep it factual and practical.
+
+[Legal, Policies, Terms and conditions] Be precise and neutral; avoid jokes, idioms and emotional language.
+
+[Legal, Policies, Terms and conditions] Do not add promises or interpretations that are not in the source text
+
+[Use of Skyscanner brand] The name Skyscanner is a core part of our brand identity and must be treated consistently across all languages. It should remain recognisable, correctly spelled, and used in a way that feels natural to the local audience while still protecting the brand.
+
+[Use of Skyscanner brand] Never translate or adapt the meaning of the name (e.g. never translate “sky” or “scanner”).
+
+[Use of Skyscanner brand] Do not add articles unless they are required in your language and sound natural.
+
+[Use of Skyscanner brand] If in doubt, always use Skyscanner in English and flag questions to Skyscanner.
+
+[Feature naming] Avoid direct, word-for-word translations if they sound strange, misleading, or carry unintended meanings. Only use the English name if it is already widely known and expected in your market.
+
+[The use of “Best”] Be careful with the use of “best” and superlatives in general. We are unable to claim that we can find travellers the “best prices” and “best deals” as this is an objective claim versus our competition that we would not be able to substantiate.
+
+[The use of “Best”] We can, however, use “Best” when there is a clear disclaimer explaining how "best" is measured.
+
+[The use of “Best”] For example, we can sort our flight results by “Best” results since we have a disclaimer clearly explaining how this is measured:
+
+[The use of “Best”] Generally, when the English copy says “best”, it’s safe to translate it the same way. When this is not the case, do not use “best” or other superlatives. Instead, use subjective claims such as “epic prices” or “amazing deals”.
+
+[The use of “Discount”] Skyscanner never offer discounts to users. Any discounts come from partners (for example Trip.com), not by Skyscanner.
+
+[The use of “Discount”] For this and especially for legal reasons we can therefore never imply that “we offer” or “Skyscanner offers” a discount. This must be translated in a neutral way, i.e. “You are offered a discount”.
+
+[The use of “Discount”] Never use the translation or equivalent of “discount” when the English source refers to a “deal” or “price drops” – these are not discounts but results of price fluctuation and it would be legally incorrect to refer to discounts.
+
+[Translating sustainability-related content] When localising content about anything related to sustainability for Skyscanner, it’s essential to communicate responsibly and avoid greenwashing. Travel has an undeniable environmental impact, and our language must reflect this honestly and transparently. Use the following principles when translating or adapting sustainability-related content:
+
+[Translating sustainability-related content] Prefer comparatives over absolutes. Use relative statements such as “X is more sustainable than Y”, rather than implying that any option is fully sustainable.
+
+[Translating sustainability-related content] Avoid superlatives. Do not use expressions like “the most ecological flight” or “the greenest option”, as they can overstate environmental benefits.
+
+[Translating sustainability-related content] Use transparent and factual language. Base all claims on clear, measurable data.
+
+[Translating sustainability-related content] Steer clear of vague or unregulated terms. Avoid words like ‘natural’, ‘green’, ‘non-toxic’, and ‘environmentally friendly’, unless the statement is supported by verifiable, standardised criteria.
+
+[Translating sustainability-related content] Do not make unsubstantiated claims. Only reference environmental performance when data is available. Never imply that a flight or travel option is “sustainable,” “eco,” “green,” “clean,” “planet-friendly,” or “guilt-free.”
+
+[Translating sustainability-related content] Avoid reinforcing “green” imagery or symbolism. Be cautious with metaphors and word associations that might imply aviation is environmentally harmless. Overuse of green or nature-themed language can unintentionally suggest a level of sustainability that does not exist in commercial aviation today.
