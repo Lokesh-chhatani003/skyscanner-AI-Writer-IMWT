@@ -848,11 +848,22 @@ def parse_html_sections_to_df_heading(
 
 
 # ──────────────────────── METRICS / AGGREGATION ────────────────────────────
-# Trados Studio–style word count with *word-based* Asian tokenization:
-#   JP → Janome morphological words (excl. punctuation-only)
-#   ZH/CH/TW → jieba words
-#   TH → pythainlp newmm words
-#   else → Western alphanumeric tokens (+ Asian chars only as fallback mix)
+# Trados Studio default word-count rules (Analyze Files / Word Count):
+#   JP / ZH (TW, CH): character-based Asian tokenization (DEFAULT)
+#     → each CJK ideograph / kana = 1 word; each Western token = 1 word
+#     (option "Use word-based tokenization for Asian languages" is OFF by default)
+#   TH: not a CJK character-based language in Studio docs → Thai word breaker
+#   else: Western alphanumeric tokens
+#
+# Refs: RWS Community / Studio docs — Chinese & Japanese default = 1 char → 1 word.
+_CJK_JP_CHAR_RE = re.compile(
+    r"["
+    r"\u3040-\u30ff"  # Hiragana / Katakana
+    r"\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff"  # CJK
+    r"\uff66-\uff9d"  # Half-width kana
+    r"]"
+)
+_THAI_CHAR_RE = re.compile(r"[\u0e00-\u0e7f]")
 _ASIAN_CHAR_RE = re.compile(
     r"["
     r"\u0e00-\u0e7f"
@@ -891,45 +902,15 @@ def _count_western_words(text: str) -> int:
     return len(_WESTERN_WORD_RE.findall(text))
 
 
-def _count_japanese_words(text: str) -> int:
-    """Janome word-based tokenization (Trados Asian word mode)."""
-    try:
-        from janome.tokenizer import Tokenizer
-    except ImportError as exc:  # pragma: no cover
-        raise ImportError("Japanese WC requires janome. pip install janome") from exc
-    tokenizer = getattr(_count_japanese_words, "_tok", None)
-    if tokenizer is None:
-        tokenizer = Tokenizer()
-        setattr(_count_japanese_words, "_tok", tokenizer)
-    n = 0
-    for tok in tokenizer.tokenize(text):
-        surface = tok.surface
-        if not surface or not surface.strip():
-            continue
-        if _PUNCT_ONLY_RE.match(surface):
-            continue
-        n += 1
-    return n
-
-
-def _count_chinese_words(text: str) -> int:
-    """jieba word-based tokenization for zh-CN / zh-TW."""
-    try:
-        import jieba
-    except ImportError as exc:  # pragma: no cover
-        raise ImportError("Chinese WC requires jieba. pip install jieba") from exc
-    n = 0
-    for w in jieba.lcut(text):
-        if not w or not w.strip():
-            continue
-        if _PUNCT_ONLY_RE.match(w):
-            continue
-        n += 1
-    return n
+def _count_cjk_jp_char_based(text: str) -> int:
+    """Trados default for Chinese/Japanese: each Asian char + each Western word."""
+    asian = _CJK_JP_CHAR_RE.findall(text)
+    residual = _CJK_JP_CHAR_RE.sub(" ", text)
+    return len(asian) + _count_western_words(residual)
 
 
 def _count_thai_words(text: str) -> int:
-    """pythainlp newmm word-based tokenization."""
+    """Thai word count via dictionary breaker (Thai is not CJK char-based in Studio)."""
     try:
         from pythainlp.tokenize import word_tokenize
     except ImportError as exc:  # pragma: no cover
@@ -946,25 +927,22 @@ def _count_thai_words(text: str) -> int:
 
 def compute_ewt(text: str, lang_code: Optional[str] = None) -> int:
     """
-    Trados-style EWT with word-based Asian tokenization when lang_code is set.
+    Trados Studio default EWT rules.
 
-    JP/JA → Janome; TW/CH/ZH → jieba; TH → pythainlp; otherwise Western words
-    (plus per-character Asian fallback for mixed untagged text).
+    JP/JA & TW/CH/ZH → character-based Asian tokenization (Studio default).
+    TH → Thai word breaker (not listed as CJK character-based).
+    else → Western words (+ Asian chars if mixed untagged text).
     """
     cleaned = re.sub(r"[<>]|`{1,3}.*?`{1,3}", " ", text or "", flags=re.S)
     code = (lang_code or "").strip().upper()
-    if code in _JP_LOCALES:
-        return _count_japanese_words(cleaned)
-    if code in _ZH_LOCALES:
-        return _count_chinese_words(cleaned)
+    if code in _JP_LOCALES or code in _ZH_LOCALES:
+        return _count_cjk_jp_char_based(cleaned)
     if code in _TH_LOCALES:
         return _count_thai_words(cleaned)
 
-    # Locale-agnostic fallback: Western tokens + Asian characters
     asian = _ASIAN_CHAR_RE.findall(cleaned)
     residual = _ASIAN_CHAR_RE.sub(" ", cleaned)
-    western = _WESTERN_WORD_RE.findall(residual)
-    return len(asian) + len(western)
+    return len(asian) + _count_western_words(residual)
 
 
 def normalize_issue(issue: Dict[str, Any]) -> Dict[str, Any]:

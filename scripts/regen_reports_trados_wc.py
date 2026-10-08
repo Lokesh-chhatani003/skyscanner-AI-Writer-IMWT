@@ -43,7 +43,7 @@ def _input_ewt(lang: str) -> tuple[int, int, str]:
         sections += len(rows)
         parts.extend(r.get("content") or "" for r in rows)
     text = "\n\n".join(parts)
-    # Word-based Asian tokenization (Janome / jieba / pythainlp)
+    # Trados Studio defaults (JP/TW char-based; TH word breaker)
     return compute_ewt(text, lang_code=lang), sections, text
 
 
@@ -74,7 +74,7 @@ def regen(lang: str) -> Path:
 
     scope = (
         f"DOCX heading-based batches ({sections} batches; "
-        f"Trados word-based WC from input/; source={final_path.name})"
+        f"Trados Studio default WC from input/; source={final_path.name})"
     )
     write_language_report(
         lang_code=lang,
@@ -88,8 +88,12 @@ def regen(lang: str) -> Path:
         overall_feedback_override=ofb if ofb else None,
         extra_dump={
             **extras,
-            "wc_method": "trados_word_based_asian_tokenization",
-            "wc_engines": {"JP": "janome", "TW": "jieba", "TH": "pythainlp_newmm"},
+            "wc_method": "trados_studio_default",
+            "wc_rules": {
+                "JP": "char-based Asian (1 kana/kanji = 1 word) + Western words",
+                "TW": "char-based Asian (1 hanzi = 1 word) + Western words",
+                "TH": "Thai word breaker (pythainlp newmm); not CJK char-based",
+            },
             "wc_source": "input_docx_section_bodies",
             "wc_ewt": ewt,
             "regenerated_at": datetime.now(ZoneInfo("Africa/Cairo")).isoformat(),
